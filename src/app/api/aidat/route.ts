@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { requireAdmin } from "@/lib/auth";
+import { getAdminSession } from "@/lib/auth";
 
 // GET /api/aidat?donem=2026-03
 export async function GET(req: Request) {
-  await requireAdmin();
+  const session = await getAdminSession();
+  if (!session) return NextResponse.json({ error: "Yetkilendirme gerekli" }, { status: 401 });
   const { searchParams } = new URL(req.url);
   const donem = searchParams.get("donem");
 
@@ -48,7 +49,8 @@ export async function GET(req: Request) {
 
 // POST /api/aidat — yeni aidat kaydı oluştur
 export async function POST(req: Request) {
-  await requireAdmin();
+  const s = await getAdminSession();
+  if (!s) return NextResponse.json({ error: "Yetkilendirme gerekli" }, { status: 401 });
   const body = await req.json();
   const { memberId, donem, tutar, odendi, odemeTarihi, notlar } = body;
 

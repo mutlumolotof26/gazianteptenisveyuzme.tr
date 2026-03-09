@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Trophy, Waves, Users, Calendar, Star, ChevronRight } from "lucide-react";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 async function getLatestNews() {
   return prisma.news.findMany({
     where: { aktif: true },

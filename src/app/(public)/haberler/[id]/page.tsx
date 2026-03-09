@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Calendar, ArrowLeft } from "lucide-react";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export default async function HaberDetayPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const news = await prisma.news.findUnique({ where: { id, aktif: true } });

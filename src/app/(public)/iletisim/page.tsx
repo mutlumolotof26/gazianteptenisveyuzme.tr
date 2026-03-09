@@ -3,6 +3,8 @@ import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { prisma } from "@/lib/db";
 import IletisimForm from "./IletisimForm";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "İletişim",
   description: "Gaziantep Tenis ve Yüzme Kulübü iletişim bilgileri ve mesaj formu.",

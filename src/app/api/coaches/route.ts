@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
-import { requireAdmin } from "@/lib/auth";
+import { getAdminSession } from "@/lib/auth";
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
@@ -18,7 +18,10 @@ export async function GET(req: Request) {
 }
 
 export async function POST(req: Request) {
-  await requireAdmin();
+  const session = await getAdminSession();
+  if (!session) {
+    return NextResponse.json({ error: "Yetkilendirme gerekli" }, { status: 401 });
+  }
   const body = await req.json();
   const coach = await prisma.coach.create({ data: body });
   return NextResponse.json(coach, { status: 201 });

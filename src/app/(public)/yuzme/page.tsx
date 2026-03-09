@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Waves, Clock, Users, Droplets, Star } from "lucide-react";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Yüzme",
   description: "Gaziantep Tenis ve Yüzme Kulübü olimpik yüzme havuzu, yüzme kursları ve antrenörler.",

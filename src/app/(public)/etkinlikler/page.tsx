@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Calendar, MapPin } from "lucide-react";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Etkinlikler",
   description: "Gaziantep Tenis ve Yüzme Kulübü etkinlikleri, turnuvaları ve organizasyonları.",

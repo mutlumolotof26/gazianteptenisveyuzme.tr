@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Calendar, ChevronRight } from "lucide-react";
 import { prisma } from "@/lib/db";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Haberler",
   description: "Gaziantep Tenis ve Yüzme Kulübü güncel haberleri ve duyurular.",
