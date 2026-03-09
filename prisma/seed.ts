@@ -1,13 +1,15 @@
-import { PrismaClient } from "@prisma/client";
-import { PrismaBetterSQLite3 } from "@prisma/adapter-better-sqlite3";
-import Database from "better-sqlite3";
-import bcrypt from "bcryptjs";
+import dotenv from "dotenv";
 import path from "path";
+dotenv.config({ path: path.resolve(process.cwd(), ".env.local"), override: true });
 
-const dbPath = path.join(__dirname, "../prisma/dev.db");
-const sqlite = new Database(dbPath);
-const adapter = new PrismaBetterSQLite3(sqlite);
-const prisma = new PrismaClient({ adapter } as Parameters<typeof PrismaClient>[0]);
+import { PrismaClient } from "@prisma/client";
+import { PrismaNeon } from "@prisma/adapter-neon";
+import { Pool } from "@neondatabase/serverless";
+import bcrypt from "bcryptjs";
+
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+const adapter = new PrismaNeon(pool);
+const prisma = new PrismaClient({ adapter });
 
 async function main() {
   console.log("🌱 Seed başlıyor...");
@@ -110,8 +112,6 @@ async function main() {
   console.log("\n📋 Admin Bilgileri:");
   console.log("   E-posta: admin@gazitenisyuzme.com");
   console.log("   Şifre: admin123");
-  console.log("\n🚀 Siteyi başlatmak için: npm run dev");
-  console.log("📍 Admin panel: http://localhost:3000/admin/login");
 }
 
 main()
