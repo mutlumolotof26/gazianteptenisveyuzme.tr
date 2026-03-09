@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
 
   const blob = await put(filename, file, {
     access: "public",
-    allowOverwrite: type === "logo",
+    addRandomSuffix: false,
   });
 
   return NextResponse.json({ url: blob.url });
