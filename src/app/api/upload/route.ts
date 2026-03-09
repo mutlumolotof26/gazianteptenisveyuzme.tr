@@ -1,20 +1,15 @@
 import { NextRequest, NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/auth";
-import { writeFile } from "fs/promises";
-import path from "path";
+import { put } from "@vercel/blob";
 
 export async function POST(req: NextRequest) {
-  const admin = await requireAdmin(req);
-  if (admin instanceof NextResponse) return admin;
+  await requireAdmin();
 
   const formData = await req.formData();
   const file = formData.get("file") as File | null;
   const type = formData.get("type") as string | null; // "logo" | "image"
 
   if (!file) return NextResponse.json({ error: "Dosya bulunamadı" }, { status: 400 });
-
-  const bytes = await file.arrayBuffer();
-  const buffer = Buffer.from(bytes);
 
   const ext = file.name.split(".").pop()?.toLowerCase() ?? "png";
   const allowed = ["png", "jpg", "jpeg", "gif", "webp", "svg"];
@@ -26,12 +21,13 @@ export async function POST(req: NextRequest) {
   if (type === "logo") {
     filename = `logo.${ext}`;
   } else {
-    filename = `${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
+    filename = `uploads/${Date.now()}-${Math.random().toString(36).slice(2)}.${ext}`;
   }
 
-  const uploadDir = path.join(process.cwd(), "public", "uploads");
-  const filePath = path.join(uploadDir, filename);
-  await writeFile(filePath, buffer);
+  const blob = await put(filename, file, {
+    access: "public",
+    allowOverwrite: type === "logo",
+  });
 
-  return NextResponse.json({ url: `/uploads/${filename}` });
+  return NextResponse.json({ url: blob.url });
 }

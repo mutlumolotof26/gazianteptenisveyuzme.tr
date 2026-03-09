@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Plus, Trash2, X, Check, Images } from "lucide-react";
+import ImageUpload from "@/components/admin/ImageUpload";
 
 type GalleryItem = { id: string; baslik: string; resimUrl: string; kategori: string };
 const emptyForm = { baslik: "", resimUrl: "", kategori: "genel" };
@@ -80,13 +81,12 @@ export default function GaleriAdminPage() {
                 <label className="block text-xs font-medium text-gray-700 mb-1">Başlık *</label>
                 <input value={form.baslik} onChange={(e) => setForm({ ...form, baslik: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
-              <div>
-                <label className="block text-xs font-medium text-gray-700 mb-1">Resim URL *</label>
-                <input value={form.resimUrl} onChange={(e) => setForm({ ...form, resimUrl: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="https://..." />
-              </div>
-              {form.resimUrl && (
-                <img src={form.resimUrl} alt="Önizleme" className="w-full h-40 object-cover rounded-lg border" onError={(e) => (e.currentTarget.style.display = "none")} />
-              )}
+              <ImageUpload
+                value={form.resimUrl}
+                onChange={(url) => setForm({ ...form, resimUrl: url })}
+                label="Fotoğraf *"
+                height="h-44"
+              />
               <div>
                 <label className="block text-xs font-medium text-gray-700 mb-1">Kategori</label>
                 <select value={form.kategori} onChange={(e) => setForm({ ...form, kategori: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
