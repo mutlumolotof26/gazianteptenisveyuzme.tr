@@ -48,3 +48,6 @@ next-env.d.ts
 
 # uploaded files (use Vercel Blob in production)
 /public/uploads/
+
+.vercel
+.env*.local
