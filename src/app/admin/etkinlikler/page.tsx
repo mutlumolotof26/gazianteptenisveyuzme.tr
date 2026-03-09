@@ -1,10 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Plus, Edit, Trash2, X, Check, Calendar } from "lucide-react";
-import ImageUpload from "@/components/admin/ImageUpload";
 
-type Event = { id: string; baslik: string; aciklama?: string; tarih: string; yer?: string; kategori: string; aktif: boolean; resimUrl?: string };
-const emptyForm = { baslik: "", aciklama: "", tarih: "", yer: "", kategori: "genel", aktif: true, resimUrl: "" };
+type Event = { id: string; baslik: string; aciklama?: string; tarih: string; yer?: string; kategori: string; aktif: boolean };
+const emptyForm = { baslik: "", aciklama: "", tarih: "", yer: "", kategori: "genel", aktif: true };
 
 export default function EtkinliklerAdminPage() {
   const [items, setItems] = useState<Event[]>([]);
@@ -39,7 +38,7 @@ export default function EtkinliklerAdminPage() {
   }
 
   function startEdit(item: Event) {
-    setForm({ baslik: item.baslik, aciklama: item.aciklama || "", tarih: item.tarih.slice(0, 16), yer: item.yer || "", kategori: item.kategori, aktif: item.aktif, resimUrl: item.resimUrl || "" });
+    setForm({ baslik: item.baslik, aciklama: item.aciklama || "", tarih: item.tarih.slice(0, 16), yer: item.yer || "", kategori: item.kategori, aktif: item.aktif });
     setEditId(item.id);
     setShowForm(true);
   }
@@ -143,12 +142,6 @@ export default function EtkinliklerAdminPage() {
                   <label htmlFor="aktif2" className="text-sm text-gray-700">Aktif</label>
                 </div>
               </div>
-              <ImageUpload
-                value={form.resimUrl}
-                onChange={(url) => setForm({ ...form, resimUrl: url })}
-                label="Etkinlik Fotoğrafı"
-                height="h-36"
-              />
             </div>
             <div className="flex gap-3 p-5 border-t">
               <button onClick={() => setShowForm(false)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button>

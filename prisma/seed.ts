@@ -1,17 +1,13 @@
 import { PrismaClient } from "@prisma/client";
-import { PrismaPg } from "@prisma/adapter-pg";
-import { Pool } from "pg";
+import { PrismaBetterSQLite3 } from "@prisma/adapter-better-sqlite3";
+import Database from "better-sqlite3";
 import bcrypt from "bcryptjs";
-import dotenv from "dotenv";
 import path from "path";
 
-// .env.local'i yükle (Vercel env'leri için)
-dotenv.config({ path: path.resolve(process.cwd(), ".env.local") });
-dotenv.config(); // fallback .env
-
-const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-const adapter = new PrismaPg(pool);
-const prisma = new PrismaClient({ adapter });
+const dbPath = path.join(__dirname, "../prisma/dev.db");
+const sqlite = new Database(dbPath);
+const adapter = new PrismaBetterSQLite3(sqlite);
+const prisma = new PrismaClient({ adapter } as Parameters<typeof PrismaClient>[0]);
 
 async function main() {
   console.log("🌱 Seed başlıyor...");
@@ -52,7 +48,7 @@ async function main() {
     {
       baslik: "Gaziantep Açık Tenis Turnuvası Başlıyor!",
       ozet: "Bu yıl 5. kez düzenlenen Gaziantep Açık Tenis Turnuvası kayıtları başladı.",
-      icerik: "Bu yıl 5. kez düzenlenen Gaziantep Açık Tenis Turnuvası kayıtları başladı. Turnuva Nisan tarihleri arasında kulübümüzün kortlarında oynanacak.",
+      icerik: "Bu yıl 5. kez düzenlenen Gaziantep Açık Tenis Turnuvası kayıtları başladı. Turnuva 15-20 Nisan 2024 tarihleri arasında kulübümüzün kortlarında oynanacak.",
       kategori: "tenis",
       aktif: true,
     },
@@ -77,19 +73,45 @@ async function main() {
   }
   console.log("✅ Örnek haberler eklendi");
 
-  // SiteSettings oluştur
-  await prisma.siteSettings.upsert({
-    where: { id: 1 },
-    update: {},
-    create: { id: 1 },
-  });
-  console.log("✅ Site ayarları oluşturuldu");
+  // Örnek etkinlikler
+  const events = [
+    {
+      baslik: "Gaziantep Açık Tenis Turnuvası",
+      aciklama: "Yıllık geleneksel tenis turnuvamız.",
+      tarih: new Date("2026-04-15T09:00:00"),
+      yer: "Kulüp Ana Kortu",
+      kategori: "turnuva",
+      aktif: true,
+    },
+    {
+      baslik: "Yüzme Gala Gecesi",
+      aciklama: "Sezon sonu yüzme yarışmaları ve ödül töreni.",
+      tarih: new Date("2026-05-20T18:00:00"),
+      yer: "Olimpik Havuz",
+      kategori: "yuzme",
+      aktif: true,
+    },
+    {
+      baslik: "Çocuk Tenis Festivali",
+      aciklama: "8-12 yaş grubu çocuklar için eğlenceli tenis etkinliği.",
+      tarih: new Date("2026-06-08T10:00:00"),
+      yer: "Mini Kort",
+      kategori: "tenis",
+      aktif: true,
+    },
+  ];
+
+  for (const event of events) {
+    await prisma.event.create({ data: event });
+  }
+  console.log("✅ Örnek etkinlikler eklendi");
 
   console.log("\n🎉 Seed tamamlandı!");
   console.log("\n📋 Admin Bilgileri:");
   console.log("   E-posta: admin@gazitenisyuzme.com");
   console.log("   Şifre: admin123");
-  console.log("\n🌐 Admin panel: https://gazianteptenisveyuzme.tr/admin/login");
+  console.log("\n🚀 Siteyi başlatmak için: npm run dev");
+  console.log("📍 Admin panel: http://localhost:3000/admin/login");
 }
 
 main()

@@ -3,14 +3,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import {
-  LayoutDashboard, Users, Newspaper, Calendar, Images, MessageSquare, LogOut, Menu, X, Settings, UserCheck, Wallet,
+  LayoutDashboard, Users, Newspaper, Calendar, Images, MessageSquare, LogOut, Menu, X, Settings, UserCheck,
 } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
   { href: "/admin/dashboard", icon: LayoutDashboard, label: "Dashboard" },
   { href: "/admin/uyeler", icon: Users, label: "Üyeler" },
-  { href: "/admin/aidat", icon: Wallet, label: "Aidat Takibi" },
   { href: "/admin/antrenorler", icon: UserCheck, label: "Antrenörler" },
   { href: "/admin/haberler", icon: Newspaper, label: "Haberler" },
   { href: "/admin/etkinlikler", icon: Calendar, label: "Etkinlikler" },

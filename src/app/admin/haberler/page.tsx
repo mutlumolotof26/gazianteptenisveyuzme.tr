@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Plus, Edit, Trash2, X, Check, Eye, EyeOff } from "lucide-react";
-import ImageUpload from "@/components/admin/ImageUpload";
 
 type News = { id: string; baslik: string; ozet?: string; icerik: string; resimUrl?: string; kategori: string; aktif: boolean; yayinTarihi: string };
 
@@ -123,12 +122,10 @@ export default function HaberlerAdminPage() {
                 <label className="block text-xs font-medium text-gray-700 mb-1">İçerik *</label>
                 <textarea value={form.icerik} onChange={(e) => setForm({ ...form, icerik: e.target.value })} rows={8} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
-              <ImageUpload
-                value={form.resimUrl}
-                onChange={(url) => setForm({ ...form, resimUrl: url })}
-                label="Kapak Fotoğrafı"
-                height="h-36"
-              />
+              <div>
+                <label className="block text-xs font-medium text-gray-700 mb-1">Resim URL</label>
+                <input value={form.resimUrl} onChange={(e) => setForm({ ...form, resimUrl: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="https://..." />
+              </div>
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="block text-xs font-medium text-gray-700 mb-1">Kategori</label>
