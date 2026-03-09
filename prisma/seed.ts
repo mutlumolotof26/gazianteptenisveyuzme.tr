@@ -4,11 +4,9 @@ dotenv.config({ path: path.resolve(process.cwd(), ".env.local"), override: true 
 
 import { PrismaClient } from "@prisma/client";
 import { PrismaNeon } from "@prisma/adapter-neon";
-import { neon } from "@neondatabase/serverless";
 import bcrypt from "bcryptjs";
 
-const sql = neon(process.env.DATABASE_URL!);
-const adapter = new PrismaNeon(sql);
+const adapter = new PrismaNeon({ connectionString: process.env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
 
 async function main() {
