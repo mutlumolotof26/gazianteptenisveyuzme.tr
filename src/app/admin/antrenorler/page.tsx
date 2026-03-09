@@ -82,7 +82,13 @@ export default function AntrenorlerPage() {
       fd.append("file", file);
       const res = await fetch("/api/upload", { method: "POST", body: fd });
       const data = await res.json();
-      if (data.url) setForm((prev) => ({ ...prev, resimUrl: data.url }));
+      if (res.ok && data.url) {
+        setForm((prev) => ({ ...prev, resimUrl: data.url }));
+      } else {
+        alert(data.error || "Fotoğraf yükleme başarısız.");
+      }
+    } catch {
+      alert("Fotoğraf yüklenirken bir hata oluştu.");
     } finally {
       setUploadingImg(false);
       if (fileRef.current) fileRef.current.value = "";

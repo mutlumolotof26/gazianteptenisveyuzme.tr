@@ -7,6 +7,9 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getAdminSession();
+  if (!session) redirect("/admin/login");
+
   return (
     <div className="flex min-h-screen bg-gray-100">
       <AdminSidebar />
