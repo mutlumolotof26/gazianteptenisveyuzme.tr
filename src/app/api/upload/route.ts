@@ -21,6 +21,11 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Geçersiz dosya türü" }, { status: 400 });
     }
 
+    const token = process.env.BLOB_READ_WRITE_TOKEN;
+    if (!token) {
+      return NextResponse.json({ error: "Blob token ayarlanmamış. Vercel Storage kontrol edin." }, { status: 500 });
+    }
+
     let filename: string;
     if (type === "logo") {
       filename = `logo.${ext}`;
@@ -31,11 +36,13 @@ export async function POST(req: NextRequest) {
     const blob = await put(filename, file, {
       access: "public",
       addRandomSuffix: false,
+      token,
     });
 
     return NextResponse.json({ url: blob.url });
   } catch (err) {
-    console.error("Upload error:", err);
-    return NextResponse.json({ error: "Dosya yükleme başarısız." }, { status: 500 });
+    const message = err instanceof Error ? err.message : "Bilinmeyen hata";
+    console.error("Upload error:", message);
+    return NextResponse.json({ error: `Yükleme hatası: ${message}` }, { status: 500 });
   }
 }
