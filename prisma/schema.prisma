@@ -1,0 +1,126 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model AdminUser {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("admin")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Member {
+  id          String   @id @default(cuid())
+  ad          String
+  soyad       String
+  email       String   @unique
+  telefon     String?
+  dogumTarihi String?
+  uyeTipi     String   @default("standart")
+  spor        String   @default("her_ikisi")
+  durum       String   @default("aktif")
+  kayitTarihi DateTime @default(now())
+  notlar      String?
+  updatedAt   DateTime @updatedAt
+  aidatlar    Aidat[]
+}
+
+model Aidat {
+  id          String    @id @default(cuid())
+  memberId    String
+  member      Member    @relation(fields: [memberId], references: [id], onDelete: Cascade)
+  donem       String
+  tutar       Float     @default(0)
+  odendi      Boolean   @default(false)
+  odemeTarihi DateTime?
+  notlar      String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([memberId, donem])
+}
+
+model News {
+  id          String   @id @default(cuid())
+  baslik      String
+  ozet        String?
+  icerik      String
+  resimUrl    String?
+  kategori    String   @default("genel")
+  aktif       Boolean  @default(true)
+  yayinTarihi DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  baslik      String
+  aciklama    String?
+  tarih       DateTime
+  bitisTarihi DateTime?
+  yer         String?
+  kategori    String   @default("genel")
+  resimUrl    String?
+  aktif       Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Gallery {
+  id        String   @id @default(cuid())
+  baslik    String
+  resimUrl  String
+  kategori  String   @default("genel")
+  aktif     Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  ad        String
+  email     String
+  telefon   String?
+  konu      String?
+  mesaj     String
+  okundu    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model Coach {
+  id        String   @id @default(cuid())
+  ad        String
+  unvan     String
+  spor      String   @default("her_ikisi")
+  deneyim   String   @default("")
+  biyografi String   @default("")
+  resimUrl  String   @default("")
+  aktif     Boolean  @default(true)
+  sira      Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id               Int      @id @default(1)
+  logoUrl          String   @default("/logo.png")
+  siteName         String   @default("Gaziantep Yüzme Spor Kulübü")
+  siteAcik         String   @default("Tenis & Yüzme")
+  telefon          String   @default("+90 (342) 000 00 00")
+  email            String   @default("info@gazitenisyuzme.com")
+  adres            String   @default("Şehitkamil Mahallesi, Gaziantep, Türkiye")
+  calismaHafta     String   @default("07:00 - 22:00")
+  calismaCumartesi String   @default("08:00 - 20:00")
+  calismaPazar     String   @default("09:00 - 18:00")
+  instagramUrl     String   @default("")
+  facebookUrl      String   @default("")
+  whatsappNo       String   @default("")
+  updatedAt        DateTime @updatedAt
+}

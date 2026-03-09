@@ -1,0 +1,48 @@
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
+
+const defaults = {
+  logoUrl: "/logo.png",
+  siteName: "Gaziantep Yüzme Spor Kulübü",
+  siteAcik: "Tenis & Yüzme",
+  telefon: "+90 (342) 000 00 00",
+  email: "info@gazitenisyuzme.com",
+  adres: "Şehitkamil Mahallesi, Gaziantep, Türkiye",
+  calismaHafta: "07:00 - 22:00",
+  calismaCumartesi: "08:00 - 20:00",
+  calismaPazar: "09:00 - 18:00",
+  instagramUrl: "",
+  facebookUrl: "",
+  whatsappNo: "",
+};
+
+export async function GET() {
+  const settings = await prisma.siteSettings.findUnique({ where: { id: 1 } });
+  return NextResponse.json(settings ?? defaults);
+}
+
+export async function PUT(req: Request) {
+  await requireAdmin();
+
+  const body = await req.json();
+  const fields = [
+    "logoUrl", "siteName", "siteAcik",
+    "telefon", "email", "adres",
+    "calismaHafta", "calismaCumartesi", "calismaPazar",
+    "instagramUrl", "facebookUrl", "whatsappNo",
+  ] as const;
+
+  const update: Record<string, string> = {};
+  for (const f of fields) {
+    if (body[f] !== undefined) update[f] = body[f];
+  }
+
+  const settings = await prisma.siteSettings.upsert({
+    where: { id: 1 },
+    update,
+    create: { id: 1, ...defaults, ...update },
+  });
+
+  return NextResponse.json(settings);
+}
