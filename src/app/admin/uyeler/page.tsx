@@ -64,6 +64,12 @@ export default function UyelerPage() {
   const [aidatSearch, setAidatSearch] = useState("");
   const [sporFilter, setSporFilter] = useState("");
 
+  // Edit modal – aidat bölümü
+  const [editMemberAidatlar, setEditMemberAidatlar] = useState<AidatRecord[]>([]);
+  const [editAidatLoading, setEditAidatLoading] = useState(false);
+  const [newAidatForm, setNewAidatForm] = useState({ donem: currentDonem(), tutar: 0, odendi: false });
+  const [showAddAidat, setShowAddAidat] = useState(false);
+
   const fetchMembers = useCallback(async () => {
     setLoading(true);
     const params = new URLSearchParams();
@@ -135,9 +141,40 @@ export default function UyelerPage() {
     if (selectedMember?.id === id) setSelectedMember({ ...selectedMember, durum: newDurum });
   }
 
-  function startEdit(member: Member) {
+  async function startEdit(member: Member) {
     setForm({ ad: member.ad, soyad: member.soyad, email: member.email, telefon: member.telefon || "", dogumTarihi: member.dogumTarihi || "", uyeTipi: member.uyeTipi, spor: member.spor, durum: member.durum, notlar: member.notlar || "" });
-    setEditId(member.id); setShowForm(true);
+    setEditId(member.id);
+    setShowAddAidat(false);
+    setNewAidatForm({ donem: currentDonem(), tutar: 0, odendi: false });
+    setShowForm(true);
+    setEditAidatLoading(true);
+    const res = await fetch(`/api/members/${member.id}`);
+    const data = await res.json();
+    setEditMemberAidatlar(data.aidatlar ?? []);
+    setEditAidatLoading(false);
+  }
+
+  async function toggleEditAidat(a: AidatRecord) {
+    setSaving(true);
+    await fetch(`/api/aidat/${a.id}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ tutar: a.tutar, odendi: !a.odendi, notlar: a.notlar ?? "" }) });
+    setSaving(false);
+    if (editId) {
+      const res = await fetch(`/api/members/${editId}`);
+      const data = await res.json();
+      setEditMemberAidatlar(data.aidatlar ?? []);
+    }
+  }
+
+  async function saveNewAidat() {
+    if (!editId) return;
+    setSaving(true);
+    await fetch("/api/aidat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ memberId: editId, donem: newAidatForm.donem, tutar: newAidatForm.tutar, odendi: newAidatForm.odendi }) });
+    setSaving(false);
+    setShowAddAidat(false);
+    setNewAidatForm({ donem: currentDonem(), tutar: 0, odendi: false });
+    const res = await fetch(`/api/members/${editId}`);
+    const data = await res.json();
+    setEditMemberAidatlar(data.aidatlar ?? []);
   }
 
   async function toggleOdendi(row: AidatRow) {
@@ -451,6 +488,57 @@ export default function UyelerPage() {
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Durum</label><select value={form.durum} onChange={(e) => setForm({ ...form, durum: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="aktif">Aktif</option><option value="beklemede">Beklemede</option><option value="pasif">Pasif</option></select></div>
               </div>
               <div><label className="block text-xs font-medium text-gray-700 mb-1">Not</label><textarea value={form.notlar} onChange={(e) => setForm({ ...form, notlar: e.target.value })} rows={2} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Opsiyonel not..." /></div>
+
+              {/* Aidat Bölümü – sadece düzenlemede göster */}
+              {editId && (
+                <div className="border-t border-gray-100 pt-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-2"><CreditCard size={14} className="text-blue-500" /> Aidat Geçmişi</h4>
+                    <button onClick={() => setShowAddAidat((v) => !v)} className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"><Plus size={12} /> Ekle</button>
+                  </div>
+
+                  {showAddAidat && (
+                    <div className="bg-blue-50 rounded-lg p-3 mb-3 space-y-2">
+                      <div className="grid grid-cols-2 gap-2">
+                        <div>
+                          <label className="block text-xs text-gray-600 mb-1">Dönem (YYYY-AA)</label>
+                          <input value={newAidatForm.donem} onChange={(e) => setNewAidatForm({ ...newAidatForm, donem: e.target.value })} placeholder="2025-01" className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                        <div>
+                          <label className="block text-xs text-gray-600 mb-1">Tutar (₺)</label>
+                          <input type="number" min={0} value={newAidatForm.tutar} onChange={(e) => setNewAidatForm({ ...newAidatForm, tutar: Number(e.target.value) })} className="w-full border border-gray-300 rounded-lg px-2 py-1.5 text-xs focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        </div>
+                      </div>
+                      <label className="flex items-center gap-2 text-xs text-gray-700 cursor-pointer">
+                        <input type="checkbox" checked={newAidatForm.odendi} onChange={(e) => setNewAidatForm({ ...newAidatForm, odendi: e.target.checked })} className="rounded" />
+                        Ödendi olarak işaretle
+                      </label>
+                      <div className="flex gap-2">
+                        <button onClick={() => setShowAddAidat(false)} className="flex-1 text-xs border border-gray-300 rounded-lg py-1.5 text-gray-600 hover:bg-gray-50">İptal</button>
+                        <button onClick={saveNewAidat} disabled={saving} className="flex-1 text-xs bg-blue-600 text-white rounded-lg py-1.5 font-medium hover:bg-blue-700 disabled:opacity-60">Kaydet</button>
+                      </div>
+                    </div>
+                  )}
+
+                  {editAidatLoading ? (
+                    <p className="text-xs text-gray-400 text-center py-3">Yükleniyor...</p>
+                  ) : editMemberAidatlar.length === 0 ? (
+                    <p className="text-xs text-gray-400 text-center py-3">Henüz aidat kaydı yok.</p>
+                  ) : (
+                    <div className="space-y-1 max-h-48 overflow-y-auto pr-1">
+                      {editMemberAidatlar.map((a) => (
+                        <div key={a.id} className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs ${a.odendi ? "bg-green-50" : "bg-red-50/50"}`}>
+                          <span className="font-medium text-gray-700">{donemLabel(a.donem)}</span>
+                          <span className="text-gray-500">{a.tutar > 0 ? `${a.tutar.toLocaleString("tr-TR")} ₺` : "—"}</span>
+                          <button onClick={() => toggleEditAidat(a)} disabled={saving} className={`flex items-center gap-1 px-2 py-1 rounded-full font-medium transition-colors disabled:opacity-50 ${a.odendi ? "bg-green-100 text-green-700 hover:bg-green-200" : "bg-red-100 text-red-600 hover:bg-red-200"}`}>
+                            {a.odendi ? <><Check size={10} /> Ödendi</> : <><X size={10} /> Ödenmedi</>}
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
             <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white"><button onClick={() => { setShowForm(false); setEditId(null); }} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={handleSave} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 flex items-center justify-center gap-2"><Check size={15} /> {editId ? "Kaydet" : "Ekle"}</button></div>
           </div>
