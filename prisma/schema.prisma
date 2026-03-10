@@ -95,17 +95,47 @@ model Contact {
 }
 
 model Coach {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   ad        String
   unvan     String
-  spor      String   @default("her_ikisi")
-  deneyim   String   @default("")
-  biyografi String   @default("")
-  resimUrl  String   @default("")
-  aktif     Boolean  @default(true)
-  sira      Int      @default(0)
+  spor      String    @default("her_ikisi")
+  deneyim   String    @default("")
+  biyografi String    @default("")
+  resimUrl  String    @default("")
+  aktif     Boolean   @default(true)
+  sira      Int       @default(0)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  sessions  Session[]
+}
+
+model Session {
+  id         String           @id @default(cuid())
+  gun        String
+  baslangic  String
+  bitis      String
+  program    String
+  seviye     String           @default("her_seviye")
+  kapasite   Int              @default(20)
+  coachId    String?
+  coach      Coach?           @relation(fields: [coachId], references: [id], onDelete: SetNull)
+  aktif      Boolean          @default(true)
+  sira       Int              @default(0)
+  createdAt  DateTime         @default(now())
+  updatedAt  DateTime         @updatedAt
+  basvurular SessionRequest[]
+}
+
+model SessionRequest {
+  id        String   @id @default(cuid())
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  ad        String
+  telefon   String
+  email     String?
+  mesaj     String?
+  okundu    Boolean  @default(false)
   createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model SiteSettings {

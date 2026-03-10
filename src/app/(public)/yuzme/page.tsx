@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Waves, Clock, Users, Droplets, Star } from "lucide-react";
+import { Waves, Clock, Users, Droplets, Star, CalendarDays } from "lucide-react";
 import { prisma } from "@/lib/db";
+import SeansBasvuruForm from "./SeansBasvuruForm";
 
 export const dynamic = "force-dynamic";
 
@@ -16,8 +17,39 @@ async function getYuzmeCoaches() {
   });
 }
 
+async function getSeanslar() {
+  return prisma.session.findMany({
+    where: { aktif: true },
+    include: { coach: { select: { id: true, ad: true } } },
+    orderBy: [{ sira: "asc" }, { gun: "asc" }, { baslangic: "asc" }],
+  });
+}
+
+const gunSirasi = ["Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"];
+
+const seviyeLabel: Record<string, string> = {
+  baslangic: "Başlangıç",
+  orta: "Orta",
+  ileri: "İleri",
+  her_seviye: "Her Seviye",
+};
+
+const seviyeColor: Record<string, string> = {
+  baslangic: "bg-green-100 text-green-700",
+  orta: "bg-yellow-100 text-yellow-700",
+  ileri: "bg-red-100 text-red-700",
+  her_seviye: "bg-blue-100 text-blue-700",
+};
+
 export default async function YuzmePage() {
-  const coaches = await getYuzmeCoaches();
+  const [coaches, seanslar] = await Promise.all([getYuzmeCoaches(), getSeanslar()]);
+
+  // Group sessions by day
+  const seansByGun = gunSirasi.reduce<Record<string, typeof seanslar>>((acc, gun) => {
+    const list = seanslar.filter((s) => s.gun === gun);
+    if (list.length > 0) acc[gun] = list;
+    return acc;
+  }, {});
 
   const programs = [
     { title: "Yüzme Okulu (Baby)", age: "2-4 yaş", saat: "Haftada 2 gün", sure: "30 dk", seviye: "Başlangıç" },
@@ -63,6 +95,59 @@ export default async function YuzmePage() {
           </div>
         </div>
       </section>
+
+      {/* Haftalık Seans Programı */}
+      {Object.keys(seansByGun).length > 0 && (
+        <section className="py-16 bg-blue-50">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <CalendarDays size={28} className="text-blue-600" />
+              <h2 className="text-3xl font-bold text-blue-900">Haftalık Seans Programı</h2>
+            </div>
+            <p className="text-center text-gray-500 mb-10">İlgilendiğiniz seansı seçip başvurunuzu yapabilirsiniz</p>
+
+            <div className="space-y-8">
+              {gunSirasi.filter((gun) => seansByGun[gun]).map((gun) => (
+                <div key={gun}>
+                  <h3 className="text-xl font-bold text-blue-800 mb-4 flex items-center gap-2">
+                    <span className="w-2 h-6 bg-blue-500 rounded-full inline-block" />
+                    {gun}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {seansByGun[gun].map((seans) => (
+                      <div key={seans.id} className="bg-white rounded-xl p-5 shadow-sm border border-blue-100 hover:shadow-md transition-shadow">
+                        <div className="flex items-start justify-between mb-3">
+                          <h4 className="font-bold text-gray-800">{seans.program}</h4>
+                          <span className={`text-xs px-2 py-1 rounded-full font-semibold ${seviyeColor[seans.seviye] ?? "bg-gray-100 text-gray-600"}`}>
+                            {seviyeLabel[seans.seviye] ?? seans.seviye}
+                          </span>
+                        </div>
+                        <div className="space-y-1.5 text-sm text-gray-500 mb-1">
+                          <div className="flex items-center gap-2">
+                            <Clock size={13} className="text-blue-500 flex-shrink-0" />
+                            <span>{seans.baslangic} – {seans.bitis}</span>
+                          </div>
+                          {seans.coach && (
+                            <div className="flex items-center gap-2">
+                              <Star size={13} className="text-amber-400 flex-shrink-0" />
+                              <span>{seans.coach.ad}</span>
+                            </div>
+                          )}
+                          <div className="flex items-center gap-2">
+                            <Users size={13} className="text-blue-500 flex-shrink-0" />
+                            <span>Kapasite: {seans.kapasite} kişi</span>
+                          </div>
+                        </div>
+                        <SeansBasvuruForm session={seans} />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Programlar */}
       <section className="py-16 bg-gray-50">
