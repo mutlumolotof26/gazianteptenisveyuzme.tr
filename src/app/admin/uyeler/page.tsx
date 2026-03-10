@@ -3,7 +3,7 @@ import { useEffect, useState, useCallback } from "react";
 import {
   Search, Plus, Trash2, Edit, Check, X, UserCheck, UserX,
   ChevronLeft, ChevronRight, TrendingUp, Users, CheckCircle, XCircle,
-  Phone, Mail, Calendar, CreditCard, ChevronDown, ArrowLeft,
+  Phone, Mail, Calendar, CreditCard, ChevronDown, ArrowLeft, Waves, Eye, EyeOff,
 } from "lucide-react";
 
 type Member = {
@@ -21,6 +21,11 @@ type AidatRow = {
   aidatId: string | null; tutar: number; odendi: boolean;
   odemeTarihi: string | null; notlar: string;
 };
+type SessionRequest = {
+  id: string; ad: string; telefon: string; email?: string | null; mesaj?: string | null;
+  okundu: boolean; createdAt: string;
+  session: { program: string; gun: string; baslangic: string; bitis: string };
+};
 
 const durumEtiket: Record<string, { label: string; cls: string }> = {
   aktif: { label: "Aktif", cls: "bg-green-100 text-green-700" },
@@ -37,7 +42,9 @@ function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return 
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
 
 export default function UyelerPage() {
-  const [tab, setTab] = useState<"uyeler" | "aidat">("uyeler");
+  const [tab, setTab] = useState<"uyeler" | "aidat" | "basvurular">("uyeler");
+  const [basvurular, setBasvurular] = useState<SessionRequest[]>([]);
+  const [basvurularLoading, setBasvurularLoading] = useState(false);
   const [selectedMember, setSelectedMember] = useState<MemberDetail | null>(null);
 
   const [members, setMembers] = useState<Member[]>([]);
@@ -74,6 +81,28 @@ export default function UyelerPage() {
     setAidatLoading(false);
   }
 
+  async function fetchBasvurular() {
+    setBasvurularLoading(true);
+    const res = await fetch("/api/sessions/request");
+    setBasvurular(await res.json());
+    setBasvurularLoading(false);
+  }
+
+  async function toggleOkundu(req: SessionRequest) {
+    await fetch(`/api/sessions/request/${req.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ okundu: !req.okundu }),
+    });
+    fetchBasvurular();
+  }
+
+  async function deleteBasvuru(id: string) {
+    if (!confirm("Bu başvuruyu silmek istediğinizden emin misiniz?")) return;
+    await fetch(`/api/sessions/request/${id}`, { method: "DELETE" });
+    fetchBasvurular();
+  }
+
   async function openProfile(member: Member) {
     const res = await fetch(`/api/members/${member.id}`);
     setSelectedMember(await res.json());
@@ -81,6 +110,7 @@ export default function UyelerPage() {
 
   useEffect(() => { fetchMembers(); }, [fetchMembers]);
   useEffect(() => { if (tab === "aidat") fetchAidat(donem); }, [donem, tab]);
+  useEffect(() => { if (tab === "basvurular") fetchBasvurular(); }, [tab]);
 
   async function handleSave() {
     const method = editId ? "PUT" : "POST";
@@ -163,6 +193,14 @@ export default function UyelerPage() {
         </button>
         <button onClick={() => setTab("aidat")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "aidat" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <TrendingUp size={16} /> Aidat Takibi
+        </button>
+        <button onClick={() => setTab("basvurular")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "basvurular" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Waves size={16} /> Seans Başvuruları
+          {basvurular.filter(b => !b.okundu).length > 0 && (
+            <span className="bg-red-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full leading-none">
+              {basvurular.filter(b => !b.okundu).length}
+            </span>
+          )}
         </button>
       </div>
 
@@ -329,6 +367,65 @@ export default function UyelerPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+        </>
+      )}
+
+      {/* ── SEANS BAŞVURULARI ── */}
+      {tab === "basvurular" && (
+        <>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-sm text-gray-500">{basvurular.length} başvuru · {basvurular.filter(b => !b.okundu).length} okunmamış</p>
+            {basvurular.filter(b => !b.okundu).length > 0 && (
+              <button
+                onClick={async () => {
+                  await Promise.all(basvurular.filter(b => !b.okundu).map(b =>
+                    fetch(`/api/sessions/request/${b.id}`, { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ okundu: true }) })
+                  ));
+                  fetchBasvurular();
+                }}
+                className="text-xs text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Tümünü okundu işaretle
+              </button>
+            )}
+          </div>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+            {basvurularLoading ? (
+              <div className="text-center py-10 text-gray-400">Yükleniyor...</div>
+            ) : basvurular.length === 0 ? (
+              <div className="text-center py-10 text-gray-400">Henüz başvuru yok.</div>
+            ) : (
+              <div className="divide-y divide-gray-50">
+                {basvurular.map((b) => (
+                  <div key={b.id} className={`p-4 flex items-start gap-4 ${!b.okundu ? "bg-blue-50/40" : ""}`}>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-2 mb-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-semibold text-gray-800 text-sm">{b.ad}</span>
+                          {!b.okundu && <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium">Yeni</span>}
+                        </div>
+                        <span className="text-xs text-gray-400 shrink-0">{new Date(b.createdAt).toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" })}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-xs text-gray-500 mb-2 flex-wrap">
+                        <span className="flex items-center gap-1"><Waves size={11} className="text-blue-400" />{b.session.program} · {b.session.gun} {b.session.baslangic}–{b.session.bitis}</span>
+                        <a href={`tel:${b.telefon}`} className="flex items-center gap-1 hover:text-blue-600"><Phone size={11} />{b.telefon}</a>
+                        {b.email && <a href={`mailto:${b.email}`} className="flex items-center gap-1 hover:text-blue-600"><Mail size={11} />{b.email}</a>}
+                      </div>
+                      {b.mesaj && <p className="text-sm text-gray-600 bg-gray-50 rounded-lg px-3 py-2 italic">"{b.mesaj}"</p>}
+                    </div>
+                    <div className="flex items-center gap-1 shrink-0">
+                      <button onClick={() => toggleOkundu(b)} title={b.okundu ? "Okunmadı işaretle" : "Okundu işaretle"} className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                        {b.okundu ? <EyeOff size={15} /> : <Eye size={15} />}
+                      </button>
+                      <button onClick={() => deleteBasvuru(b.id)} title="Sil" className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors">
+                        <Trash2 size={15} />
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </>
       )}
