@@ -46,7 +46,7 @@ export default async function YuzmePage() {
 
   // Group sessions by day
   const seansByGun = gunSirasi.reduce<Record<string, typeof seanslar>>((acc, gun) => {
-    const list = seanslar.filter((s) => s.gun === gun);
+    const list = seanslar.filter((s) => s.gun.toLowerCase() === gun.toLowerCase());
     if (list.length > 0) acc[gun] = list;
     return acc;
   }, {});
