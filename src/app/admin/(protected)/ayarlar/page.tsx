@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { Save, Upload, Check, AlertCircle, Globe, Phone, Mail, MapPin, Clock, Share2, Image as ImageIcon } from "lucide-react";
+import { Save, Upload, Check, AlertCircle, Globe, Phone, Mail, MapPin, Clock, Share2, Image as ImageIcon, Lock, Eye, EyeOff } from "lucide-react";
 
 type Settings = {
   logoUrl: string;
@@ -40,6 +40,13 @@ export default function AyarlarPage() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const fileRef = useRef<HTMLInputElement>(null);
 
+  // Şifre değiştirme state
+  const [sifreForm, setSifreForm] = useState({ mevcutSifre: "", yeniSifre: "", yeniSifreTekrar: "" });
+  const [sifreGoster, setSifreGoster] = useState({ mevcut: false, yeni: false, tekrar: false });
+  const [sifreSaving, setSifreSaving] = useState(false);
+  const [sifreStatus, setSifreStatus] = useState<"idle" | "success" | "error">("idle");
+  const [sifreHata, setSifreHata] = useState("");
+
   useEffect(() => {
     fetch("/api/settings")
       .then((r) => r.json())
@@ -64,6 +71,42 @@ export default function AyarlarPage() {
     } finally {
       setUploadingLogo(false);
       if (fileRef.current) fileRef.current.value = "";
+    }
+  }
+
+  async function handleSifreChange() {
+    setSifreHata("");
+    if (!sifreForm.mevcutSifre || !sifreForm.yeniSifre || !sifreForm.yeniSifreTekrar) {
+      setSifreHata("Tüm alanlar zorunludur."); return;
+    }
+    if (sifreForm.yeniSifre !== sifreForm.yeniSifreTekrar) {
+      setSifreHata("Yeni şifreler eşleşmiyor."); return;
+    }
+    if (sifreForm.yeniSifre.length < 6) {
+      setSifreHata("Yeni şifre en az 6 karakter olmalı."); return;
+    }
+    setSifreSaving(true);
+    setSifreStatus("idle");
+    try {
+      const res = await fetch("/api/auth/change-password", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mevcutSifre: sifreForm.mevcutSifre, yeniSifre: sifreForm.yeniSifre }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setSifreStatus("success");
+        setSifreForm({ mevcutSifre: "", yeniSifre: "", yeniSifreTekrar: "" });
+      } else {
+        setSifreHata(data.error || "Bir hata oluştu.");
+        setSifreStatus("error");
+      }
+    } catch {
+      setSifreHata("Bir hata oluştu.");
+      setSifreStatus("error");
+    } finally {
+      setSifreSaving(false);
+      setTimeout(() => { setSifreStatus("idle"); setSifreHata(""); }, 4000);
     }
   }
 
@@ -312,6 +355,61 @@ export default function AyarlarPage() {
               />
               <p className="text-xs text-gray-400 mt-1">Boş bırakılırsa WhatsApp butonu görünmez.</p>
             </div>
+          </div>
+        </div>
+
+        {/* Şifre Değiştir */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div className="flex items-center gap-2 mb-5">
+            <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+              <Lock size={16} className="text-red-700" />
+            </div>
+            <h2 className="font-bold text-gray-800">Şifre Değiştir</h2>
+          </div>
+
+          {sifreStatus === "success" && (
+            <div className="mb-4 flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 rounded-lg px-4 py-3 text-sm">
+              <Check size={16} /> Şifre başarıyla değiştirildi.
+            </div>
+          )}
+          {sifreHata && (
+            <div className="mb-4 flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 rounded-lg px-4 py-3 text-sm">
+              <AlertCircle size={16} /> {sifreHata}
+            </div>
+          )}
+
+          <div className="space-y-4 max-w-md">
+            {[
+              { label: "Mevcut Şifre", key: "mevcutSifre" as const, show: sifreGoster.mevcut, toggle: () => setSifreGoster(s => ({ ...s, mevcut: !s.mevcut })) },
+              { label: "Yeni Şifre", key: "yeniSifre" as const, show: sifreGoster.yeni, toggle: () => setSifreGoster(s => ({ ...s, yeni: !s.yeni })) },
+              { label: "Yeni Şifre (Tekrar)", key: "yeniSifreTekrar" as const, show: sifreGoster.tekrar, toggle: () => setSifreGoster(s => ({ ...s, tekrar: !s.tekrar })) },
+            ].map(({ label, key, show, toggle }) => (
+              <div key={key}>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+                <div className="relative">
+                  <input
+                    type={show ? "text" : "password"}
+                    value={sifreForm[key]}
+                    onChange={(e) => setSifreForm(prev => ({ ...prev, [key]: e.target.value }))}
+                    className="w-full border border-gray-300 rounded-lg px-3 pr-10 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    placeholder="••••••••"
+                  />
+                  <button type="button" onClick={toggle} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                    {show ? <EyeOff size={15} /> : <Eye size={15} />}
+                  </button>
+                </div>
+              </div>
+            ))}
+
+            <button
+              type="button"
+              onClick={handleSifreChange}
+              disabled={sifreSaving}
+              className="flex items-center gap-2 bg-red-700 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-red-600 transition-colors disabled:opacity-60 text-sm"
+            >
+              {sifreSaving ? <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" /> : <Lock size={15} />}
+              {sifreSaving ? "Kaydediliyor..." : "Şifreyi Güncelle"}
+            </button>
           </div>
         </div>
 
