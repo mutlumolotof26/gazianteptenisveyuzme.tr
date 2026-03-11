@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { Save, Upload, Check, AlertCircle, Globe, Phone, Mail, MapPin, Clock, Share2, Image as ImageIcon, Lock, Eye, EyeOff } from "lucide-react";
+import { Save, Upload, Check, AlertCircle, Globe, Phone, Mail, MapPin, Clock, Share2, Image as ImageIcon, Lock, Eye, EyeOff, Tag } from "lucide-react";
 
 type Settings = {
   logoUrl: string;
@@ -15,6 +15,10 @@ type Settings = {
   instagramUrl: string;
   facebookUrl: string;
   whatsappNo: string;
+  fiyatYetiskin: string;
+  fiyatCocuk: string;
+  fiyatYazKursu: string;
+  fiyatKardes: string;
 };
 
 const defaultSettings: Settings = {
@@ -30,6 +34,10 @@ const defaultSettings: Settings = {
   instagramUrl: "",
   facebookUrl: "",
   whatsappNo: "",
+  fiyatYetiskin: "₺800",
+  fiyatCocuk: "₺600",
+  fiyatYazKursu: "₺1.500",
+  fiyatKardes: "₺500",
 };
 
 export default function AyarlarPage() {
@@ -356,6 +364,35 @@ export default function AyarlarPage() {
               <p className="text-xs text-gray-400 mt-1">Boş bırakılırsa WhatsApp butonu görünmez.</p>
             </div>
           </div>
+        </div>
+
+        {/* Üyelik Fiyatları */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+          <div className="flex items-center gap-2 mb-5">
+            <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+              <Tag size={16} className="text-orange-700" />
+            </div>
+            <h2 className="font-bold text-gray-800">Üyelik Fiyatları</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              { label: "Yetişkin", key: "fiyatYetiskin" as const },
+              { label: "Çocuk", key: "fiyatCocuk" as const },
+              { label: "Yaz Kursu", key: "fiyatYazKursu" as const },
+              { label: "Kardeş", key: "fiyatKardes" as const },
+            ].map(({ label, key }) => (
+              <div key={key}>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{label}</label>
+                <input
+                  value={form[key]}
+                  onChange={(e) => set(key, e.target.value)}
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="₺800"
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-3">Fiyatları güncelledikten sonra sayfanın üstündeki "Kaydet" butonuna tıklayın.</p>
         </div>
 
         {/* Şifre Değiştir */}

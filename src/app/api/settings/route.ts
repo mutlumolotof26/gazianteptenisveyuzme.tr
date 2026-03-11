@@ -15,6 +15,10 @@ const defaults = {
   instagramUrl: "",
   facebookUrl: "",
   whatsappNo: "",
+  fiyatYetiskin: "₺800",
+  fiyatCocuk: "₺600",
+  fiyatYazKursu: "₺1.500",
+  fiyatKardes: "₺500",
 };
 
 export async function GET() {
@@ -32,6 +36,7 @@ export async function PUT(req: Request) {
     "telefon", "email", "adres",
     "calismaHafta", "calismaCumartesi", "calismaPazar",
     "instagramUrl", "facebookUrl", "whatsappNo",
+    "fiyatYetiskin", "fiyatCocuk", "fiyatYazKursu", "fiyatKardes",
   ] as const;
 
   const update: Record<string, string> = {};

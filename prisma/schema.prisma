@@ -152,5 +152,9 @@ model SiteSettings {
   instagramUrl     String   @default("")
   facebookUrl      String   @default("")
   whatsappNo       String   @default("")
+  fiyatYetiskin    String   @default("₺800")
+  fiyatCocuk       String   @default("₺600")
+  fiyatYazKursu    String   @default("₺1.500")
+  fiyatKardes      String   @default("₺500")
   updatedAt        DateTime @updatedAt
 }
