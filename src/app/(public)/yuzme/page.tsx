@@ -6,8 +6,22 @@ import SeansBasvuruForm from "./SeansBasvuruForm";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Yüzme",
-  description: "Gaziantep Tenis ve Yüzme Kulübü olimpik yüzme havuzu, yüzme kursları ve antrenörler.",
+  title: "Yüzme Kursları ve Olimpik Havuz",
+  description: "Gaziantep yüzme kursu ve olimpik yüzme havuzu. Çocuk, yetişkin ve bebek yüzme programları. Uzman antrenörlerle Gaziantep'in en köklü yüzme kulübünde yüzme öğrenin.",
+  keywords: [
+    "Gaziantep yüzme kursu",
+    "Gaziantep yüzme havuzu",
+    "yüzme kursu Gaziantep",
+    "çocuk yüzme kursu Gaziantep",
+    "bebek yüzme Gaziantep",
+    "yetişkin yüzme kursu Gaziantep",
+    "olimpik havuz Gaziantep",
+    "yüzme okulu Gaziantep",
+  ],
+  openGraph: {
+    title: "Gaziantep Yüzme Kursu ve Olimpik Havuz",
+    description: "Çocuk, yetişkin ve bebek yüzme programları. Gaziantep'in olimpik yüzme havuzunda uzman antrenörlerle yüzme öğrenin.",
+  },
 };
 
 async function getYuzmeCoaches() {
