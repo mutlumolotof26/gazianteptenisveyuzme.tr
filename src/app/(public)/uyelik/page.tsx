@@ -4,38 +4,38 @@ import { Check, Users } from "lucide-react";
 
 const plans = [
   {
-    title: "Öğrenci",
-    price: "₺500",
+    title: "Yetişkin",
+    price: "₺800",
     period: "/ay",
     color: "blue",
-    features: ["Tenis veya Yüzme (seçiniz)", "Haftada 3 ders", "Soyunma odası kullanımı", "Öğrenci kimliği ile"],
+    features: ["Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler", "Soyunma odası kullanımı"],
   },
   {
-    title: "Standart",
-    price: "₺800",
+    title: "Çocuk",
+    price: "₺600",
     period: "/ay",
     color: "green",
     popular: true,
-    features: ["Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler", "Ücretsiz raket kiralama"],
+    features: ["Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler", "Uzman çocuk antrenörleri"],
   },
   {
-    title: "Premium",
-    price: "₺1.200",
-    period: "/ay",
+    title: "Yaz Kursu",
+    price: "₺1.500",
+    period: "/kurs",
     color: "amber",
-    features: ["Tenis + Yüzme", "Sınırsız ders", "Tüm tesisler", "Özel ders indirimi %20", "Antrenör önceliği"],
+    features: ["Tenis veya Yüzme (seçiniz)", "Yoğun yaz programı", "Tüm tesisler", "Sertifika"],
   },
   {
-    title: "Aile",
-    price: "₺2.000",
+    title: "Kardeş",
+    price: "₺500",
     period: "/ay",
     color: "purple",
-    features: ["4 kişiye kadar", "Tenis + Yüzme", "Sınırsız ders", "Tüm tesisler", "Etkinliklere ücretsiz katılım"],
+    features: ["2. kardeş için indirimli fiyat", "Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler"],
   },
 ];
 
 export default function UyelikPage() {
-  const [formData, setFormData] = useState({ ad: "", soyad: "", email: "", telefon: "", uyeTipi: "standart", spor: "her_ikisi", mesaj: "" });
+  const [formData, setFormData] = useState({ ad: "", soyad: "", email: "", telefon: "", uyeTipi: "yetiskin", spor: "her_ikisi", mesaj: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -142,10 +142,10 @@ export default function UyelikPage() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Üyelik Tipi</label>
                 <select value={formData.uyeTipi} onChange={(e) => setFormData({ ...formData, uyeTipi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-                  <option value="ogrenci">Öğrenci</option>
-                  <option value="standart">Standart</option>
-                  <option value="premium">Premium</option>
-                  <option value="aile">Aile</option>
+                  <option value="yetiskin">Yetişkin</option>
+                  <option value="cocuk">Çocuk</option>
+                  <option value="yaz_kursu">Yaz Kursu</option>
+                  <option value="kardes">Kardeş</option>
                 </select>
               </div>
               <div>
