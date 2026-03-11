@@ -56,7 +56,7 @@ export default function UyelikClient({ plans }: Props) {
           <p className="text-center text-gray-500 mb-10">Tüm planlar kayıt ve sigorta dahildir</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan) => (
-              <div key={plan.title} className={`bg-white rounded-2xl shadow-lg overflow-hidden border-2 ${plan.popular ? "border-green-500 scale-105" : "border-gray-100"}`}>
+              <div key={plan.title} className={`bg-white rounded-2xl shadow-lg overflow-hidden border-2 transition-all duration-300 hover:border-green-500 hover:shadow-green-200 hover:shadow-xl hover:-translate-y-1 ${plan.popular ? "border-green-500 scale-105" : "border-gray-100"}`}>
                 {plan.popular && (
                   <div className="bg-green-500 text-white text-center text-xs font-bold py-1.5">
                     EN POPÜLER
