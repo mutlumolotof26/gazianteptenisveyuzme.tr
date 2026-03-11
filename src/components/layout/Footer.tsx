@@ -48,7 +48,7 @@ export default function Footer({
               </div>
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              1985 yılından bu yana Gaziantep'in spor alanında öncü kulübü olarak hizmet vermekteyiz.
+              2014 yılından bu yana Gaziantep'in spor alanında öncü kulübü olarak hizmet vermekteyiz.
             </p>
             {(instagramUrl || facebookUrl) && (
               <div className="flex items-center gap-3">
