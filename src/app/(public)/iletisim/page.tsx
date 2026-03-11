@@ -21,9 +21,9 @@ async function getSettings() {
 export default async function IletisimPage() {
   const s = await getSettings();
 
-  const telefon = s?.telefon ?? "+90 (342) 000 00 00";
+  const telefon = s?.telefon ?? "0551 245 82 74";
   const email = s?.email ?? "info@gazitenisyuzme.com";
-  const adres = s?.adres ?? "Şehitkamil Mahallesi, Gaziantep, Türkiye";
+  const adres = s?.adres ?? "Batıkent, Muhsin Yazıcıoğlu Cd. No:18, 27560 Şehitkamil/Gaziantep";
   const calismaHafta = s?.calismaHafta ?? "07:00 - 22:00";
   const calismaCumartesi = s?.calismaCumartesi ?? "08:00 - 20:00";
   const calismaPazar = s?.calismaPazar ?? "09:00 - 18:00";
