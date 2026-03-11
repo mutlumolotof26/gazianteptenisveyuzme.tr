@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Award, Target, Heart, Users } from "lucide-react";
+import { prisma } from "@/lib/db";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Hakkımızda",
-  description: "Gaziantep Tenis ve Yüzme Kulübü - 1985'ten beri sporu seven herkese kaliteli hizmet sunuyoruz.",
+  description: "Gaziantep Tenis ve Yüzme Kulübü - 2014'ten beri sporu seven herkese kaliteli hizmet sunuyoruz.",
 };
 
-export default function HakkimizdaPage() {
+export default async function HakkimizdaPage() {
+  const uyeSayisi = await prisma.member.count({ where: { durum: "aktif" } });
+
   return (
     <div>
       {/* Hero */}
@@ -25,11 +30,11 @@ export default function HakkimizdaPage() {
               <h2 className="text-3xl font-bold text-blue-900 mb-6">Kulüp Tarihçemiz</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Gaziantep Tenis ve Yüzme Kulübü, 1985 yılında bir grup sporsever tarafından kurulmuştur.
+                  Gaziantep Tenis ve Yüzme Kulübü, 2014 yılında bir grup sporsever tarafından kurulmuştur.
                   Kuruluşundan bu yana şehrimizin spor hayatına önemli katkılar sağlamıştır.
                 </p>
                 <p>
-                  Yıllar içinde büyüyerek gelişen kulübümüz, bugün 500'den fazla aktif üyesiyle
+                  Yıllar içinde büyüyerek gelişen kulübümüz, bugün {uyeSayisi} aktif üyesiyle
                   Gaziantep'in en köklü spor kulüplerinden biri haline gelmiştir.
                 </p>
                 <p>
@@ -41,8 +46,8 @@ export default function HakkimizdaPage() {
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { value: "1985", label: "Kuruluş Yılı" },
-                  { value: "500+", label: "Aktif Üye" },
+                  { value: "2014", label: "Kuruluş Yılı" },
+                  { value: `${uyeSayisi}`, label: "Aktif Üye" },
                   { value: "12+", label: "Antrenör" },
                   { value: "50+", label: "Turnuva" },
                 ].map((stat) => (

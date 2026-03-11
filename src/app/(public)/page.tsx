@@ -64,7 +64,7 @@ export default async function HomePage() {
               <span className="text-[#ed780e]">Yüzme Kulübü</span>
             </h1>
             <p className="text-lg md:text-xl text-[#a8c8d8] mb-8 leading-relaxed">
-              1985'ten bu yana profesyonel tenis ve yüzme eğitimi sunuyoruz.
+              2014'ten bu yana profesyonel tenis ve yüzme eğitimi sunuyoruz.
               Uzman antrenörlerimiz ve modern tesislerimizle spor kariyerinizi şekillendirin.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -90,7 +90,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              { value: "1985", label: "Kuruluş Yılı" },
+              { value: "2014", label: "Kuruluş Yılı" },
               { value: `${stats.members}+`, label: "Aktif Üye" },
               { value: "12+", label: "Uzman Antrenör" },
               { value: `${stats.events}+`, label: "Etkinlik" },

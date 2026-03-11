@@ -50,7 +50,7 @@ const jsonLd = {
   logo: `${siteUrl}/logo.png`,
   image: `${siteUrl}/logo.png`,
   description: "Gaziantep'in en köklü spor kulübü. Olimpik yüzme havuzu, yüzme kursları ve profesyonel tenis kortları.",
-  foundingDate: "1985",
+  foundingDate: "2014",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Gaziantep",
