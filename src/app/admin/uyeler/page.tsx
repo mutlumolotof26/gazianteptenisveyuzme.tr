@@ -26,6 +26,12 @@ type SessionRequest = {
   okundu: boolean; createdAt: string;
   session: { program: string; gun: string; baslangic: string; bitis: string };
 };
+type Coach = { id: string; ad: string };
+type Session = {
+  id: string; gun: string; baslangic: string; bitis: string;
+  program: string; seviye: string; kapasite: number;
+  coachId: string | null; coach: Coach | null; aktif: boolean; sira: number;
+};
 
 const durumEtiket: Record<string, { label: string; cls: string }> = {
   aktif: { label: "Aktif", cls: "bg-green-100 text-green-700" },
@@ -36,13 +42,19 @@ const sporLabel: Record<string, string> = { tenis: "Tenis", yuzme: "Yüzme", her
 const tipLabel: Record<string, string> = { ogrenci: "Öğrenci", standart: "Standart", premium: "Premium", aile: "Aile" };
 const aylar = ["", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
+const gunler = ["pazartesi", "sali", "carsamba", "persembe", "cuma", "cumartesi", "pazar"];
+const gunLabel: Record<string, string> = { pazartesi: "Pazartesi", sali: "Salı", carsamba: "Çarşamba", persembe: "Perşembe", cuma: "Cuma", cumartesi: "Cumartesi", pazar: "Pazar" };
+const seviyeRenk: Record<string, string> = { baslangic: "bg-green-100 text-green-700", orta: "bg-blue-100 text-blue-700", ileri: "bg-purple-100 text-purple-700", her_seviye: "bg-gray-100 text-gray-600" };
+const seviyeAdLabel: Record<string, string> = { baslangic: "Başlangıç", orta: "Orta", ileri: "İleri", her_seviye: "Her Seviye" };
+const emptySeansForm = { gun: "pazartesi", baslangic: "09:00", bitis: "10:00", program: "", seviye: "her_seviye", kapasite: 20, coachId: "", aktif: true, sira: 0 };
+
 function donemLabel(d: string) { const [y, m] = d.split("-"); return `${aylar[parseInt(m)]} ${y}`; }
 function prevDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, "0")}`; }
 function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 12 ? `${y + 1}-01` : `${y}-${String(m + 1).padStart(2, "0")}`; }
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
 
 export default function UyelerPage() {
-  const [tab, setTab] = useState<"uyeler" | "aidat" | "basvurular">("uyeler");
+  const [tab, setTab] = useState<"uyeler" | "aidat" | "seanslar" | "basvurular">("uyeler");
   const [basvurular, setBasvurular] = useState<SessionRequest[]>([]);
   const [basvurularLoading, setBasvurularLoading] = useState(false);
   const [selectedMember, setSelectedMember] = useState<MemberDetail | null>(null);
@@ -63,6 +75,15 @@ export default function UyelerPage() {
   const [saving, setSaving] = useState(false);
   const [aidatSearch, setAidatSearch] = useState("");
   const [sporFilter, setSporFilter] = useState("");
+
+  // Seanslar
+  const [sessions, setSessions] = useState<Session[]>([]);
+  const [seansLoading, setSeansLoading] = useState(false);
+  const [seansCoaches, setSeansCoaches] = useState<Coach[]>([]);
+  const [seansShowForm, setSeansShowForm] = useState(false);
+  const [seansEditId, setSeansEditId] = useState<string | null>(null);
+  const [seansForm, setSeansForm] = useState({ ...emptySeansForm });
+  const [seansSaving, setSeansSaving] = useState(false);
 
   // Edit modal – aidat bölümü
   const [editMemberAidatlar, setEditMemberAidatlar] = useState<AidatRecord[]>([]);
@@ -114,9 +135,38 @@ export default function UyelerPage() {
     setSelectedMember(await res.json());
   }
 
+  async function fetchSessions() {
+    setSeansLoading(true);
+    const res = await fetch("/api/sessions?all=true");
+    setSessions(await res.json());
+    setSeansLoading(false);
+  }
+  async function fetchSeansCoaches() {
+    const res = await fetch("/api/coaches?all=true");
+    setSeansCoaches(await res.json());
+  }
+  function openNewSeans() { setSeansForm({ ...emptySeansForm }); setSeansEditId(null); setSeansShowForm(true); }
+  function openEditSeans(s: Session) { setSeansForm({ gun: s.gun, baslangic: s.baslangic, bitis: s.bitis, program: s.program, seviye: s.seviye, kapasite: s.kapasite, coachId: s.coachId || "", aktif: s.aktif, sira: s.sira }); setSeansEditId(s.id); setSeansShowForm(true); }
+  async function handleSeansSave() {
+    if (!seansForm.program) return;
+    setSeansSaving(true);
+    const payload = { ...seansForm, coachId: seansForm.coachId || null };
+    if (seansEditId) { await fetch(`/api/sessions/${seansEditId}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }); }
+    else { await fetch("/api/sessions", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }); }
+    setSeansSaving(false); setSeansShowForm(false); fetchSessions();
+  }
+  async function handleSeansDelete(id: string) {
+    if (!confirm("Bu seansı silmek istediğinizden emin misiniz?")) return;
+    await fetch(`/api/sessions/${id}`, { method: "DELETE" }); fetchSessions();
+  }
+  async function toggleSeansAktif(s: Session) {
+    await fetch(`/api/sessions/${s.id}`, { method: "PUT", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ aktif: !s.aktif }) }); fetchSessions();
+  }
+
   useEffect(() => { fetchMembers(); }, [fetchMembers]);
   useEffect(() => { if (tab === "aidat") fetchAidat(donem); }, [donem, tab]);
   useEffect(() => { if (tab === "basvurular") fetchBasvurular(); }, [tab]);
+  useEffect(() => { if (tab === "seanslar") { fetchSessions(); fetchSeansCoaches(); } }, [tab]);
 
   async function handleSave() {
     const method = editId ? "PUT" : "POST";
@@ -222,6 +272,11 @@ export default function UyelerPage() {
             <Plus size={16} /> Yeni Üye
           </button>
         )}
+        {tab === "seanslar" && (
+          <button onClick={openNewSeans} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+            <Plus size={16} /> Yeni Seans
+          </button>
+        )}
       </div>
 
       <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6 w-fit">
@@ -230,6 +285,9 @@ export default function UyelerPage() {
         </button>
         <button onClick={() => setTab("aidat")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "aidat" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <TrendingUp size={16} /> Aidat Takibi
+        </button>
+        <button onClick={() => setTab("seanslar")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "seanslar" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Waves size={16} /> Seanslar
         </button>
         <button onClick={() => setTab("basvurular")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "basvurular" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <Waves size={16} /> Seans Başvuruları
@@ -408,6 +466,54 @@ export default function UyelerPage() {
         </>
       )}
 
+      {/* ── SEANSLAR ── */}
+      {tab === "seanslar" && (
+        seansLoading ? <div className="text-center py-16 text-gray-400">Yükleniyor...</div> : (
+          <div className="space-y-6">
+            {gunler.map((gun) => {
+              const list = sessions.filter((s) => s.gun === gun).sort((a, b) => a.baslangic.localeCompare(b.baslangic));
+              if (!list.length) return null;
+              return (
+                <div key={gun}>
+                  <h2 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3">{gunLabel[gun]}</h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-3">
+                    {list.map((s) => (
+                      <div key={s.id} className={`bg-white rounded-xl border p-4 shadow-sm ${s.aktif ? "border-gray-100" : "border-dashed border-gray-300 opacity-60"}`}>
+                        <div className="flex items-start justify-between gap-2 mb-2">
+                          <div>
+                            <p className="font-semibold text-gray-800 text-sm">{s.program}</p>
+                            <p className="text-blue-600 font-medium text-sm">{s.baslangic} – {s.bitis}</p>
+                          </div>
+                          <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${seviyeRenk[s.seviye] || "bg-gray-100 text-gray-600"}`}>{seviyeAdLabel[s.seviye] || s.seviye}</span>
+                        </div>
+                        <div className="text-xs text-gray-500 space-y-1 mb-3">
+                          {s.coach && <p>Antrenör: <span className="text-gray-700">{s.coach.ad}</span></p>}
+                          <p>Kapasite: <span className="text-gray-700">{s.kapasite} kişi</span></p>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <button onClick={() => toggleSeansAktif(s)} title={s.aktif ? "Pasife Al" : "Aktive Et"} className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded">
+                            {s.aktif ? <Eye size={14} /> : <EyeOff size={14} />}
+                          </button>
+                          <button onClick={() => openEditSeans(s)} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded"><Edit size={14} /></button>
+                          <button onClick={() => handleSeansDelete(s.id)} className="p-1.5 text-red-500 hover:bg-red-50 rounded"><Trash2 size={14} /></button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+            {sessions.length === 0 && (
+              <div className="text-center py-16 text-gray-400">
+                <Waves size={40} className="mx-auto mb-3 text-gray-300" />
+                <p>Henüz seans eklenmemiş.</p>
+                <button onClick={openNewSeans} className="mt-4 text-blue-600 text-sm hover:underline">İlk seansı ekle</button>
+              </div>
+            )}
+          </div>
+        )
+      )}
+
       {/* ── SEANS BAŞVURULARI ── */}
       {tab === "basvurular" && (
         <>
@@ -465,6 +571,57 @@ export default function UyelerPage() {
             )}
           </div>
         </>
+      )}
+
+      {/* SEANS FORM MODAL */}
+      {seansShowForm && (
+        <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl w-full max-w-lg shadow-2xl max-h-[90vh] overflow-y-auto">
+            <div className="flex items-center justify-between p-5 border-b sticky top-0 bg-white z-10">
+              <h3 className="font-bold text-gray-800">{seansEditId ? "Seansı Düzenle" : "Yeni Seans Ekle"}</h3>
+              <button onClick={() => setSeansShowForm(false)} className="text-gray-400 hover:text-gray-600"><X size={20} /></button>
+            </div>
+            <div className="p-5 space-y-4">
+              <div><label className="block text-xs font-medium text-gray-700 mb-1">Program Adı *</label><input value={seansForm.program} onChange={(e) => setSeansForm({ ...seansForm, program: e.target.value })} placeholder="ör. Çocuk Programı" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+              <div><label className="block text-xs font-medium text-gray-700 mb-1">Gün *</label>
+                <select value={seansForm.gun} onChange={(e) => setSeansForm({ ...seansForm, gun: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  {gunler.map((g) => <option key={g} value={g}>{gunLabel[g]}</option>)}
+                </select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Başlangıç *</label><input type="time" value={seansForm.baslangic} onChange={(e) => setSeansForm({ ...seansForm, baslangic: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Bitiş *</label><input type="time" value={seansForm.bitis} onChange={(e) => setSeansForm({ ...seansForm, bitis: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Seviye</label>
+                  <select value={seansForm.seviye} onChange={(e) => setSeansForm({ ...seansForm, seviye: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="her_seviye">Her Seviye</option>
+                    <option value="baslangic">Başlangıç</option>
+                    <option value="orta">Orta</option>
+                    <option value="ileri">İleri</option>
+                  </select>
+                </div>
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Kapasite</label><input type="number" min={1} value={seansForm.kapasite} onChange={(e) => setSeansForm({ ...seansForm, kapasite: Number(e.target.value) })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+              </div>
+              <div><label className="block text-xs font-medium text-gray-700 mb-1">Antrenör</label>
+                <select value={seansForm.coachId} onChange={(e) => setSeansForm({ ...seansForm, coachId: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                  <option value="">— Antrenör seçin —</option>
+                  {seansCoaches.map((c) => <option key={c.id} value={c.id}>{c.ad}</option>)}
+                </select>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Sıra</label><input type="number" min={0} value={seansForm.sira} onChange={(e) => setSeansForm({ ...seansForm, sira: Number(e.target.value) })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+                <div className="flex items-end pb-1"><label className="flex items-center gap-2 cursor-pointer"><input type="checkbox" checked={seansForm.aktif} onChange={(e) => setSeansForm({ ...seansForm, aktif: e.target.checked })} className="w-4 h-4 rounded" /><span className="text-sm text-gray-700">Aktif</span></label></div>
+              </div>
+            </div>
+            <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white">
+              <button onClick={() => setSeansShowForm(false)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button>
+              <button onClick={handleSeansSave} disabled={seansSaving || !seansForm.program} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 disabled:opacity-60 flex items-center justify-center gap-2">
+                <Check size={15} /> {seansEditId ? "Güncelle" : "Ekle"}
+              </button>
+            </div>
+          </div>
+        </div>
       )}
 
       {/* ÜYE FORM MODAL */}
