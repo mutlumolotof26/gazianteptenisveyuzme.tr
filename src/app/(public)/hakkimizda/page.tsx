@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 };
 
 export default async function HakkimizdaPage() {
-  const uyeSayisi = await prisma.member.count({ where: { durum: "aktif" } });
+  const [uyeSayisi, antrenorSayisi] = await Promise.all([
+    prisma.member.count({ where: { durum: "aktif" } }),
+    prisma.coach.count({ where: { aktif: true } }),
+  ]);
 
   return (
     <div>
@@ -48,7 +51,7 @@ export default async function HakkimizdaPage() {
                 {[
                   { value: "2014", label: "Kuruluş Yılı" },
                   { value: `${uyeSayisi}`, label: "Aktif Üye" },
-                  { value: "12+", label: "Antrenör" },
+                  { value: `${antrenorSayisi}`, label: "Antrenör" },
                   { value: "50+", label: "Turnuva" },
                 ].map((stat) => (
                   <div key={stat.label} className="text-center p-4 bg-white rounded-xl shadow-sm">

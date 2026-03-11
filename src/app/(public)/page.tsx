@@ -21,11 +21,12 @@ async function getUpcomingEvents() {
 }
 
 async function getStats() {
-  const [members, events] = await Promise.all([
+  const [members, coaches, events] = await Promise.all([
     prisma.member.count({ where: { durum: "aktif" } }),
+    prisma.coach.count({ where: { aktif: true } }),
     prisma.event.count({ where: { aktif: true } }),
   ]);
-  return { members, events };
+  return { members, coaches, events };
 }
 
 export default async function HomePage() {
@@ -92,7 +93,7 @@ export default async function HomePage() {
             {[
               { value: "2014", label: "Kuruluş Yılı" },
               { value: `${stats.members}+`, label: "Aktif Üye" },
-              { value: "12+", label: "Uzman Antrenör" },
+              { value: `${stats.coaches}`, label: "Uzman Antrenör" },
               { value: `${stats.events}+`, label: "Etkinlik" },
             ].map((stat) => (
               <div key={stat.label} className="text-white">
