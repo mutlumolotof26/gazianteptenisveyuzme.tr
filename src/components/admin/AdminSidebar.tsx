@@ -43,7 +43,7 @@ export default function AdminSidebar() {
           />
           <div>
             <div className="text-white font-bold text-sm leading-tight">Admin Paneli</div>
-            <div className="text-[#ed780e] text-xs">GTY Kulübü</div>
+            <div className="text-[#ed780e] text-xs">GTY Spor Kulübü</div>
           </div>
         </div>
       </div>
