@@ -26,7 +26,7 @@ export default async function UyelikPage() {
       price: s?.fiyatYetiskin ?? "₺800",
       period: "/ay",
       color: "blue",
-      features: ["Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler", "Soyunma odası kullanımı"],
+      features: ["Tenis veya Yüzme (seçiniz)", "Haftada 2 gün", "Erkek: Salı - Perşembe 21:00-22:00", "Kadın: Çarşamba - Cuma 21:00-22:00"],
     },
     {
       title: "Çocuk",
