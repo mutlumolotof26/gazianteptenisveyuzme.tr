@@ -5,8 +5,8 @@ import { prisma } from "@/lib/db";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Hakkımızda",
-  description: "Gaziantep Tenis ve Yüzme Kulübü - 2014'ten beri sporu seven herkese kaliteli hizmet sunuyoruz.",
+  title: "Hakkımızda | GTY Gaziantep Tenis ve Yüzme Spor Kulübü",
+  description: "GTY Gaziantep Tenis ve Yüzme Spor Kulübü hakkında. 2014'ten bu yana Gaziantep'te yüzme kursu ve tenis eğitimi veriyoruz. Uzman kadromuz ve olimpik tesislerimizle tanışın.",
 };
 
 export default async function HakkimizdaPage() {

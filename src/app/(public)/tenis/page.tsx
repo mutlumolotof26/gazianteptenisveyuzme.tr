@@ -5,8 +5,21 @@ import { prisma } from "@/lib/db";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Tenis",
-  description: "Gaziantep Tenis ve Yüzme Kulübü tenis tesisleri, antrenörler ve eğitim programları.",
+  title: "Gaziantep Tenis Kursu | Profesyonel Tenis Kortları",
+  description: "Gaziantep tenis kursu ve tenis kortları. Çocuk, yetişkin ve ileri seviye tenis programları. Uzman antrenörlerle Şehitkamil, Gaziantep'te tenis öğrenin.",
+  keywords: [
+    "Gaziantep tenis kursu",
+    "Gaziantep tenis kulübü",
+    "tenis kursu Gaziantep",
+    "çocuk tenis kursu Gaziantep",
+    "yetişkin tenis Gaziantep",
+    "tenis kortu Gaziantep",
+    "Şehitkamil tenis",
+  ],
+  openGraph: {
+    title: "Gaziantep Tenis Kursu | GTY Spor Kulübü",
+    description: "Çocuk ve yetişkin tenis programları. Şehitkamil, Gaziantep'te profesyonel tenis kortları ve uzman antrenörler.",
+  },
 };
 
 async function getTenisCoaches() {

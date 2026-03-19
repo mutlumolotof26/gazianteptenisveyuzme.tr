@@ -6,8 +6,8 @@ import IletisimForm from "./IletisimForm";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "İletişim",
-  description: "Gaziantep Tenis ve Yüzme Kulübü iletişim bilgileri ve mesaj formu.",
+  title: "İletişim | Gaziantep Yüzme Kursu Kayıt ve Bilgi",
+  description: "Gaziantep yüzme kursu kayıt ve bilgi için bizimle iletişime geçin. GTY Spor Kulübü - Batıkent, Muhsin Yazıcıoğlu Cd. No:18, Şehitkamil/Gaziantep. Tel: 0551 245 82 74",
 };
 
 async function getSettings() {

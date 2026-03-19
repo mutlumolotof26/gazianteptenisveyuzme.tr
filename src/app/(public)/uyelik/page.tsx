@@ -5,8 +5,8 @@ import UyelikClient from "./UyelikClient";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Üyelik",
-  description: "Gaziantep Tenis ve Yüzme Kulübü üyelik planları ve başvuru formu.",
+  title: "Üyelik | Gaziantep Yüzme Kursu ve Tenis Kayıt",
+  description: "Gaziantep yüzme kursu ve tenis eğitimi için GTY Spor Kulübü üyelik planları. Çocuk, yetişkin ve aile üyelikleri. Hemen kayıt olun.",
 };
 
 async function getSettings() {

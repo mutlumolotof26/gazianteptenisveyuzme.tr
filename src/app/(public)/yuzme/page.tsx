@@ -6,8 +6,8 @@ import SeansBasvuruForm from "./SeansBasvuruForm";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Yüzme Kursları ve Olimpik Havuz",
-  description: "Gaziantep yüzme kursu ve olimpik yüzme havuzu. Çocuk, yetişkin ve bebek yüzme programları. Uzman antrenörlerle Gaziantep'in en köklü yüzme kulübünde yüzme öğrenin.",
+  title: "Gaziantep Yüzme Kursu | Olimpik Havuz ve Yüzme Programları",
+  description: "Gaziantep yüzme kursu — çocuk, bebek ve yetişkin yüzme programları. Olimpik yüzme havuzu, uzman antrenörler. Şehitkamil, Gaziantep'te yüzme öğrenin.",
   keywords: [
     "Gaziantep yüzme kursu",
     "Gaziantep yüzme havuzu",
@@ -17,10 +17,12 @@ export const metadata: Metadata = {
     "yetişkin yüzme kursu Gaziantep",
     "olimpik havuz Gaziantep",
     "yüzme okulu Gaziantep",
+    "Şehitkamil yüzme kursu",
+    "Gaziantep yüzme okulu",
   ],
   openGraph: {
-    title: "Gaziantep Yüzme Kursu ve Olimpik Havuz",
-    description: "Çocuk, yetişkin ve bebek yüzme programları. Gaziantep'in olimpik yüzme havuzunda uzman antrenörlerle yüzme öğrenin.",
+    title: "Gaziantep Yüzme Kursu | Olimpik Havuz | GTY Spor Kulübü",
+    description: "Çocuk, bebek ve yetişkin yüzme programları. Şehitkamil, Gaziantep'te olimpik yüzme havuzu ve uzman antrenörler.",
   },
 };
 
