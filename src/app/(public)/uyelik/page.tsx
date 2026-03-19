@@ -34,7 +34,7 @@ export default async function UyelikPage() {
       period: "/ay",
       color: "green",
       popular: true,
-      features: ["Tenis veya Yüzme (seçiniz)", "Haftada 5 ders", "Tüm tesisler", "Uzman çocuk antrenörleri"],
+      features: ["Tenis veya Yüzme (seçiniz)", "Aylık 8 ders", "Haftada 2 gün (Cumartesi - Pazar)", "Uzman çocuk antrenörleri"],
     },
     {
       title: "Yaz Kursu",
