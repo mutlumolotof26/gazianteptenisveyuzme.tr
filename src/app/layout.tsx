@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "çocuk yüzme kursu Gaziantep",
     "bebek yüzme Gaziantep",
     "yetişkin yüzme kursu Gaziantep",
-    "olimpik havuz Gaziantep",
+    "olimpik yüzme havuzu Gaziantep",
     "yüzme okulu Gaziantep",
     "Gaziantep tenis kursu",
     "Gaziantep tenis kulübü",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: "GTY Gaziantep Tenis ve Yüzme Spor Kulübü",
     title: "Gaziantep Yüzme Kursu ve Tenis Kulübü | GTY Spor Kulübü",
-    description: "Gaziantep'in yüzme kursu ve tenis merkezi. Olimpik havuz, uzman antrenörler, çocuk ve yetişkin programları.",
+    description: "Gaziantep'in yüzme kursu ve tenis merkezi. Olimpik yüzme havuzu, uzman antrenörler, çocuk ve yetişkin programları.",
     images: [{ url: "/logo.png", width: 512, height: 512, alt: "GTY Gaziantep Tenis ve Yüzme Spor Kulübü" }],
   },
   robots: {
@@ -66,8 +66,8 @@ const jsonLd = {
   },
   geo: {
     "@type": "GeoCoordinates",
-    addressCountry: "TR",
-    addressRegion: "Gaziantep",
+    latitude: 37.0592,
+    longitude: 37.3826,
   },
   telephone: "+905512458274",
   email: "gazianteptenisveyuzmegsk@gmail.com",

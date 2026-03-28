@@ -6,7 +6,7 @@ import SeansBasvuruForm from "./SeansBasvuruForm";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Gaziantep Yüzme Kursu | Olimpik Havuz ve Yüzme Programları",
+  title: "Gaziantep Yüzme Kursu | Olimpik Yüzme Havuzu ve Programlar",
   description: "Gaziantep yüzme kursu — çocuk, bebek ve yetişkin yüzme programları. Olimpik yüzme havuzu, uzman antrenörler. Şehitkamil, Gaziantep'te yüzme öğrenin.",
   keywords: [
     "Gaziantep yüzme kursu",
@@ -15,13 +15,13 @@ export const metadata: Metadata = {
     "çocuk yüzme kursu Gaziantep",
     "bebek yüzme Gaziantep",
     "yetişkin yüzme kursu Gaziantep",
-    "olimpik havuz Gaziantep",
+    "olimpik yüzme havuzu Gaziantep",
     "yüzme okulu Gaziantep",
     "Şehitkamil yüzme kursu",
     "Gaziantep yüzme okulu",
   ],
   openGraph: {
-    title: "Gaziantep Yüzme Kursu | Olimpik Havuz | GTY Spor Kulübü",
+    title: "Gaziantep Yüzme Kursu | Olimpik Yüzme Havuzu | GTY Spor Kulübü",
     description: "Çocuk, bebek ve yetişkin yüzme programları. Şehitkamil, Gaziantep'te olimpik yüzme havuzu ve uzman antrenörler.",
   },
 };
@@ -57,6 +57,68 @@ const seviyeColor: Record<string, string> = {
   her_seviye: "bg-blue-100 text-blue-700",
 };
 
+const yuzmeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Course",
+      name: "Gaziantep Yüzme Kursu",
+      description: "Gaziantep'te çocuk, bebek ve yetişkin yüzme kursları. Olimpik yüzme havuzu, uzman antrenörler. Şehitkamil, Gaziantep.",
+      url: "https://gazianteptenisveyuzme.tr/yuzme",
+      provider: {
+        "@type": "SportsClub",
+        name: "GTY Gaziantep Tenis ve Yüzme Spor Kulübü",
+        url: "https://gazianteptenisveyuzme.tr",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Batıkent, Muhsin Yazıcıoğlu Cd. No:18",
+          addressLocality: "Şehitkamil",
+          addressRegion: "Gaziantep",
+          postalCode: "27560",
+          addressCountry: "TR",
+        },
+        telephone: "+905512458274",
+      },
+      hasCourseInstance: [
+        { "@type": "CourseInstance", name: "Yüzme Okulu (Baby)", courseMode: "Onsite", courseWorkload: "PT30M", audience: { "@type": "Audience", audienceType: "2-4 yaş çocuklar" } },
+        { "@type": "CourseInstance", name: "Küçükler Programı", courseMode: "Onsite", courseWorkload: "PT45M", audience: { "@type": "Audience", audienceType: "5-8 yaş çocuklar" } },
+        { "@type": "CourseInstance", name: "Çocuk Programı", courseMode: "Onsite", courseWorkload: "PT60M", audience: { "@type": "Audience", audienceType: "9-14 yaş çocuklar" } },
+        { "@type": "CourseInstance", name: "Yetişkin Yüzme Kursu", courseMode: "Onsite", courseWorkload: "PT60M", audience: { "@type": "Audience", audienceType: "18 yaş üstü yetişkinler" } },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Gaziantep'te yüzme kursu nerede var?",
+          acceptedAnswer: { "@type": "Answer", text: "GTY Spor Kulübü, Batıkent Muhsin Yazıcıoğlu Cd. No:18, Şehitkamil, Gaziantep adresinde olimpik yüzme havuzu ve yüzme kursları sunmaktadır." },
+        },
+        {
+          "@type": "Question",
+          name: "Çocuklar için Gaziantep yüzme kursu var mı?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. GTY Spor Kulübü'nde 2 yaşından itibaren bebek yüzme, çocuk yüzme okulu ve 9-14 yaş çocuk programları mevcuttur." },
+        },
+        {
+          "@type": "Question",
+          name: "Gaziantep yüzme kursu ücretleri ne kadar?",
+          acceptedAnswer: { "@type": "Answer", text: "Yüzme kursu ücretleri için GTY Spor Kulübü'nü +90 551 245 82 74 numaralı telefondan veya web sitesindeki iletişim formu aracılığıyla arayabilirsiniz." },
+        },
+        {
+          "@type": "Question",
+          name: "Yetişkinler için yüzme kursu var mı?",
+          acceptedAnswer: { "@type": "Answer", text: "Evet. GTY Spor Kulübü'nde 18 yaş üstü yetişkinler için haftada 3 gün, 60 dakikalık yüzme kursları ve özel dersler verilmektedir." },
+        },
+        {
+          "@type": "Question",
+          name: "Havuz kaç metre?",
+          acceptedAnswer: { "@type": "Answer", text: "GTY Spor Kulübü'nde 50 metre olimpik yüzme havuzu, 25 metre ısınma havuzu ve çocuklar için güvenli çocuk havuzu bulunmaktadır. Havuzlar yıl boyu 28°C sıcaklıkta tutulmaktadır." },
+        },
+      ],
+    },
+  ],
+};
+
 export default async function YuzmePage() {
   const [coaches, seanslar] = await Promise.all([getYuzmeCoaches(), getSeanslar()]);
 
@@ -78,14 +140,18 @@ export default async function YuzmePage() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(yuzmeJsonLd) }}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-r from-blue-700 to-cyan-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Waves size={48} className="text-cyan-300" />
             <div>
-              <h1 className="text-4xl font-bold mb-1">Yüzme</h1>
-              <p className="text-blue-200 text-lg">Olimpik havuz, uzman antrenörler</p>
+              <h1 className="text-4xl font-bold mb-1">Gaziantep Yüzme Kursu</h1>
+              <p className="text-blue-200 text-lg">Olimpik yüzme havuzu, çocuk ve yetişkin yüzme kursları – Şehitkamil, Gaziantep</p>
             </div>
           </div>
         </div>
@@ -97,7 +163,7 @@ export default async function YuzmePage() {
           <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">Havuz Tesislerimiz</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {[
-              { icon: <Droplets size={32} className="text-blue-600" />, title: "50m Olimpik Havuz", desc: "Uluslararası standartta olimpik havuz" },
+              { icon: <Droplets size={32} className="text-blue-600" />, title: "50m Olimpik Yüzme Havuzu", desc: "Uluslararası standartta olimpik yüzme havuzu" },
               { icon: <Waves size={32} className="text-cyan-600" />, title: "25m Isınma Havuzu", desc: "Antrenman öncesi ısınma havuzu" },
               { icon: <Users size={32} className="text-blue-500" />, title: "Çocuk Havuzu", desc: "Küçük yüzücüler için güvenli havuz" },
               { icon: "🌡️", title: "Isıtmalı Havuz", desc: "Yıl boyu 28°C sabit sıcaklık" },
@@ -226,6 +292,30 @@ export default async function YuzmePage() {
           </div>
         </section>
       )}
+
+      {/* SSS / FAQ */}
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-900 text-center mb-10">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            {[
+              { q: "Gaziantep'te yüzme kursu nerede var?", a: "GTY Spor Kulübü, Batıkent Muhsin Yazıcıoğlu Cd. No:18, Şehitkamil, Gaziantep adresinde olimpik yüzme havuzu ve yüzme kursları sunmaktadır." },
+              { q: "Çocuklar için yüzme kursu var mı?", a: "Evet. 2 yaşından itibaren bebek yüzme, 5-8 yaş küçükler programı ve 9-14 yaş çocuk programları mevcuttur." },
+              { q: "Yetişkinler için yüzme kursu var mı?", a: "Evet. 18 yaş üstü yetişkinler için haftada 3 gün, 60 dakikalık kurslar ve özel ders seçenekleri sunulmaktadır." },
+              { q: "Havuz kaç metre?", a: "50m olimpik yüzme havuzu, 25m ısınma havuzu ve çocuk havuzu bulunmaktadır. Tüm havuzlar yıl boyu 28°C sıcaklıkta tutulur." },
+              { q: "Yüzme kursu ücretleri ne kadar?", a: "Güncel ücretler için 0551 245 82 74 numaralı hattı arayabilir veya iletişim formundan bize ulaşabilirsiniz." },
+            ].map((item) => (
+              <details key={item.q} className="bg-blue-50 rounded-xl p-5 group">
+                <summary className="font-semibold text-blue-900 cursor-pointer list-none flex justify-between items-center">
+                  {item.q}
+                  <span className="text-blue-400 text-xl group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="mt-3 text-gray-600 text-sm leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 bg-blue-700 text-white text-center">
