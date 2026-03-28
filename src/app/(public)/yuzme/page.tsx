@@ -317,6 +317,76 @@ export default async function YuzmePage() {
         </div>
       </section>
 
+      {/* Gaziantep'te Yüzme Öğrenmek */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-900 mb-6">Gaziantep'te Yüzme Öğrenmek</h2>
+          <div className="prose prose-lg text-gray-600 space-y-4">
+            <p>
+              Gaziantep'te yüzme kursu arayanlar için GTY Gençlik Spor Kulübü, Şehitkamil ilçesinde profesyonel yüzme eğitimi sunmaktadır.
+              50 metre olimpik yüzme havuzumuz ve uzman antrenör kadromuzla 2 yaşından itibaren her yaş grubuna yüzme öğretiyoruz.
+            </p>
+            <p>
+              Şehitkamil, Batıkent, Güneykent, Gaziantep merkez ve çevre mahallelerden öğrencilerimiz kulübümüze ulaşmaktadır.
+              Tesisimiz hafta içi ve hafta sonu açık olup geniş otopark imkânı sunmaktadır.
+            </p>
+            <p>
+              Çocuğunuzun yüzme öğrenmesi için doğru yaş 2-4 yaştır. GTY Spor Kulübü'ndeki bebek yüzme programımız,
+              su korkusunu yenmeye ve temel yüzme becerilerini kazanmaya yönelik tasarlanmıştır.
+              Yetişkinler için de başlangıçtan ileri seviyeye kadar kurslarımız mevcuttur.
+            </p>
+            <p>
+              Gaziantep yüzme kursu fiyatları hakkında bilgi almak için <strong>0551 245 82 74</strong> numaralı hattımızı arayabilir
+              veya aşağıdaki iletişim formunu kullanabilirsiniz.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Neden GTY */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">Neden GTY Spor Kulübü?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { title: "Olimpik Yüzme Havuzu", desc: "50m olimpik, 25m ısınma ve çocuk havuzu ile tam donanımlı tesis. Yıl boyu 28°C." },
+              { title: "Uzman Antrenörler", desc: "Milli sporcu ve federasyon lisanslı antrenörlerden birebir ilgi." },
+              { title: "Her Yaşa Uygun Program", desc: "2 yaşından itibaren bebek, çocuk, genç ve yetişkin yüzme kursları." },
+              { title: "Şehitkamil'de Merkezi Konum", desc: "Batıkent, Güneykent ve Gaziantep merkeze kolay ulaşım. Geniş otopark." },
+              { title: "Küçük Grup Eğitimi", desc: "Az kişilik gruplarla kişisel ilgi ve hızlı gelişim." },
+              { title: "Yıl Boyu Açık", desc: "Kapalı havuz sayesinde kış-yaz aralıksız yüzme eğitimi." },
+            ].map((item) => (
+              <div key={item.title} className="flex gap-4 p-5 bg-blue-50 rounded-xl">
+                <div className="w-2 h-2 rounded-full bg-blue-500 mt-2 flex-shrink-0" />
+                <div>
+                  <h3 className="font-bold text-blue-900 mb-1">{item.title}</h3>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Fiyat */}
+      <section className="py-16 bg-blue-50">
+        <div className="max-w-2xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-blue-900 mb-4">Gaziantep Yüzme Kursu Fiyatları</h2>
+          <p className="text-gray-600 mb-8">
+            Yüzme kursu ücretleri program türüne, seans sayısına ve yaş grubuna göre değişmektedir.
+            Güncel fiyat bilgisi ve kayıt için bizi arayın.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:05512458274" className="bg-blue-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-600 transition-colors">
+              0551 245 82 74
+            </a>
+            <a href="/iletisim" className="bg-white text-blue-700 border border-blue-700 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors">
+              İletişim Formu
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-blue-700 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
