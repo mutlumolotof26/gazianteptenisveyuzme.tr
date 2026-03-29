@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Ana Sayfa" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/tenis", label: "Tenis" },
   { href: "/yuzme", label: "Yüzme" },
@@ -33,113 +32,107 @@ export default function Header({
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close menu on route change
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-[#0f1f30]/95 backdrop-blur-md shadow-2xl"
-          : "bg-[#1d3a5c] shadow-lg"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16" : "h-32"}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-[#0f1f30]/97 backdrop-blur-md shadow-2xl border-b border-[#5aaddc]/10" : "bg-transparent"
+    }`} style={{ padding: scrolled ? "10px 0" : "14px 0" }}>
+      <div className="max-w-6xl mx-auto px-6 flex items-center gap-7">
 
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className={`rounded-full overflow-hidden shrink-0 border-2 border-white/20 transition-all duration-300 group-hover:border-[#e5500a]/60 ${scrolled ? "w-16 h-16" : "w-28 h-28"}`}>
-              <Image
-                src={logoUrl}
-                alt={siteName}
-                width={64}
-                height={64}
-                className="w-full h-full object-cover"
-                priority
-                unoptimized
-              />
-            </div>
-            <div className="hidden sm:block">
-              <div className={`text-white font-bold leading-tight tracking-tight transition-all duration-300 ${scrolled ? "text-sm" : "text-base"}`}>
-                {siteName}
-              </div>
-              <div className="text-[#e5500a] text-xs font-semibold tracking-widest uppercase mt-0.5">
-                {siteAcik}
-              </div>
-            </div>
-          </Link>
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5 shrink-0 no-underline group">
+          <div className={`rounded-full overflow-hidden shrink-0 border-2 border-white/20 bg-white/8 p-0.5 shadow-md transition-all duration-300 group-hover:border-[#e5500a]/50 ${scrolled ? "w-11 h-11" : "w-14 h-14"}`}>
+            <Image src={logoUrl} alt={siteName} width={56} height={56} className="w-full h-full object-cover" priority unoptimized />
+          </div>
+          <div className="flex flex-col leading-tight">
+            <span className="font-black text-white tracking-widest" style={{ fontFamily: "Montserrat,sans-serif", fontSize: ".88rem" }}>
+              GAZİANTEP
+            </span>
+            <span className="font-semibold" style={{ fontSize: ".68rem", color: "var(--blue-light)" }}>
+              {siteAcik}
+            </span>
+          </div>
+        </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-0.5">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`relative px-3.5 py-2 text-sm font-medium tracking-wide rounded-md transition-all duration-200 group ${
-                    isActive
-                      ? "text-[#e5500a]"
-                      : "text-white/85 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                  {/* Animated underline */}
-                  <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#e5500a] rounded-full transition-all duration-300 ${
-                      isActive ? "w-4/5" : "w-0 group-hover:w-3/5"
-                    }`}
-                  />
-                </Link>
-              );
-            })}
-          </nav>
+        {/* Desktop Nav */}
+        <nav className="hidden lg:flex items-center gap-1 ml-auto">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="relative px-3 py-2 rounded-lg transition-all duration-200 font-semibold text-sm"
+                style={{
+                  fontFamily: "Montserrat,sans-serif",
+                  color: isActive ? "#fff" : "rgba(255,255,255,.8)",
+                  background: isActive ? "rgba(229,80,10,.18)" : "transparent",
+                }}
+              >
+                {link.label}
+                {isActive && (
+                  <span className="absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 w-3/5 rounded-full" style={{ background: "var(--orange)" }} />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Menü"
-          >
-            <div className={`transition-transform duration-300 ${menuOpen ? "rotate-90" : "rotate-0"}`}>
-              {menuOpen ? <X size={22} /> : <Menu size={22} />}
-            </div>
-          </button>
-        </div>
-
-        {/* Mobile Nav */}
-        <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
-          }`}
+        {/* CTA */}
+        <Link
+          href="/uyelik"
+          className="hidden lg:inline-block shrink-0 font-bold text-sm text-white rounded-full border-2 transition-all duration-300 hover:-translate-y-0.5"
+          style={{
+            fontFamily: "Montserrat,sans-serif",
+            padding: "10px 22px",
+            background: "var(--orange)",
+            borderColor: "var(--orange)",
+            boxShadow: "0 4px 16px rgba(229,80,10,.35)",
+          }}
         >
-          <nav className="py-3 border-t border-white/10 space-y-0.5">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    isActive
-                      ? "bg-[#e5500a]/15 text-[#e5500a]"
-                      : "text-white/80 hover:bg-white/8 hover:text-white"
-                  }`}
-                >
-                  {isActive && <span className="w-1 h-1 rounded-full bg-[#e5500a]" />}
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
-          <div className="pb-3" />
-        </div>
+          Üye Ol
+        </Link>
+
+        {/* Mobile Hamburger */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="lg:hidden ml-auto p-1 text-white"
+          aria-label="Menü"
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`lg:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0"}`}
+        style={{ background: "rgba(15,31,48,.98)", backdropFilter: "blur(16px)" }}>
+        <nav className="flex flex-col gap-1 px-6 py-3 pb-4">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link key={link.href} href={link.href}
+                className="px-4 py-2.5 rounded-lg font-semibold text-sm transition-colors"
+                style={{
+                  fontFamily: "Montserrat,sans-serif",
+                  color: isActive ? "var(--orange)" : "rgba(255,255,255,.82)",
+                  background: isActive ? "rgba(229,80,10,.1)" : "transparent",
+                }}>
+                {link.label}
+              </Link>
+            );
+          })}
+          <Link href="/uyelik"
+            className="mt-2 py-3 rounded-full text-center font-bold text-sm text-white"
+            style={{ fontFamily: "Montserrat,sans-serif", background: "var(--orange)" }}>
+            Üye Ol
+          </Link>
+        </nav>
       </div>
     </header>
   );

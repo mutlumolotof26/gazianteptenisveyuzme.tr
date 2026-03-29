@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
@@ -17,10 +17,10 @@ interface FooterProps {
 
 export default function Footer({
   logoUrl = "/logo.png",
-  siteName = "Gaziantep Yüzme Spor Kulübü",
-  telefon = "+90 (342) 000 00 00",
-  email = "info@gazitenisyuzme.com",
-  adres = "Şehitkamil, Gaziantep, Türkiye",
+  siteName = "Gaziantep Tenis ve Yüzme Spor Kulübü",
+  telefon = "0551 245 82 74",
+  email = "gazianteptenisveyuzmegsk@gmail.com",
+  adres = "Batıkent, Muhsin Yazıcıoğlu Cd. No:18, 27560 Şehitkamil/Gaziantep",
   calismaHafta = "07:00 - 22:00",
   calismaCumartesi = "08:00 - 20:00",
   calismaPazar = "09:00 - 18:00",
@@ -28,50 +28,51 @@ export default function Footer({
   facebookUrl = "",
 }: FooterProps) {
   return (
-    <footer className="bg-[#0f1f30] text-gray-300">
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Kulüp Bilgisi */}
-          <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Image
-                src={logoUrl}
-                alt={siteName}
-                width={56}
-                height={56}
-                className="object-contain"
-                unoptimized
-              />
+    <footer style={{ background: "var(--navy-dark)", color: "rgba(255,255,255,.75)", borderTop: "4px solid var(--orange)" }}>
+      <div className="max-w-6xl mx-auto px-6 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          {/* Marka */}
+          <div className="flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 p-1"
+                style={{ borderColor: "rgba(255,255,255,.12)", background: "rgba(255,255,255,.06)" }}>
+                <Image src={logoUrl} alt={siteName} width={64} height={64} className="w-full h-full object-contain" unoptimized />
+              </div>
               <div>
-                <div className="text-white font-bold text-sm">{siteName}</div>
-                <div className="text-[#e5500a] text-xs">Spor Kulübü</div>
+                <div className="font-black text-white text-sm leading-tight" style={{ fontFamily: "Montserrat,sans-serif" }}>
+                  {siteName}
+                </div>
+                <div className="text-xs font-semibold mt-0.5" style={{ color: "var(--orange)" }}>Spor Kulübü</div>
               </div>
             </div>
-            <p className="text-sm leading-relaxed mb-4">
-              2014 yılından bu yana Gaziantep'in spor alanında öncü kulübü olarak hizmet vermekteyiz.
+            <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,.45)" }}>
+              Gaziantep&apos;in köklü spor kulübü olarak olimpik yüzme havuzu ve profesyonel tenis kortlarıyla hizmetinizdeyiz.
             </p>
             {(instagramUrl || facebookUrl) && (
-              <div className="flex items-center gap-3">
+              <div className="flex gap-2 mt-1">
                 {instagramUrl && (
                   <a href={instagramUrl} target="_blank" rel="noopener noreferrer"
-                    className="w-8 h-8 bg-[#1d3a5c] rounded-lg flex items-center justify-center hover:bg-[#e5500a] transition-colors">
-                    <Instagram size={14} />
+                    className="w-9 h-9 rounded-xl flex items-center justify-center"
+                    style={{ background: "rgba(255,255,255,.07)" }}>
+                    <Instagram size={16} color="rgba(255,255,255,.7)" />
                   </a>
                 )}
                 {facebookUrl && (
                   <a href={facebookUrl} target="_blank" rel="noopener noreferrer"
-                    className="w-8 h-8 bg-[#1d3a5c] rounded-lg flex items-center justify-center hover:bg-[#e5500a] transition-colors">
-                    <Facebook size={14} />
+                    className="w-9 h-9 rounded-xl flex items-center justify-center"
+                    style={{ background: "rgba(255,255,255,.07)" }}>
+                    <Facebook size={16} color="rgba(255,255,255,.7)" />
                   </a>
                 )}
               </div>
             )}
           </div>
 
-          {/* Hızlı Bağlantılar */}
+          {/* Hızlı Linkler */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Hızlı Bağlantılar</h3>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white font-bold mb-4 text-sm" style={{ fontFamily: "Montserrat,sans-serif" }}>Hızlı Linkler</h4>
+            <ul className="flex flex-col gap-2.5">
               {[
                 { href: "/hakkimizda", label: "Hakkımızda" },
                 { href: "/tenis", label: "Tenis" },
@@ -79,9 +80,10 @@ export default function Footer({
                 { href: "/uyelik", label: "Üyelik" },
                 { href: "/haberler", label: "Haberler" },
                 { href: "/galeri", label: "Galeri" },
+                { href: "/iletisim", label: "İletişim" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-[#e5500a] transition-colors">
+                  <Link href={link.href} className="text-sm" style={{ color: "rgba(255,255,255,.45)" }}>
                     {link.label}
                   </Link>
                 </li>
@@ -91,18 +93,18 @@ export default function Footer({
 
           {/* İletişim */}
           <div>
-            <h3 className="text-white font-semibold mb-4">İletişim</h3>
-            <ul className="space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-[#e5500a] mt-0.5 shrink-0" />
+            <h4 className="text-white font-bold mb-4 text-sm" style={{ fontFamily: "Montserrat,sans-serif" }}>İletişim</h4>
+            <ul className="flex flex-col gap-3">
+              <li className="flex items-start gap-2.5 text-sm" style={{ color: "rgba(255,255,255,.6)" }}>
+                <MapPin size={15} className="mt-0.5 shrink-0" style={{ color: "var(--orange)" }} />
                 <span>{adres}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Phone size={16} className="text-[#e5500a] shrink-0" />
+              <li className="flex items-center gap-2.5 text-sm" style={{ color: "rgba(255,255,255,.6)" }}>
+                <Phone size={15} className="shrink-0" style={{ color: "var(--orange)" }} />
                 <span>{telefon}</span>
               </li>
-              <li className="flex items-center gap-2">
-                <Mail size={16} className="text-[#e5500a] shrink-0" />
+              <li className="flex items-center gap-2.5 text-sm" style={{ color: "rgba(255,255,255,.6)" }}>
+                <Mail size={15} className="shrink-0" style={{ color: "var(--orange)" }} />
                 <span>{email}</span>
               </li>
             </ul>
@@ -110,22 +112,22 @@ export default function Footer({
 
           {/* Çalışma Saatleri */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Çalışma Saatleri</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-start gap-2">
-                <Clock size={16} className="text-[#e5500a] mt-0.5 shrink-0" />
-                <div className="space-y-1">
-                  <div><span className="text-gray-400">Hafta içi:</span> {calismaHafta}</div>
-                  <div><span className="text-gray-400">Cumartesi:</span> {calismaCumartesi}</div>
-                  <div><span className="text-gray-400">Pazar:</span> {calismaPazar}</div>
+            <h4 className="text-white font-bold mb-4 text-sm" style={{ fontFamily: "Montserrat,sans-serif" }}>Çalışma Saatleri</h4>
+            <ul className="flex flex-col gap-2.5 text-sm" style={{ color: "rgba(255,255,255,.6)" }}>
+              <li className="flex items-start gap-2.5">
+                <Clock size={15} className="mt-0.5 shrink-0" style={{ color: "var(--orange)" }} />
+                <div className="flex flex-col gap-1">
+                  <span><span style={{ color: "rgba(255,255,255,.35)" }}>Hf. içi:</span> {calismaHafta}</span>
+                  <span><span style={{ color: "rgba(255,255,255,.35)" }}>Cumartesi:</span> {calismaCumartesi}</span>
+                  <span><span style={{ color: "rgba(255,255,255,.35)" }}>Pazar:</span> {calismaPazar}</span>
                 </div>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-[#1d3a5c] mt-8 pt-6 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} {siteName}. Tüm hakları saklıdır.</p>
+        <div className="mt-10 pt-6 text-center text-xs" style={{ borderTop: "1px solid rgba(255,255,255,.08)", color: "rgba(255,255,255,.25)" }}>
+          © {new Date().getFullYear()} {siteName}. Tüm hakları saklıdır. · gazianteptenisveyuzme.tr
         </div>
       </div>
     </footer>
