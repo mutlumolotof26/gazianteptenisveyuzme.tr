@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState, useCallback } from "react";
 import {
   Search, Plus, Trash2, Edit, Check, X, UserCheck, UserX,
@@ -34,7 +34,7 @@ type Session = {
 };
 
 const durumEtiket: Record<string, { label: string; cls: string }> = {
-  aktif: { label: "Aktif", cls: "bg-green-100 text-green-700" },
+  aktif: { label: "Aktif", cls: "bg-orange-50 text-[#e5500a]" },
   pasif: { label: "Pasif", cls: "bg-gray-100 text-gray-600" },
   beklemede: { label: "Beklemede", cls: "bg-amber-100 text-amber-700" },
 };
@@ -44,7 +44,7 @@ const aylar = ["", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temm
 
 const gunler = ["pazartesi", "sali", "carsamba", "persembe", "cuma", "cumartesi", "pazar"];
 const gunLabel: Record<string, string> = { pazartesi: "Pazartesi", sali: "Salı", carsamba: "Çarşamba", persembe: "Perşembe", cuma: "Cuma", cumartesi: "Cumartesi", pazar: "Pazar" };
-const seviyeRenk: Record<string, string> = { baslangic: "bg-green-100 text-green-700", orta: "bg-blue-100 text-blue-700", ileri: "bg-purple-100 text-purple-700", her_seviye: "bg-gray-100 text-gray-600" };
+const seviyeRenk: Record<string, string> = { baslangic: "bg-orange-50 text-[#e5500a]", orta: "bg-[#e0f3fc] text-[#3a8fbf]", ileri: "bg-purple-100 text-purple-700", her_seviye: "bg-gray-100 text-gray-600" };
 const seviyeAdLabel: Record<string, string> = { baslangic: "Başlangıç", orta: "Orta", ileri: "İleri", her_seviye: "Her Seviye" };
 const emptySeansForm = { gun: "pazartesi", baslangic: "09:00", bitis: "10:00", program: "", seviye: "her_seviye", kapasite: 20, coachId: "", aktif: true, sira: 0 };
 
@@ -268,12 +268,12 @@ export default function UyelerPage() {
           <p className="text-gray-500 text-sm">Üyeleri ve aidat durumlarını yönetin</p>
         </div>
         {tab === "uyeler" && !selectedMember && (
-          <button onClick={() => { setShowForm(true); setEditId(null); }} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+          <button onClick={() => { setShowForm(true); setEditId(null); }} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
             <Plus size={16} /> Yeni Üye
           </button>
         )}
         {tab === "seanslar" && (
-          <button onClick={openNewSeans} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+          <button onClick={openNewSeans} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
             <Plus size={16} /> Yeni Seans
           </button>
         )}
@@ -309,15 +309,15 @@ export default function UyelerPage() {
             <div className="xl:col-span-1 space-y-4">
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                 <div className="flex items-center gap-4 mb-5">
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xl shrink-0">{selectedMember.ad[0]}{selectedMember.soyad[0]}</div>
+                  <div className="w-16 h-16 bg-[#e0f3fc] rounded-full flex items-center justify-center text-[#3a8fbf] font-bold text-xl shrink-0">{selectedMember.ad[0]}{selectedMember.soyad[0]}</div>
                   <div>
                     <h2 className="font-bold text-gray-800 text-lg">{selectedMember.ad} {selectedMember.soyad}</h2>
                     <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${durumEtiket[selectedMember.durum]?.cls}`}>{durumEtiket[selectedMember.durum]?.label}</span>
                   </div>
                 </div>
                 <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-2 text-gray-600"><Mail size={14} className="text-gray-400 shrink-0" /><a href={`mailto:${selectedMember.email}`} className="hover:text-blue-600 truncate">{selectedMember.email}</a></div>
-                  {selectedMember.telefon && <div className="flex items-center gap-2 text-gray-600"><Phone size={14} className="text-gray-400 shrink-0" /><a href={`tel:${selectedMember.telefon}`} className="hover:text-blue-600">{selectedMember.telefon}</a></div>}
+                  <div className="flex items-center gap-2 text-gray-600"><Mail size={14} className="text-gray-400 shrink-0" /><a href={`mailto:${selectedMember.email}`} className="hover:text-[#3a8fbf] truncate">{selectedMember.email}</a></div>
+                  {selectedMember.telefon && <div className="flex items-center gap-2 text-gray-600"><Phone size={14} className="text-gray-400 shrink-0" /><a href={`tel:${selectedMember.telefon}`} className="hover:text-[#3a8fbf]">{selectedMember.telefon}</a></div>}
                   {selectedMember.dogumTarihi && <div className="flex items-center gap-2 text-gray-600"><Calendar size={14} className="text-gray-400 shrink-0" /><span>{selectedMember.dogumTarihi}</span></div>}
                   <div className="flex items-center gap-2 text-gray-600"><CreditCard size={14} className="text-gray-400 shrink-0" /><span>{tipLabel[selectedMember.uyeTipi]} · {sporLabel[selectedMember.spor]}</span></div>
                   <div className="flex items-center gap-2 text-gray-500 text-xs"><Calendar size={12} className="text-gray-300 shrink-0" /><span>Kayıt: {new Date(selectedMember.kayitTarihi).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}</span></div>
@@ -325,15 +325,15 @@ export default function UyelerPage() {
                 <div className="border-t border-gray-100 mt-4 pt-4 flex gap-2 flex-wrap">
                   {selectedMember.durum === "beklemede" && (<><button onClick={() => handleStatusChange(selectedMember.id, "aktif")} className="flex items-center gap-1.5 text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700"><UserCheck size={12} /> Onayla</button><button onClick={() => handleStatusChange(selectedMember.id, "pasif")} className="flex items-center gap-1.5 text-xs bg-red-500 text-white px-3 py-1.5 rounded-lg hover:bg-red-600"><UserX size={12} /> Reddet</button></>)}
                   {selectedMember.durum === "aktif" && <button onClick={() => handleStatusChange(selectedMember.id, "pasif")} className="flex items-center gap-1.5 text-xs bg-gray-100 text-gray-600 px-3 py-1.5 rounded-lg hover:bg-gray-200">Pasife Al</button>}
-                  {selectedMember.durum === "pasif" && <button onClick={() => handleStatusChange(selectedMember.id, "aktif")} className="flex items-center gap-1.5 text-xs bg-green-100 text-green-700 px-3 py-1.5 rounded-lg hover:bg-green-200">Aktive Et</button>}
-                  <button onClick={() => startEdit(selectedMember)} className="flex items-center gap-1.5 text-xs bg-blue-100 text-blue-700 px-3 py-1.5 rounded-lg hover:bg-blue-200"><Edit size={12} /> Düzenle</button>
+                  {selectedMember.durum === "pasif" && <button onClick={() => handleStatusChange(selectedMember.id, "aktif")} className="flex items-center gap-1.5 text-xs bg-orange-50 text-[#e5500a] px-3 py-1.5 rounded-lg hover:bg-green-200">Aktive Et</button>}
+                  <button onClick={() => startEdit(selectedMember)} className="flex items-center gap-1.5 text-xs bg-[#e0f3fc] text-[#3a8fbf] px-3 py-1.5 rounded-lg hover:bg-blue-200"><Edit size={12} /> Düzenle</button>
                   <button onClick={() => handleDelete(selectedMember.id)} className="flex items-center gap-1.5 text-xs bg-red-50 text-red-500 px-3 py-1.5 rounded-lg hover:bg-red-100"><Trash2 size={12} /> Sil</button>
                 </div>
               </div>
               <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-5">
                 <h3 className="font-semibold text-gray-700 text-sm mb-3">Aidat Özeti</h3>
                 <div className="space-y-2">
-                  <div className="flex justify-between text-sm"><span className="text-gray-500">Toplam Ödenen</span><span className="font-semibold text-green-700">{profilToplamOdenen.toLocaleString("tr-TR")} ₺</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-gray-500">Toplam Ödenen</span><span className="font-semibold text-[#e5500a]">{profilToplamOdenen.toLocaleString("tr-TR")} ₺</span></div>
                   <div className="flex justify-between text-sm"><span className="text-gray-500">Bekleyen Kayıt</span><span className="font-semibold text-red-600">{profilBorc.length} ay</span></div>
                   <div className="flex justify-between text-sm"><span className="text-gray-500">Son Ödeme</span><span className="font-semibold text-gray-700">{profilOdendi[0]?.odemeTarihi ? new Date(profilOdendi[0].odemeTarihi).toLocaleDateString("tr-TR") : "—"}</span></div>
                 </div>
@@ -356,11 +356,11 @@ export default function UyelerPage() {
                       <thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Dönem</th><th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Tutar</th><th className="text-center px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Ödeme Tarihi</th><th className="text-center px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Durum</th></tr></thead>
                       <tbody className="divide-y divide-gray-50">
                         {selectedMember.aidatlar.map((a) => (
-                          <tr key={a.id} className={a.odendi ? "bg-green-50/20" : ""}>
+                          <tr key={a.id} className={a.odendi ? "bg-orange-50/20" : ""}>
                             <td className="px-4 py-3 text-sm font-medium text-gray-700">{donemLabel(a.donem)}</td>
                             <td className="px-4 py-3 text-sm text-right text-gray-700">{a.tutar > 0 ? `${a.tutar.toLocaleString("tr-TR")} ₺` : "—"}</td>
                             <td className="px-4 py-3 text-xs text-center text-gray-500">{a.odemeTarihi ? new Date(a.odemeTarihi).toLocaleDateString("tr-TR") : "—"}</td>
-                            <td className="px-4 py-3 text-center">{a.odendi ? <span className="inline-flex items-center gap-1 text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full font-medium"><Check size={10} /> Ödendi</span> : <span className="inline-flex items-center gap-1 text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-medium"><X size={10} /> Ödenmedi</span>}</td>
+                            <td className="px-4 py-3 text-center">{a.odendi ? <span className="inline-flex items-center gap-1 text-xs bg-orange-50 text-[#e5500a] px-2 py-0.5 rounded-full font-medium"><Check size={10} /> Ödendi</span> : <span className="inline-flex items-center gap-1 text-xs bg-red-100 text-red-600 px-2 py-0.5 rounded-full font-medium"><X size={10} /> Ödenmedi</span>}</td>
                           </tr>
                         ))}
                       </tbody>
@@ -382,8 +382,8 @@ export default function UyelerPage() {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {[
-              { label: "Toplam", value: members.length, cls: "bg-blue-50 text-blue-700", icon: <Users size={16} /> },
-              { label: "Aktif", value: members.filter(m => m.durum === "aktif").length, cls: "bg-green-50 text-green-700", icon: <CheckCircle size={16} /> },
+              { label: "Toplam", value: members.length, cls: "bg-[#f0f9ff] text-[#3a8fbf]", icon: <Users size={16} /> },
+              { label: "Aktif", value: members.filter(m => m.durum === "aktif").length, cls: "bg-orange-50 text-[#e5500a]", icon: <CheckCircle size={16} /> },
               { label: "Beklemede", value: members.filter(m => m.durum === "beklemede").length, cls: "bg-amber-50 text-amber-700", icon: <ChevronDown size={16} /> },
               { label: "Pasif", value: members.filter(m => m.durum === "pasif").length, cls: "bg-gray-50 text-gray-600", icon: <XCircle size={16} /> },
             ].map((c) => (
@@ -401,16 +401,16 @@ export default function UyelerPage() {
                   {loading ? <tr><td colSpan={6} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
                     : members.length === 0 ? <tr><td colSpan={6} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
                     : members.map((m) => (
-                      <tr key={m.id} className="hover:bg-blue-50/30 cursor-pointer" onClick={() => openProfile(m)}>
-                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-xs shrink-0">{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
+                      <tr key={m.id} className="hover:bg-[#f0f9ff]/30 cursor-pointer" onClick={() => openProfile(m)}>
+                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className="w-8 h-8 bg-[#e0f3fc] rounded-full flex items-center justify-center text-[#3a8fbf] font-bold text-xs shrink-0">{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
                         <td className="px-4 py-3 text-sm text-gray-500 hidden md:table-cell">{m.email}</td>
                         <td className="px-4 py-3 text-sm"><span className="block text-gray-700">{tipLabel[m.uyeTipi]}</span><span className="text-xs text-gray-400">{sporLabel[m.spor]}</span></td>
                         <td className="px-4 py-3"><span className={`text-xs px-2 py-0.5 rounded-full font-medium ${durumEtiket[m.durum]?.cls}`}>{durumEtiket[m.durum]?.label}</span></td>
                         <td className="px-4 py-3 text-xs text-gray-400 hidden lg:table-cell">{new Date(m.kayitTarihi).toLocaleDateString("tr-TR")}</td>
                         <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
                           <div className="flex items-center justify-end gap-1">
-                            {m.durum === "beklemede" && (<><button onClick={() => handleStatusChange(m.id, "aktif")} title="Onayla" className="p-1.5 text-green-600 hover:bg-green-50 rounded"><UserCheck size={15} /></button><button onClick={() => handleStatusChange(m.id, "pasif")} title="Reddet" className="p-1.5 text-red-500 hover:bg-red-50 rounded"><UserX size={15} /></button></>)}
-                            <button onClick={() => startEdit(m)} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded"><Edit size={15} /></button>
+                            {m.durum === "beklemede" && (<><button onClick={() => handleStatusChange(m.id, "aktif")} title="Onayla" className="p-1.5 text-[#e5500a] hover:bg-orange-50 rounded"><UserCheck size={15} /></button><button onClick={() => handleStatusChange(m.id, "pasif")} title="Reddet" className="p-1.5 text-red-500 hover:bg-red-50 rounded"><UserX size={15} /></button></>)}
+                            <button onClick={() => startEdit(m)} className="p-1.5 text-[#3a8fbf] hover:bg-[#f0f9ff] rounded"><Edit size={15} /></button>
                             <button onClick={() => handleDelete(m.id)} className="p-1.5 text-red-500 hover:bg-red-50 rounded"><Trash2 size={15} /></button>
                           </div>
                         </td>
@@ -436,8 +436,8 @@ export default function UyelerPage() {
             <select value={sporFilter} onChange={(e) => setSporFilter(e.target.value)} className="border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="">Tüm Sporlar</option><option value="tenis">Tenis</option><option value="yuzme">Yüzme</option><option value="her_ikisi">Her İkisi</option></select>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0"><Users size={18} className="text-blue-700" /></div><div><div className="text-2xl font-bold text-gray-800">{filteredRows.length}</div><div className="text-xs text-gray-500">Toplam</div></div></div>
-            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center shrink-0"><CheckCircle size={18} className="text-green-700" /></div><div><div className="text-2xl font-bold text-green-700">{odendi.length}</div><div className="text-xs text-gray-500">Ödendi</div></div></div>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0"><Users size={18} className="text-[#3a8fbf]" /></div><div><div className="text-2xl font-bold text-gray-800">{filteredRows.length}</div><div className="text-xs text-gray-500">Toplam</div></div></div>
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center shrink-0"><CheckCircle size={18} className="text-[#e5500a]" /></div><div><div className="text-2xl font-bold text-[#e5500a]">{odendi.length}</div><div className="text-xs text-gray-500">Ödendi</div></div></div>
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center shrink-0"><CheckCircle size={18} className="text-red-600" /></div><div><div className="text-2xl font-bold text-red-600">{odenmedi.length}</div><div className="text-xs text-gray-500">Ödenmedi</div></div></div>
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3"><div className="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center shrink-0"><TrendingUp size={18} className="text-amber-700" /></div><div><div className="text-xl font-bold text-gray-800">{toplamTahsilat > 0 ? `${toplamTahsilat.toLocaleString("tr-TR")} ₺` : "—"}</div><div className="text-xs text-gray-500">Tahsilat</div></div></div>
           </div>
@@ -449,13 +449,13 @@ export default function UyelerPage() {
                   {aidatLoading ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
                     : filteredRows.length === 0 ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
                     : filteredRows.map((row) => (
-                      <tr key={row.memberId} className={`hover:bg-gray-50 ${row.odendi ? "bg-green-50/20" : ""}`}>
-                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.odendi ? "bg-green-100 text-green-700" : "bg-blue-100 text-blue-700"}`}>{row.ad[0]}{row.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{row.ad} {row.soyad}</span></div></td>
-                        <td className="px-4 py-3 text-sm text-gray-500 hidden md:table-cell">{row.telefon ? <a href={`tel:${row.telefon}`} className="hover:text-blue-600">{row.telefon}</a> : "—"}</td>
+                      <tr key={row.memberId} className={`hover:bg-gray-50 ${row.odendi ? "bg-orange-50/20" : ""}`}>
+                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.odendi ? "bg-orange-50 text-[#e5500a]" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{row.ad[0]}{row.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{row.ad} {row.soyad}</span></div></td>
+                        <td className="px-4 py-3 text-sm text-gray-500 hidden md:table-cell">{row.telefon ? <a href={`tel:${row.telefon}`} className="hover:text-[#3a8fbf]">{row.telefon}</a> : "—"}</td>
                         <td className="px-4 py-3 text-sm hidden lg:table-cell"><span className="block text-gray-700">{tipLabel[row.uyeTipi]}</span><span className="text-xs text-gray-400">{sporLabel[row.spor]}</span></td>
-                        <td className="px-4 py-3 text-right"><button onClick={() => { setModalRow(row); setModalForm({ tutar: row.tutar, notlar: row.notlar }); }} className="text-sm font-medium text-gray-700 hover:text-blue-600">{row.tutar > 0 ? `${row.tutar.toLocaleString("tr-TR")} ₺` : <span className="text-gray-300 text-xs">Gir</span>}</button></td>
+                        <td className="px-4 py-3 text-right"><button onClick={() => { setModalRow(row); setModalForm({ tutar: row.tutar, notlar: row.notlar }); }} className="text-sm font-medium text-gray-700 hover:text-[#3a8fbf]">{row.tutar > 0 ? `${row.tutar.toLocaleString("tr-TR")} ₺` : <span className="text-gray-300 text-xs">Gir</span>}</button></td>
                         <td className="px-4 py-3 text-center text-xs text-gray-500 hidden md:table-cell">{row.odemeTarihi ? new Date(row.odemeTarihi).toLocaleDateString("tr-TR") : "—"}</td>
-                        <td className="px-4 py-3 text-center">{row.odendi ? <span className="inline-flex items-center gap-1 text-xs bg-green-100 text-green-700 px-2.5 py-1 rounded-full font-medium"><Check size={11} /> Ödendi</span> : <span className="inline-flex items-center gap-1 text-xs bg-red-100 text-red-600 px-2.5 py-1 rounded-full font-medium"><X size={11} /> Ödenmedi</span>}</td>
+                        <td className="px-4 py-3 text-center">{row.odendi ? <span className="inline-flex items-center gap-1 text-xs bg-orange-50 text-[#e5500a] px-2.5 py-1 rounded-full font-medium"><Check size={11} /> Ödendi</span> : <span className="inline-flex items-center gap-1 text-xs bg-red-100 text-red-600 px-2.5 py-1 rounded-full font-medium"><X size={11} /> Ödenmedi</span>}</td>
                         <td className="px-4 py-3 text-center"><button onClick={() => toggleOdendi(row)} disabled={saving} className={`text-xs px-3 py-1.5 rounded-lg font-medium transition-colors disabled:opacity-50 ${row.odendi ? "bg-gray-100 text-gray-600 hover:bg-gray-200" : "bg-green-600 text-white hover:bg-green-700"}`}>{row.odendi ? "Geri Al" : "Ödendi"}</button></td>
                       </tr>
                     ))}
@@ -482,7 +482,7 @@ export default function UyelerPage() {
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div>
                             <p className="font-semibold text-gray-800 text-sm">{s.program}</p>
-                            <p className="text-blue-600 font-medium text-sm">{s.baslangic} – {s.bitis}</p>
+                            <p className="text-[#3a8fbf] font-medium text-sm">{s.baslangic} – {s.bitis}</p>
                           </div>
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${seviyeRenk[s.seviye] || "bg-gray-100 text-gray-600"}`}>{seviyeAdLabel[s.seviye] || s.seviye}</span>
                         </div>
@@ -494,7 +494,7 @@ export default function UyelerPage() {
                           <button onClick={() => toggleSeansAktif(s)} title={s.aktif ? "Pasife Al" : "Aktive Et"} className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded">
                             {s.aktif ? <Eye size={14} /> : <EyeOff size={14} />}
                           </button>
-                          <button onClick={() => openEditSeans(s)} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded"><Edit size={14} /></button>
+                          <button onClick={() => openEditSeans(s)} className="p-1.5 text-[#3a8fbf] hover:bg-[#f0f9ff] rounded"><Edit size={14} /></button>
                           <button onClick={() => handleSeansDelete(s.id)} className="p-1.5 text-red-500 hover:bg-red-50 rounded"><Trash2 size={14} /></button>
                         </div>
                       </div>
@@ -507,7 +507,7 @@ export default function UyelerPage() {
               <div className="text-center py-16 text-gray-400">
                 <Waves size={40} className="mx-auto mb-3 text-gray-300" />
                 <p>Henüz seans eklenmemiş.</p>
-                <button onClick={openNewSeans} className="mt-4 text-blue-600 text-sm hover:underline">İlk seansı ekle</button>
+                <button onClick={openNewSeans} className="mt-4 text-[#3a8fbf] text-sm hover:underline">İlk seansı ekle</button>
               </div>
             )}
           </div>
@@ -527,7 +527,7 @@ export default function UyelerPage() {
                   ));
                   fetchBasvurular();
                 }}
-                className="text-xs text-blue-600 hover:text-blue-800 font-medium"
+                className="text-xs text-[#3a8fbf] hover:text-[#163050] font-medium"
               >
                 Tümünü okundu işaretle
               </button>
@@ -541,24 +541,24 @@ export default function UyelerPage() {
             ) : (
               <div className="divide-y divide-gray-50">
                 {basvurular.map((b) => (
-                  <div key={b.id} className={`p-4 flex items-start gap-4 ${!b.okundu ? "bg-blue-50/40" : ""}`}>
+                  <div key={b.id} className={`p-4 flex items-start gap-4 ${!b.okundu ? "bg-[#f0f9ff]/40" : ""}`}>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between gap-2 mb-1">
                         <div className="flex items-center gap-2 flex-wrap">
                           <span className="font-semibold text-gray-800 text-sm">{b.ad}</span>
-                          {!b.okundu && <span className="text-xs bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full font-medium">Yeni</span>}
+                          {!b.okundu && <span className="text-xs bg-[#e0f3fc] text-[#3a8fbf] px-1.5 py-0.5 rounded-full font-medium">Yeni</span>}
                         </div>
                         <span className="text-xs text-gray-400 shrink-0">{new Date(b.createdAt).toLocaleDateString("tr-TR", { day: "numeric", month: "short", year: "numeric" })}</span>
                       </div>
                       <div className="flex items-center gap-3 text-xs text-gray-500 mb-2 flex-wrap">
-                        <span className="flex items-center gap-1"><Waves size={11} className="text-blue-400" />{b.session.program} · {b.session.gun} {b.session.baslangic}–{b.session.bitis}</span>
-                        <a href={`tel:${b.telefon}`} className="flex items-center gap-1 hover:text-blue-600"><Phone size={11} />{b.telefon}</a>
-                        {b.email && <a href={`mailto:${b.email}`} className="flex items-center gap-1 hover:text-blue-600"><Mail size={11} />{b.email}</a>}
+                        <span className="flex items-center gap-1"><Waves size={11} className="text-[#5aaddc]" />{b.session.program} · {b.session.gun} {b.session.baslangic}–{b.session.bitis}</span>
+                        <a href={`tel:${b.telefon}`} className="flex items-center gap-1 hover:text-[#3a8fbf]"><Phone size={11} />{b.telefon}</a>
+                        {b.email && <a href={`mailto:${b.email}`} className="flex items-center gap-1 hover:text-[#3a8fbf]"><Mail size={11} />{b.email}</a>}
                       </div>
                       {b.mesaj && <p className="text-sm text-gray-600 bg-gray-50 rounded-lg px-3 py-2 italic">"{b.mesaj}"</p>}
                     </div>
                     <div className="flex items-center gap-1 shrink-0">
-                      <button onClick={() => toggleOkundu(b)} title={b.okundu ? "Okunmadı işaretle" : "Okundu işaretle"} className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
+                      <button onClick={() => toggleOkundu(b)} title={b.okundu ? "Okunmadı işaretle" : "Okundu işaretle"} className="p-1.5 text-gray-400 hover:text-[#3a8fbf] hover:bg-[#f0f9ff] rounded-lg transition-colors">
                         {b.okundu ? <EyeOff size={15} /> : <Eye size={15} />}
                       </button>
                       <button onClick={() => deleteBasvuru(b.id)} title="Sil" className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-lg transition-colors">
@@ -616,7 +616,7 @@ export default function UyelerPage() {
             </div>
             <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white">
               <button onClick={() => setSeansShowForm(false)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button>
-              <button onClick={handleSeansSave} disabled={seansSaving || !seansForm.program} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 disabled:opacity-60 flex items-center justify-center gap-2">
+              <button onClick={handleSeansSave} disabled={seansSaving || !seansForm.program} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] disabled:opacity-60 flex items-center justify-center gap-2">
                 <Check size={15} /> {seansEditId ? "Güncelle" : "Ekle"}
               </button>
             </div>
@@ -650,12 +650,12 @@ export default function UyelerPage() {
               {editId && (
                 <div className="border-t border-gray-100 pt-4">
                   <div className="flex items-center justify-between mb-3">
-                    <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-2"><CreditCard size={14} className="text-blue-500" /> Aidat Geçmişi</h4>
-                    <button onClick={() => setShowAddAidat((v) => !v)} className="text-xs text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"><Plus size={12} /> Ekle</button>
+                    <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-2"><CreditCard size={14} className="text-[#5aaddc]" /> Aidat Geçmişi</h4>
+                    <button onClick={() => setShowAddAidat((v) => !v)} className="text-xs text-[#3a8fbf] hover:text-[#163050] font-medium flex items-center gap-1"><Plus size={12} /> Ekle</button>
                   </div>
 
                   {showAddAidat && (
-                    <div className="bg-blue-50 rounded-lg p-3 mb-3 space-y-2">
+                    <div className="bg-[#f0f9ff] rounded-lg p-3 mb-3 space-y-2">
                       <div className="grid grid-cols-2 gap-2">
                         <div>
                           <label className="block text-xs text-gray-600 mb-1">Dönem (YYYY-AA)</label>
@@ -672,7 +672,7 @@ export default function UyelerPage() {
                       </label>
                       <div className="flex gap-2">
                         <button onClick={() => setShowAddAidat(false)} className="flex-1 text-xs border border-gray-300 rounded-lg py-1.5 text-gray-600 hover:bg-gray-50">İptal</button>
-                        <button onClick={saveNewAidat} disabled={saving} className="flex-1 text-xs bg-blue-600 text-white rounded-lg py-1.5 font-medium hover:bg-blue-700 disabled:opacity-60">Kaydet</button>
+                        <button onClick={saveNewAidat} disabled={saving} className="flex-1 text-xs bg-[#3a8fbf] text-white rounded-lg py-1.5 font-medium hover:bg-[#163050] disabled:opacity-60">Kaydet</button>
                       </div>
                     </div>
                   )}
@@ -684,10 +684,10 @@ export default function UyelerPage() {
                   ) : (
                     <div className="space-y-1 max-h-48 overflow-y-auto pr-1">
                       {editMemberAidatlar.map((a) => (
-                        <div key={a.id} className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs ${a.odendi ? "bg-green-50" : "bg-red-50/50"}`}>
+                        <div key={a.id} className={`flex items-center justify-between rounded-lg px-3 py-2 text-xs ${a.odendi ? "bg-orange-50" : "bg-red-50/50"}`}>
                           <span className="font-medium text-gray-700">{donemLabel(a.donem)}</span>
                           <span className="text-gray-500">{a.tutar > 0 ? `${a.tutar.toLocaleString("tr-TR")} ₺` : "—"}</span>
-                          <button onClick={() => toggleEditAidat(a)} disabled={saving} className={`flex items-center gap-1 px-2 py-1 rounded-full font-medium transition-colors disabled:opacity-50 ${a.odendi ? "bg-green-100 text-green-700 hover:bg-green-200" : "bg-red-100 text-red-600 hover:bg-red-200"}`}>
+                          <button onClick={() => toggleEditAidat(a)} disabled={saving} className={`flex items-center gap-1 px-2 py-1 rounded-full font-medium transition-colors disabled:opacity-50 ${a.odendi ? "bg-orange-50 text-[#e5500a] hover:bg-green-200" : "bg-red-100 text-red-600 hover:bg-red-200"}`}>
                             {a.odendi ? <><Check size={10} /> Ödendi</> : <><X size={10} /> Ödenmedi</>}
                           </button>
                         </div>
@@ -697,7 +697,7 @@ export default function UyelerPage() {
                 </div>
               )}
             </div>
-            <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white"><button onClick={() => { setShowForm(false); setEditId(null); }} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={handleSave} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 flex items-center justify-center gap-2"><Check size={15} /> {editId ? "Kaydet" : "Ekle"}</button></div>
+            <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white"><button onClick={() => { setShowForm(false); setEditId(null); }} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={handleSave} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] flex items-center justify-center gap-2"><Check size={15} /> {editId ? "Kaydet" : "Ekle"}</button></div>
           </div>
         </div>
       )}
@@ -711,7 +711,7 @@ export default function UyelerPage() {
               <div><label className="block text-xs font-medium text-gray-700 mb-1">Aidat Tutarı (₺)</label><input type="number" min={0} value={modalForm.tutar} onChange={(e) => setModalForm({ ...modalForm, tutar: Number(e.target.value) })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
               <div><label className="block text-xs font-medium text-gray-700 mb-1">Not</label><input value={modalForm.notlar} onChange={(e) => setModalForm({ ...modalForm, notlar: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
             </div>
-            <div className="flex gap-3 p-5 border-t"><button onClick={() => setModalRow(null)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={saveModal} disabled={saving} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 disabled:opacity-60">Kaydet</button></div>
+            <div className="flex gap-3 p-5 border-t"><button onClick={() => setModalRow(null)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={saveModal} disabled={saving} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] disabled:opacity-60">Kaydet</button></div>
           </div>
         </div>
       )}

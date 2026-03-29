@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { Images } from "lucide-react";
 
@@ -21,10 +21,10 @@ export default function GaleriPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Galeri</h1>
-          <p className="text-blue-200">Kulübümüzden fotoğraflar</p>
+          <p className="text-[#8fd0f0]">Kulübümüzden fotoğraflar</p>
         </div>
       </section>
 
@@ -36,7 +36,7 @@ export default function GaleriPage() {
               <button
                 key={k}
                 onClick={() => setFilter(k)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === k ? "bg-blue-900 text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === k ? "bg-[#1d3a5c] text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"}`}
               >
                 {k === "tümü" ? "Tümü" : k === "yuzme" ? "Yüzme" : k.charAt(0).toUpperCase() + k.slice(1)}
               </button>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -43,7 +43,7 @@ export default function AdminSidebar() {
           />
           <div>
             <div className="text-white font-bold text-sm leading-tight">Admin Paneli</div>
-            <div className="text-[#ed780e] text-xs">GTY Spor Kulübü</div>
+            <div className="text-[#e5500a] text-xs">GTY Spor Kulübü</div>
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ export default function AdminSidebar() {
               href={href}
               onClick={() => setMobileOpen(false)}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                active ? "bg-[#ed780e] text-white" : "text-blue-200 hover:bg-[#1e4468] hover:text-white"
+                active ? "bg-[#e5500a] text-white" : "text-[#8fd0f0] hover:bg-[#1d3a5c] hover:text-white"
               }`}
             >
               <Icon size={18} />
@@ -84,14 +84,14 @@ export default function AdminSidebar() {
   return (
     <>
       {/* Desktop Sidebar */}
-      <div className="hidden lg:flex w-64 bg-[#0d1e2e] flex-col h-screen sticky top-0">
+      <div className="hidden lg:flex w-64 bg-[#0f1f30] flex-col h-screen sticky top-0">
         {sidebarContent}
       </div>
 
       {/* Mobile Toggle */}
       <button
         onClick={() => setMobileOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-[#1e4468] text-white p-2 rounded-lg shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-[#1d3a5c] text-white p-2 rounded-lg shadow-lg"
       >
         <Menu size={20} />
       </button>
@@ -99,7 +99,7 @@ export default function AdminSidebar() {
       {/* Mobile Overlay */}
       {mobileOpen && (
         <div className="lg:hidden fixed inset-0 z-50 flex">
-          <div className="w-64 bg-[#0d1e2e] flex flex-col">
+          <div className="w-64 bg-[#0f1f30] flex flex-col">
             <button onClick={() => setMobileOpen(false)} className="absolute top-4 right-4 text-white">
               <X size={20} />
             </button>

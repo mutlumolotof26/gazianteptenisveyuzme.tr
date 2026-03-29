@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -45,16 +45,16 @@ export default function Header({
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[#152f47]/95 backdrop-blur-md shadow-2xl"
-          : "bg-[#1e4468] shadow-lg"
+          ? "bg-[#0f1f30]/95 backdrop-blur-md shadow-2xl"
+          : "bg-[#1d3a5c] shadow-lg"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4">
-        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16" : "h-24"}`}>
+        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "h-16" : "h-32"}`}>
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className={`rounded-full overflow-hidden shrink-0 border-2 border-white/20 transition-all duration-300 group-hover:border-[#ed780e]/60 ${scrolled ? "w-10 h-10" : "w-16 h-16"}`}>
+            <div className={`rounded-full overflow-hidden shrink-0 border-2 border-white/20 transition-all duration-300 group-hover:border-[#e5500a]/60 ${scrolled ? "w-16 h-16" : "w-28 h-28"}`}>
               <Image
                 src={logoUrl}
                 alt={siteName}
@@ -69,7 +69,7 @@ export default function Header({
               <div className={`text-white font-bold leading-tight tracking-tight transition-all duration-300 ${scrolled ? "text-sm" : "text-base"}`}>
                 {siteName}
               </div>
-              <div className="text-[#ed780e] text-xs font-semibold tracking-widest uppercase mt-0.5">
+              <div className="text-[#e5500a] text-xs font-semibold tracking-widest uppercase mt-0.5">
                 {siteAcik}
               </div>
             </div>
@@ -85,14 +85,14 @@ export default function Header({
                   href={link.href}
                   className={`relative px-3.5 py-2 text-sm font-medium tracking-wide rounded-md transition-all duration-200 group ${
                     isActive
-                      ? "text-[#ed780e]"
+                      ? "text-[#e5500a]"
                       : "text-white/85 hover:text-white"
                   }`}
                 >
                   {link.label}
                   {/* Animated underline */}
                   <span
-                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#ed780e] rounded-full transition-all duration-300 ${
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 bg-[#e5500a] rounded-full transition-all duration-300 ${
                       isActive ? "w-4/5" : "w-0 group-hover:w-3/5"
                     }`}
                   />
@@ -128,11 +128,11 @@ export default function Header({
                   href={link.href}
                   className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
                     isActive
-                      ? "bg-[#ed780e]/15 text-[#ed780e]"
+                      ? "bg-[#e5500a]/15 text-[#e5500a]"
                       : "text-white/80 hover:bg-white/8 hover:text-white"
                   }`}
                 >
-                  {isActive && <span className="w-1 h-1 rounded-full bg-[#ed780e]" />}
+                  {isActive && <span className="w-1 h-1 rounded-full bg-[#e5500a]" />}
                   {link.label}
                 </Link>
               );

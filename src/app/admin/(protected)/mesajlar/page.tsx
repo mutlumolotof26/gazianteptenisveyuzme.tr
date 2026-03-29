@@ -1,4 +1,4 @@
-import { requireAdmin } from "@/lib/auth";
+﻿import { requireAdmin } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { MessageSquare, Mail, Phone, Clock } from "lucide-react";
 
@@ -38,11 +38,11 @@ export default async function MesajlarPage() {
               </div>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">{contact.mesaj}</p>
               <div className="flex items-center gap-4 text-sm">
-                <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 text-blue-700 hover:underline">
+                <a href={`mailto:${contact.email}`} className="flex items-center gap-1.5 text-[#3a8fbf] hover:underline">
                   <Mail size={14} /> {contact.email}
                 </a>
                 {contact.telefon && (
-                  <a href={`tel:${contact.telefon}`} className="flex items-center gap-1.5 text-blue-700 hover:underline">
+                  <a href={`tel:${contact.telefon}`} className="flex items-center gap-1.5 text-[#3a8fbf] hover:underline">
                     <Phone size={14} /> {contact.telefon}
                   </a>
                 )}

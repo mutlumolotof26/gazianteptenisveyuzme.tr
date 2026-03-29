@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState, useRef } from "react";
 import { Save, Upload, Check, AlertCircle, Globe, Phone, Mail, MapPin, Clock, Share2, Image as ImageIcon, Lock, Eye, EyeOff, Tag } from "lucide-react";
 
@@ -154,7 +154,7 @@ export default function AyarlarPage() {
         <button
           onClick={handleSave}
           disabled={saving}
-          className="flex items-center gap-2 bg-blue-900 text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-blue-800 transition-colors disabled:opacity-60"
+          className="flex items-center gap-2 bg-[#1d3a5c] text-white px-5 py-2.5 rounded-lg font-semibold hover:bg-[#163050] transition-colors disabled:opacity-60"
         >
           {saving ? (
             <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -178,8 +178,8 @@ export default function AyarlarPage() {
         {/* Logo */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-              <ImageIcon size={16} className="text-blue-700" />
+            <div className="w-8 h-8 bg-[#e0f3fc] rounded-lg flex items-center justify-center">
+              <ImageIcon size={16} className="text-[#3a8fbf]" />
             </div>
             <h2 className="font-bold text-gray-800">Logo</h2>
           </div>
@@ -214,8 +214,8 @@ export default function AyarlarPage() {
         {/* Site Bilgileri */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div className="flex items-center gap-2 mb-5">
-            <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-              <Globe size={16} className="text-green-700" />
+            <div className="w-8 h-8 bg-orange-50 rounded-lg flex items-center justify-center">
+              <Globe size={16} className="text-[#e5500a]" />
             </div>
             <h2 className="font-bold text-gray-800">Site Bilgileri</h2>
           </div>
@@ -405,7 +405,7 @@ export default function AyarlarPage() {
           </div>
 
           {sifreStatus === "success" && (
-            <div className="mb-4 flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 rounded-lg px-4 py-3 text-sm">
+            <div className="mb-4 flex items-center gap-2 bg-orange-50 border border-orange-200 text-[#e5500a] rounded-lg px-4 py-3 text-sm">
               <Check size={16} /> Şifre başarıyla değiştirildi.
             </div>
           )}
@@ -455,7 +455,7 @@ export default function AyarlarPage() {
           <button
             onClick={handleSave}
             disabled={saving}
-            className="flex items-center gap-2 bg-blue-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors disabled:opacity-60"
+            className="flex items-center gap-2 bg-[#1d3a5c] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#163050] transition-colors disabled:opacity-60"
           >
             {saving ? (
               <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />

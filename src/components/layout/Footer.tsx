@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
@@ -28,7 +28,7 @@ export default function Footer({
   facebookUrl = "",
 }: FooterProps) {
   return (
-    <footer className="bg-[#0d1e2e] text-gray-300">
+    <footer className="bg-[#0f1f30] text-gray-300">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Kulüp Bilgisi */}
@@ -44,7 +44,7 @@ export default function Footer({
               />
               <div>
                 <div className="text-white font-bold text-sm">{siteName}</div>
-                <div className="text-[#ed780e] text-xs">Spor Kulübü</div>
+                <div className="text-[#e5500a] text-xs">Spor Kulübü</div>
               </div>
             </div>
             <p className="text-sm leading-relaxed mb-4">
@@ -54,13 +54,13 @@ export default function Footer({
               <div className="flex items-center gap-3">
                 {instagramUrl && (
                   <a href={instagramUrl} target="_blank" rel="noopener noreferrer"
-                    className="w-8 h-8 bg-[#1e4468] rounded-lg flex items-center justify-center hover:bg-[#ed780e] transition-colors">
+                    className="w-8 h-8 bg-[#1d3a5c] rounded-lg flex items-center justify-center hover:bg-[#e5500a] transition-colors">
                     <Instagram size={14} />
                   </a>
                 )}
                 {facebookUrl && (
                   <a href={facebookUrl} target="_blank" rel="noopener noreferrer"
-                    className="w-8 h-8 bg-[#1e4468] rounded-lg flex items-center justify-center hover:bg-[#ed780e] transition-colors">
+                    className="w-8 h-8 bg-[#1d3a5c] rounded-lg flex items-center justify-center hover:bg-[#e5500a] transition-colors">
                     <Facebook size={14} />
                   </a>
                 )}
@@ -81,7 +81,7 @@ export default function Footer({
                 { href: "/galeri", label: "Galeri" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="hover:text-[#ed780e] transition-colors">
+                  <Link href={link.href} className="hover:text-[#e5500a] transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -94,15 +94,15 @@ export default function Footer({
             <h3 className="text-white font-semibold mb-4">İletişim</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2">
-                <MapPin size={16} className="text-[#ed780e] mt-0.5 shrink-0" />
+                <MapPin size={16} className="text-[#e5500a] mt-0.5 shrink-0" />
                 <span>{adres}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} className="text-[#ed780e] shrink-0" />
+                <Phone size={16} className="text-[#e5500a] shrink-0" />
                 <span>{telefon}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Mail size={16} className="text-[#ed780e] shrink-0" />
+                <Mail size={16} className="text-[#e5500a] shrink-0" />
                 <span>{email}</span>
               </li>
             </ul>
@@ -113,7 +113,7 @@ export default function Footer({
             <h3 className="text-white font-semibold mb-4">Çalışma Saatleri</h3>
             <ul className="space-y-2 text-sm">
               <li className="flex items-start gap-2">
-                <Clock size={16} className="text-[#ed780e] mt-0.5 shrink-0" />
+                <Clock size={16} className="text-[#e5500a] mt-0.5 shrink-0" />
                 <div className="space-y-1">
                   <div><span className="text-gray-400">Hafta içi:</span> {calismaHafta}</div>
                   <div><span className="text-gray-400">Cumartesi:</span> {calismaCumartesi}</div>
@@ -124,7 +124,7 @@ export default function Footer({
           </div>
         </div>
 
-        <div className="border-t border-[#1e4468] mt-8 pt-6 text-center text-sm text-gray-500">
+        <div className="border-t border-[#1d3a5c] mt-8 pt-6 text-center text-sm text-gray-500">
           <p>© {new Date().getFullYear()} {siteName}. Tüm hakları saklıdır.</p>
         </div>
       </div>

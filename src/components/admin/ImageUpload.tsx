@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useRef, useState } from "react";
 import { Upload, X, Loader2 } from "lucide-react";
 import Image from "next/image";
@@ -61,11 +61,11 @@ export default function ImageUpload({ value, onChange, label = "Fotoğraf", heig
           onDragLeave={() => setDrag(false)}
           onDrop={onDrop}
           className={`${height} flex flex-col items-center justify-center border-2 border-dashed rounded-lg cursor-pointer transition-colors ${
-            drag ? "border-blue-400 bg-blue-50" : "border-gray-300 hover:border-blue-400 hover:bg-gray-50"
+            drag ? "border-blue-400 bg-[#f0f9ff]" : "border-gray-300 hover:border-blue-400 hover:bg-gray-50"
           }`}
         >
           {uploading ? (
-            <Loader2 size={24} className="text-blue-500 animate-spin" />
+            <Loader2 size={24} className="text-[#5aaddc] animate-spin" />
           ) : (
             <>
               <Upload size={24} className="text-gray-400 mb-2" />

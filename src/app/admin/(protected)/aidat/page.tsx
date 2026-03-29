@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { Check, X, ChevronLeft, ChevronRight, TrendingUp, Users, CheckCircle, XCircle } from "lucide-react";
 
@@ -147,8 +147,8 @@ export default function AidatPage() {
       {/* Özet kartlar */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-            <Users size={18} className="text-blue-700" />
+          <div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0">
+            <Users size={18} className="text-[#3a8fbf]" />
           </div>
           <div>
             <div className="text-2xl font-bold text-gray-800">{rows.length}</div>
@@ -156,11 +156,11 @@ export default function AidatPage() {
           </div>
         </div>
         <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex items-center gap-3">
-          <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center shrink-0">
-            <CheckCircle size={18} className="text-green-700" />
+          <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center shrink-0">
+            <CheckCircle size={18} className="text-[#e5500a]" />
           </div>
           <div>
-            <div className="text-2xl font-bold text-green-700">{odendi.length}</div>
+            <div className="text-2xl font-bold text-[#e5500a]">{odendi.length}</div>
             <div className="text-xs text-gray-500">Ödendi</div>
           </div>
         </div>
@@ -207,10 +207,10 @@ export default function AidatPage() {
               ) : rows.length === 0 ? (
                 <tr><td colSpan={7} className="text-center py-10 text-gray-400">Aktif üye bulunamadı.</td></tr>
               ) : rows.map((row) => (
-                <tr key={row.memberId} className={`hover:bg-gray-50 ${row.odendi ? "bg-green-50/30" : ""}`}>
+                <tr key={row.memberId} className={`hover:bg-gray-50 ${row.odendi ? "bg-orange-50/30" : ""}`}>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-2">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.odendi ? "bg-green-100 text-green-700" : "bg-blue-100 text-blue-700"}`}>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.odendi ? "bg-orange-50 text-[#e5500a]" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>
                         {row.ad[0]}{row.soyad[0]}
                       </div>
                       <span className="font-medium text-gray-800 text-sm">{row.ad} {row.soyad}</span>
@@ -222,7 +222,7 @@ export default function AidatPage() {
                     <span className="text-xs text-gray-400">{sporLabel[row.spor] || row.spor}</span>
                   </td>
                   <td className="px-4 py-3 text-right">
-                    <button onClick={() => openModal(row)} className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors">
+                    <button onClick={() => openModal(row)} className="text-sm font-medium text-gray-700 hover:text-[#3a8fbf] transition-colors">
                       {row.tutar > 0 ? `${row.tutar.toLocaleString("tr-TR")} ₺` : <span className="text-gray-300 text-xs">Gir</span>}
                     </button>
                   </td>
@@ -233,7 +233,7 @@ export default function AidatPage() {
                   </td>
                   <td className="px-4 py-3 text-center">
                     {row.odendi ? (
-                      <span className="inline-flex items-center gap-1 text-xs bg-green-100 text-green-700 px-2.5 py-1 rounded-full font-medium">
+                      <span className="inline-flex items-center gap-1 text-xs bg-orange-50 text-[#e5500a] px-2.5 py-1 rounded-full font-medium">
                         <Check size={11} /> Ödendi
                       </span>
                     ) : (
@@ -300,7 +300,7 @@ export default function AidatPage() {
               <button onClick={() => setModalRow(null)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">
                 İptal
               </button>
-              <button onClick={saveModal} disabled={saving} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 disabled:opacity-60">
+              <button onClick={saveModal} disabled={saving} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] disabled:opacity-60">
                 Kaydet
               </button>
             </div>

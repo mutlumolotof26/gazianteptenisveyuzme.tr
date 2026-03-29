@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { X, Send, CheckCircle } from "lucide-react";
@@ -69,7 +69,7 @@ export default function SeansBasvuruForm({ session }: Props) {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="mt-3 w-full bg-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
+        className="mt-3 w-full bg-[#3a8fbf] text-white text-sm font-semibold py-2 px-4 rounded-lg hover:bg-[#163050] transition-colors"
       >
         Başvur
       </button>
@@ -92,12 +92,12 @@ export default function SeansBasvuruForm({ session }: Props) {
             <div className="p-5">
               {success ? (
                 <div className="text-center py-6">
-                  <CheckCircle size={48} className="text-green-500 mx-auto mb-3" />
+                  <CheckCircle size={48} className="text-[#e5500a] mx-auto mb-3" />
                   <h4 className="font-bold text-gray-800 text-lg mb-2">Başvurunuz Alındı!</h4>
                   <p className="text-gray-500 text-sm">En kısa sürede sizinle iletişime geçeceğiz.</p>
                   <button
                     onClick={handleClose}
-                    className="mt-5 bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                    className="mt-5 bg-[#3a8fbf] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#163050] transition-colors"
                   >
                     Kapat
                   </button>
@@ -161,7 +161,7 @@ export default function SeansBasvuruForm({ session }: Props) {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="w-full bg-blue-600 text-white font-semibold py-2.5 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
+                    className="w-full bg-[#3a8fbf] text-white font-semibold py-2.5 rounded-lg hover:bg-[#163050] transition-colors flex items-center justify-center gap-2 disabled:opacity-60"
                   >
                     {loading ? (
                       <span className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />

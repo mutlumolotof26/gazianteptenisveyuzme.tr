@@ -1,4 +1,4 @@
-import { requireAdmin } from "@/lib/auth";
+﻿import { requireAdmin } from "@/lib/auth";
 import { prisma } from "@/lib/db";
 import { Users, Newspaper, Calendar, MessageSquare, Clock } from "lucide-react";
 import Link from "next/link";
@@ -26,9 +26,9 @@ export default async function DashboardPage() {
   ];
 
   const colorMap: Record<string, string> = {
-    blue: "bg-blue-100 text-blue-700",
+    blue: "bg-[#e0f3fc] text-[#3a8fbf]",
     amber: "bg-amber-100 text-amber-700",
-    green: "bg-green-100 text-green-700",
+    green: "bg-orange-50 text-[#e5500a]",
     purple: "bg-purple-100 text-purple-700",
     red: "bg-red-100 text-red-700",
   };
@@ -56,7 +56,7 @@ export default async function DashboardPage() {
       <div className="bg-white rounded-xl shadow-sm border border-gray-100">
         <div className="flex items-center justify-between p-5 border-b border-gray-100">
           <h2 className="font-bold text-gray-800">Son Üye Başvuruları</h2>
-          <Link href="/admin/uyeler" className="text-sm text-blue-700 font-medium hover:underline">
+          <Link href="/admin/uyeler" className="text-sm text-[#3a8fbf] font-medium hover:underline">
             Tümünü Gör
           </Link>
         </div>
@@ -64,7 +64,7 @@ export default async function DashboardPage() {
           {recentMembers.map((member) => (
             <div key={member.id} className="flex items-center justify-between p-4 hover:bg-gray-50">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 bg-blue-100 rounded-full flex items-center justify-center text-blue-700 font-bold text-sm">
+                <div className="w-9 h-9 bg-[#e0f3fc] rounded-full flex items-center justify-center text-[#3a8fbf] font-bold text-sm">
                   {member.ad[0]}{member.soyad[0]}
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default async function DashboardPage() {
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${member.durum === "aktif" ? "bg-green-100 text-green-700" : member.durum === "beklemede" ? "bg-amber-100 text-amber-700" : "bg-gray-100 text-gray-600"}`}>
+                <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${member.durum === "aktif" ? "bg-orange-50 text-[#e5500a]" : member.durum === "beklemede" ? "bg-amber-100 text-amber-700" : "bg-gray-100 text-gray-600"}`}>
                   {member.durum === "aktif" ? "Aktif" : member.durum === "beklemede" ? "Beklemede" : "Pasif"}
                 </span>
                 <span className="text-gray-400 text-xs">

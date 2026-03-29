@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { Plus, Edit, Trash2, X, Check, Waves, Eye, EyeOff } from "lucide-react";
 
@@ -23,7 +23,7 @@ const seviyeLabel: Record<string, string> = {
   baslangic: "Başlangıç", orta: "Orta", ileri: "İleri", her_seviye: "Her Seviye",
 };
 const seviyeRenk: Record<string, string> = {
-  baslangic: "bg-green-100 text-green-700", orta: "bg-blue-100 text-blue-700",
+  baslangic: "bg-orange-50 text-[#e5500a]", orta: "bg-[#e0f3fc] text-[#3a8fbf]",
   ileri: "bg-purple-100 text-purple-700", her_seviye: "bg-gray-100 text-gray-600",
 };
 
@@ -109,7 +109,7 @@ export default function SeanslarPage() {
           <p className="text-gray-500 text-sm">Yüzme seanslarını ve başvuruları yönetin</p>
         </div>
         {tab === "seanslar" && (
-          <button onClick={openNew} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+          <button onClick={openNew} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
             <Plus size={16} /> Yeni Seans
           </button>
         )}
@@ -141,7 +141,7 @@ export default function SeanslarPage() {
                         <div className="flex items-start justify-between gap-2 mb-2">
                           <div>
                             <p className="font-semibold text-gray-800 text-sm">{s.program}</p>
-                            <p className="text-blue-600 font-medium text-sm">{s.baslangic} – {s.bitis}</p>
+                            <p className="text-[#3a8fbf] font-medium text-sm">{s.baslangic} – {s.bitis}</p>
                           </div>
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${seviyeRenk[s.seviye] || "bg-gray-100 text-gray-600"}`}>{seviyeLabel[s.seviye] || s.seviye}</span>
                         </div>
@@ -153,7 +153,7 @@ export default function SeanslarPage() {
                           <button onClick={() => toggleAktif(s)} title={s.aktif ? "Pasife Al" : "Aktive Et"} className="p-1.5 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded">
                             {s.aktif ? <Eye size={14} /> : <EyeOff size={14} />}
                           </button>
-                          <button onClick={() => openEdit(s)} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded"><Edit size={14} /></button>
+                          <button onClick={() => openEdit(s)} className="p-1.5 text-[#3a8fbf] hover:bg-[#f0f9ff] rounded"><Edit size={14} /></button>
                           <button onClick={() => handleDelete(s.id)} className="p-1.5 text-red-500 hover:bg-red-50 rounded"><Trash2 size={14} /></button>
                         </div>
                       </div>
@@ -166,7 +166,7 @@ export default function SeanslarPage() {
               <div className="text-center py-16 text-gray-400">
                 <Waves size={40} className="mx-auto mb-3 text-gray-300" />
                 <p>Henüz seans eklenmemiş.</p>
-                <button onClick={openNew} className="mt-4 text-blue-600 text-sm hover:underline">İlk seansı ekle</button>
+                <button onClick={openNew} className="mt-4 text-[#3a8fbf] text-sm hover:underline">İlk seansı ekle</button>
               </div>
             )}
           </div>
@@ -181,18 +181,18 @@ export default function SeanslarPage() {
           ) : (
             <div className="divide-y divide-gray-50">
               {requests.map((r) => (
-                <div key={r.id} className={`p-4 ${!r.okundu ? "bg-blue-50/40" : ""}`}>
+                <div key={r.id} className={`p-4 ${!r.okundu ? "bg-[#f0f9ff]/40" : ""}`}>
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        {!r.okundu && <span className="w-2 h-2 bg-blue-500 rounded-full shrink-0" />}
+                        {!r.okundu && <span className="w-2 h-2 bg-[#f0f9ff]0 rounded-full shrink-0" />}
                         <span className="font-semibold text-gray-800 text-sm">{r.ad}</span>
                         <span className="text-xs text-gray-400">{new Date(r.createdAt).toLocaleDateString("tr-TR", { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}</span>
                       </div>
-                      <p className="text-xs text-blue-600 font-medium mb-1">{r.session.program} · {gunLabel[r.session.gun]} {r.session.baslangic}–{r.session.bitis}</p>
+                      <p className="text-xs text-[#3a8fbf] font-medium mb-1">{r.session.program} · {gunLabel[r.session.gun]} {r.session.baslangic}–{r.session.bitis}</p>
                       <div className="flex flex-wrap gap-3 text-xs text-gray-500">
-                        <a href={`tel:${r.telefon}`} className="hover:text-blue-600">{r.telefon}</a>
-                        {r.email && <a href={`mailto:${r.email}`} className="hover:text-blue-600">{r.email}</a>}
+                        <a href={`tel:${r.telefon}`} className="hover:text-[#3a8fbf]">{r.telefon}</a>
+                        {r.email && <a href={`mailto:${r.email}`} className="hover:text-[#3a8fbf]">{r.email}</a>}
                       </div>
                       {r.mesaj && <p className="text-sm text-gray-600 mt-2 bg-gray-50 rounded-lg p-2">{r.mesaj}</p>}
                     </div>
@@ -270,7 +270,7 @@ export default function SeanslarPage() {
             </div>
             <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white">
               <button onClick={() => setShowForm(false)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button>
-              <button onClick={handleSave} disabled={saving || !form.program} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 disabled:opacity-60 flex items-center justify-center gap-2">
+              <button onClick={handleSave} disabled={saving || !form.program} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] disabled:opacity-60 flex items-center justify-center gap-2">
                 <Check size={15} /> {editId ? "Güncelle" : "Ekle"}
               </button>
             </div>

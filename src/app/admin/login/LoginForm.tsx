@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -92,7 +92,7 @@ export default function LoginForm() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors disabled:opacity-60"
+            className="w-full bg-[#1d3a5c] text-white py-3 rounded-lg font-bold hover:bg-[#163050] transition-colors disabled:opacity-60"
           >
             {loading ? "Giriş yapılıyor..." : "Giriş Yap"}
           </button>

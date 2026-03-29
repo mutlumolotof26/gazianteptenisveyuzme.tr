@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState } from "react";
 import { Plus, Edit, Trash2, X, Check, Calendar } from "lucide-react";
 
@@ -50,7 +50,7 @@ export default function EtkinliklerAdminPage() {
           <h1 className="text-2xl font-bold text-gray-800">Etkinlik Yönetimi</h1>
           <p className="text-gray-500 text-sm">{items.length} etkinlik</p>
         </div>
-        <button onClick={() => { setShowForm(true); setEditId(null); setForm({ ...emptyForm }); }} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+        <button onClick={() => { setShowForm(true); setEditId(null); setForm({ ...emptyForm }); }} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
           <Plus size={16} /> Yeni Etkinlik
         </button>
       </div>
@@ -80,17 +80,17 @@ export default function EtkinliklerAdminPage() {
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-1.5 text-sm text-gray-600">
-                      <Calendar size={13} className="text-blue-500" />
+                      <Calendar size={13} className="text-[#5aaddc]" />
                       {new Date(item.tarih).toLocaleDateString("tr-TR")}
                     </div>
                   </td>
                   <td className="px-4 py-3 text-sm text-gray-500">{item.yer || "-"}</td>
                   <td className="px-4 py-3">
-                    <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full capitalize">{item.kategori}</span>
+                    <span className="text-xs bg-[#e0f3fc] text-[#3a8fbf] px-2 py-0.5 rounded-full capitalize">{item.kategori}</span>
                   </td>
                   <td className="px-4 py-3">
                     <div className="flex items-center justify-end gap-1">
-                      <button onClick={() => startEdit(item)} className="p-1.5 text-blue-600 hover:bg-blue-50 rounded"><Edit size={15} /></button>
+                      <button onClick={() => startEdit(item)} className="p-1.5 text-[#3a8fbf] hover:bg-[#f0f9ff] rounded"><Edit size={15} /></button>
                       <button onClick={() => handleDelete(item.id)} className="p-1.5 text-red-500 hover:bg-red-50 rounded"><Trash2 size={15} /></button>
                     </div>
                   </td>
@@ -145,7 +145,7 @@ export default function EtkinliklerAdminPage() {
             </div>
             <div className="flex gap-3 p-5 border-t">
               <button onClick={() => setShowForm(false)} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button>
-              <button onClick={handleSave} className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 flex items-center justify-center gap-2">
+              <button onClick={handleSave} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] flex items-center justify-center gap-2">
                 <Check size={15} /> {editId ? "Kaydet" : "Ekle"}
               </button>
             </div>

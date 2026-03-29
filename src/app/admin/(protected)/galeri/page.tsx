@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState, useRef } from "react";
 import { Plus, Trash2, X, Check, Images, Upload } from "lucide-react";
 
@@ -68,7 +68,7 @@ export default function GaleriAdminPage() {
           <h1 className="text-2xl font-bold text-gray-800">Galeri Yönetimi</h1>
           <p className="text-gray-500 text-sm">{items.length} fotoğraf</p>
         </div>
-        <button onClick={() => setShowForm(true)} className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-800">
+        <button onClick={() => setShowForm(true)} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
           <Plus size={16} /> Fotoğraf Ekle
         </button>
       </div>
@@ -122,7 +122,7 @@ export default function GaleriAdminPage() {
                 ) : (
                   <div
                     onClick={() => fileRef.current?.click()}
-                    className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-blue-400 hover:bg-blue-50/50 transition-colors"
+                    className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center cursor-pointer hover:border-blue-400 hover:bg-[#f0f9ff]/50 transition-colors"
                   >
                     <Upload size={32} className="mx-auto mb-2 text-gray-400" />
                     <p className="text-sm text-gray-500 font-medium">
@@ -156,7 +156,7 @@ export default function GaleriAdminPage() {
               <button
                 onClick={handleSave}
                 disabled={!form.baslik || !form.resimUrl}
-                className="flex-1 bg-blue-900 text-white py-2.5 rounded-lg text-sm font-bold hover:bg-blue-800 flex items-center justify-center gap-2 disabled:opacity-60"
+                className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] flex items-center justify-center gap-2 disabled:opacity-60"
               >
                 <Check size={15} /> Ekle
               </button>

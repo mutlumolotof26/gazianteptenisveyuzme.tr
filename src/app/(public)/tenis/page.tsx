@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Trophy, Clock, Users, Star } from "lucide-react";
 import { prisma } from "@/lib/db";
 
@@ -44,13 +44,13 @@ export default async function TenisPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-800 to-green-700 text-white py-16">
+      <section className="bg-gradient-to-r from-[#e5500a] to-[#c44208] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Trophy size={48} className="text-amber-400" />
             <div>
               <h1 className="text-4xl font-bold mb-1">Tenis</h1>
-              <p className="text-green-200 text-lg">Profesyonel kortlar, uzman antrenörler</p>
+              <p className="text-orange-100 text-lg">Profesyonel kortlar, uzman antrenörler</p>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default async function TenisPage() {
       {/* Tesisler */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-900 mb-10 text-center">Tenis Tesislerimiz</h2>
+          <h2 className="text-3xl font-bold text-[#1d3a5c] mb-10 text-center">Tenis Tesislerimiz</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {[
               { icon: "🎾", title: "6 Tenis Kortu", desc: "Profesyonel Amerikan sert kort zemini, gece aydınlatmalı" },
@@ -79,22 +79,22 @@ export default async function TenisPage() {
       {/* Programlar */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-900 text-center mb-3">Eğitim Programları</h2>
+          <h2 className="text-3xl font-bold text-[#1d3a5c] text-center mb-3">Eğitim Programları</h2>
           <p className="text-center text-gray-500 mb-10">Her yaş ve seviyeye uygun programlar</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {programs.map((prog) => (
               <div key={prog.title} className="bg-white rounded-xl p-6 shadow-md border border-gray-100 hover:border-green-400 transition-colors">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="font-bold text-gray-800 text-lg">{prog.title}</h3>
-                  <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-semibold">{prog.seviye}</span>
+                  <span className="text-xs bg-orange-50 text-[#e5500a] px-2 py-1 rounded-full font-semibold">{prog.seviye}</span>
                 </div>
                 <div className="space-y-2 text-sm text-gray-600">
                   <div className="flex items-center gap-2">
-                    <Users size={14} className="text-green-600" />
+                    <Users size={14} className="text-[#e5500a]" />
                     <span>{prog.age}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock size={14} className="text-green-600" />
+                    <Clock size={14} className="text-[#e5500a]" />
                     <span>{prog.saat} - {prog.sure}</span>
                   </div>
                 </div>
@@ -108,20 +108,20 @@ export default async function TenisPage() {
       {coaches.length > 0 && (
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4">
-            <h2 className="text-3xl font-bold text-blue-900 text-center mb-10">Antrenörlerimiz</h2>
+            <h2 className="text-3xl font-bold text-[#1d3a5c] text-center mb-10">Antrenörlerimiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {coaches.map((coach) => (
                 <div key={coach.id} className="bg-white rounded-xl p-6 shadow-md text-center border border-gray-100 hover:shadow-lg transition-shadow">
-                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-green-100 flex items-center justify-center border-2 border-green-200">
+                  <div className="w-24 h-24 rounded-full mx-auto mb-4 overflow-hidden bg-orange-50 flex items-center justify-center border-2 border-orange-200">
                     {coach.resimUrl ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={coach.resimUrl} alt={coach.ad} className="w-full h-full object-cover" />
                     ) : (
-                      <Users size={36} className="text-green-500" />
+                      <Users size={36} className="text-[#e5500a]" />
                     )}
                   </div>
                   <h3 className="font-bold text-gray-800 text-lg">{coach.ad}</h3>
-                  <p className="text-green-600 font-medium text-sm mt-1">{coach.unvan}</p>
+                  <p className="text-[#e5500a] font-medium text-sm mt-1">{coach.unvan}</p>
                   {coach.deneyim && (
                     <div className="flex items-center justify-center gap-1 mt-2 text-gray-400 text-sm">
                       <Star size={12} fill="currentColor" className="text-amber-400" />
@@ -142,8 +142,8 @@ export default async function TenisPage() {
       <section className="py-16 bg-green-700 text-white text-center">
         <div className="max-w-2xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Tenis Ailemize Katılın</h2>
-          <p className="text-green-200 mb-8">Deneme dersi için bizimle iletişime geçin.</p>
-          <a href="/iletisim" className="bg-amber-400 text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-amber-300 transition-colors inline-block">
+          <p className="text-orange-100 mb-8">Deneme dersi için bizimle iletişime geçin.</p>
+          <a href="/iletisim" className="bg-amber-400 text-[#1d3a5c] px-8 py-3 rounded-lg font-bold hover:bg-amber-300 transition-colors inline-block">
             İletişime Geç
           </a>
         </div>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Calendar, ChevronRight } from "lucide-react";
 import { prisma } from "@/lib/db";
@@ -21,10 +21,10 @@ export default async function HaberlerPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Haberler</h1>
-          <p className="text-blue-200">Kulübümüzden güncel haberler ve duyurular</p>
+          <p className="text-[#8fd0f0]">Kulübümüzden güncel haberler ve duyurular</p>
         </div>
       </section>
 
@@ -42,20 +42,20 @@ export default async function HaberlerPage() {
                   {item.resimUrl ? (
                     <img src={item.resimUrl} alt={item.baslik} className="w-full h-48 object-cover" />
                   ) : (
-                    <div className="w-full h-48 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
-                      <Calendar size={48} className="text-blue-400" />
+                    <div className="w-full h-48 bg-gradient-to-br from-[#e0f3fc] to-[#c7e9f7] flex items-center justify-center">
+                      <Calendar size={48} className="text-[#5aaddc]" />
                     </div>
                   )}
                   <div className="p-5">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium capitalize">{item.kategori}</span>
+                      <span className="text-xs bg-[#e0f3fc] text-[#3a8fbf] px-2 py-0.5 rounded-full font-medium capitalize">{item.kategori}</span>
                       <span className="text-xs text-gray-400">
                         {new Date(item.yayinTarihi).toLocaleDateString("tr-TR")}
                       </span>
                     </div>
                     <h2 className="font-bold text-gray-800 mb-2 line-clamp-2">{item.baslik}</h2>
                     {item.ozet && <p className="text-gray-500 text-sm line-clamp-2 mb-3">{item.ozet}</p>}
-                    <Link href={`/haberler/${item.id}`} className="text-blue-700 text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all">
+                    <Link href={`/haberler/${item.id}`} className="text-[#3a8fbf] text-sm font-semibold inline-flex items-center gap-1 hover:gap-2 transition-all">
                       Devamını Oku <ChevronRight size={14} />
                     </Link>
                   </div>

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useEffect, useState, useRef } from "react";
 import { Plus, Edit, Trash2, X, Check, Upload, GripVertical, Users } from "lucide-react";
 
@@ -32,8 +32,8 @@ const sporEtiket: Record<string, string> = {
 };
 
 const sporRenk: Record<string, string> = {
-  tenis: "bg-green-100 text-green-700",
-  yuzme: "bg-blue-100 text-blue-700",
+  tenis: "bg-orange-50 text-[#e5500a]",
+  yuzme: "bg-[#e0f3fc] text-[#3a8fbf]",
   her_ikisi: "bg-purple-100 text-purple-700",
 };
 
@@ -134,7 +134,7 @@ export default function AntrenorlerPage() {
         </div>
         <button
           onClick={openNew}
-          className="flex items-center gap-2 bg-blue-900 text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-blue-800 transition-colors text-sm"
+          className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg font-semibold hover:bg-[#163050] transition-colors text-sm"
         >
           <Plus size={16} />
           Yeni Antrenör
@@ -267,7 +267,7 @@ export default function AntrenorlerPage() {
                   <label className="flex items-center gap-2 cursor-pointer">
                     <div
                       onClick={() => setForm({ ...form, aktif: !form.aktif })}
-                      className={`w-10 h-6 rounded-full transition-colors ${form.aktif ? "bg-green-500" : "bg-gray-300"} relative cursor-pointer`}
+                      className={`w-10 h-6 rounded-full transition-colors ${form.aktif ? "bg-[#e5500a]" : "bg-gray-300"} relative cursor-pointer`}
                     >
                       <span className={`absolute top-1 w-4 h-4 bg-white rounded-full shadow transition-transform ${form.aktif ? "translate-x-5" : "translate-x-1"}`} />
                     </div>
@@ -289,7 +289,7 @@ export default function AntrenorlerPage() {
               <button
                 onClick={handleSave}
                 disabled={saving || !form.ad || !form.unvan}
-                className="flex items-center gap-2 bg-blue-900 text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-blue-800 transition-colors disabled:opacity-60"
+                className="flex items-center gap-2 bg-[#1d3a5c] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:bg-[#163050] transition-colors disabled:opacity-60"
               >
                 {saving ? (
                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
@@ -313,7 +313,7 @@ export default function AntrenorlerPage() {
             <p className="text-gray-500 mb-4">Henüz antrenör eklenmemiş.</p>
             <button
               onClick={openNew}
-              className="inline-flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-blue-800 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-[#163050] transition-colors"
             >
               <Plus size={15} /> İlk Antrenörü Ekle
             </button>
@@ -355,14 +355,14 @@ export default function AntrenorlerPage() {
                     onClick={() => toggleAktif(coach)}
                     title={coach.aktif ? "Pasif yap" : "Aktif yap"}
                     className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold transition-colors ${
-                      coach.aktif ? "bg-green-100 text-green-700 hover:bg-green-200" : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+                      coach.aktif ? "bg-orange-50 text-[#e5500a] hover:bg-green-200" : "bg-gray-100 text-gray-500 hover:bg-gray-200"
                     }`}
                   >
                     {coach.aktif ? "A" : "P"}
                   </button>
                   <button
                     onClick={() => openEdit(coach)}
-                    className="w-8 h-8 rounded-lg flex items-center justify-center bg-blue-50 text-blue-700 hover:bg-blue-100 transition-colors"
+                    className="w-8 h-8 rounded-lg flex items-center justify-center bg-[#f0f9ff] text-[#3a8fbf] hover:bg-[#e0f3fc] transition-colors"
                   >
                     <Edit size={14} />
                   </button>

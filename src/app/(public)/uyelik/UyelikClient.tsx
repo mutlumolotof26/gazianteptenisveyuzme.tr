@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { Check, Users } from "lucide-react";
 
@@ -37,13 +37,13 @@ export default function UyelikClient({ plans }: Props) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Users size={48} className="text-amber-400" />
             <div>
               <h1 className="text-4xl font-bold mb-1">Üyelik</h1>
-              <p className="text-blue-200 text-lg">Size uygun üyelik planını seçin</p>
+              <p className="text-[#8fd0f0] text-lg">Size uygun üyelik planını seçin</p>
             </div>
           </div>
         </div>
@@ -52,33 +52,33 @@ export default function UyelikClient({ plans }: Props) {
       {/* Planlar */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-900 text-center mb-3">Üyelik Planları</h2>
+          <h2 className="text-3xl font-bold text-[#1d3a5c] text-center mb-3">Üyelik Planları</h2>
           <p className="text-center text-gray-500 mb-10">Tüm planlar kayıt ve sigorta dahildir</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan) => (
               <div key={plan.title} className={`bg-white rounded-2xl shadow-lg overflow-hidden border-2 transition-all duration-300 hover:border-green-500 hover:shadow-green-200 hover:shadow-xl hover:-translate-y-1 ${plan.popular ? "border-green-500 scale-105" : "border-gray-100"}`}>
                 {plan.popular && (
-                  <div className="bg-green-500 text-white text-center text-xs font-bold py-1.5">
+                  <div className="bg-[#e5500a] text-white text-center text-xs font-bold py-1.5">
                     EN POPÜLER
                   </div>
                 )}
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-gray-800 mb-2">{plan.title}</h3>
                   <div className="flex items-end gap-1 mb-4">
-                    <span className="text-3xl font-black text-blue-900">{plan.price}</span>
+                    <span className="text-3xl font-black text-[#1d3a5c]">{plan.price}</span>
                     <span className="text-gray-400 text-sm mb-1">{plan.period}</span>
                   </div>
                   <ul className="space-y-2 mb-6">
                     {plan.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-sm text-gray-600">
-                        <Check size={14} className="text-green-500 shrink-0" />
+                        <Check size={14} className="text-[#e5500a] shrink-0" />
                         {f}
                       </li>
                     ))}
                   </ul>
                   <button
                     onClick={() => document.getElementById("basvuru")?.scrollIntoView({ behavior: "smooth" })}
-                    className={`w-full py-2.5 rounded-lg font-semibold text-sm transition-colors ${plan.popular ? "bg-green-500 text-white hover:bg-green-600" : "bg-blue-900 text-white hover:bg-blue-800"}`}
+                    className={`w-full py-2.5 rounded-lg font-semibold text-sm transition-colors ${plan.popular ? "bg-[#e5500a] text-white hover:bg-[#c44208]" : "bg-[#1d3a5c] text-white hover:bg-[#163050]"}`}
                   >
                     Başvur
                   </button>
@@ -92,13 +92,13 @@ export default function UyelikClient({ plans }: Props) {
       {/* Başvuru Formu */}
       <section id="basvuru" className="py-16 bg-gray-50">
         <div className="max-w-2xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-900 text-center mb-3">Üyelik Başvurusu</h2>
+          <h2 className="text-3xl font-bold text-[#1d3a5c] text-center mb-3">Üyelik Başvurusu</h2>
           <p className="text-center text-gray-500 mb-8">Formu doldurun, sizi arayalım.</p>
           {submitted ? (
-            <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-              <Check size={48} className="text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-green-800 mb-2">Başvurunuz Alındı!</h3>
-              <p className="text-green-600">En kısa sürede sizinle iletişime geçeceğiz.</p>
+            <div className="bg-orange-50 border border-orange-200 rounded-xl p-8 text-center">
+              <Check size={48} className="text-[#e5500a] mx-auto mb-4" />
+              <h3 className="text-xl font-bold text-[#c44208] mb-2">Başvurunuz Alındı!</h3>
+              <p className="text-[#e5500a]">En kısa sürede sizinle iletişime geçeceğiz.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-md p-8 space-y-4">
@@ -141,7 +141,7 @@ export default function UyelikClient({ plans }: Props) {
                 <label className="block text-sm font-medium text-gray-700 mb-1">Notlar</label>
                 <textarea value={formData.mesaj} onChange={(e) => setFormData({ ...formData, mesaj: e.target.value })} rows={3} className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Sorularınızı veya notlarınızı yazabilirsiniz..." />
               </div>
-              <button type="submit" disabled={loading} className="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors disabled:opacity-60">
+              <button type="submit" disabled={loading} className="w-full bg-[#1d3a5c] text-white py-3 rounded-lg font-bold hover:bg-[#163050] transition-colors disabled:opacity-60">
                 {loading ? "Gönderiliyor..." : "Başvuruyu Gönder"}
               </button>
             </form>

@@ -1,15 +1,15 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --brand-navy: #1e4468;
-  --brand-navy-dark: #0d1e2e;
-  --brand-navy-mid: #244e72;
-  --brand-blue: #2d6e90;
-  --brand-orange: #ed780e;
-  --brand-orange-light: #f5880f;
-  --brand-orange-dark: #c56b09;
+  --brand-navy: #1d3a5c;
+  --brand-navy-dark: #0f1f30;
+  --brand-navy-mid: #163050;
+  --brand-blue: #3a8fbf;
+  --brand-orange: #e5500a;
+  --brand-orange-light: #ff6b2b;
+  --brand-orange-dark: #c44208;
 }
 
 body {

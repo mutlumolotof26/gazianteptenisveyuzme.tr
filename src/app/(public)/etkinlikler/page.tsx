@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Calendar, MapPin } from "lucide-react";
 import { prisma } from "@/lib/db";
 
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const kategoriRenk: Record<string, string> = {
-  tenis: "bg-green-100 text-green-700",
-  yuzme: "bg-blue-100 text-blue-700",
+  tenis: "bg-orange-50 text-[#e5500a]",
+  yuzme: "bg-[#e0f3fc] text-[#3a8fbf]",
   turnuva: "bg-red-100 text-red-700",
   genel: "bg-gray-100 text-gray-700",
 };
@@ -35,17 +35,17 @@ export default async function EtkinliklerPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">Etkinlikler</h1>
-          <p className="text-blue-200">Turnuvalar ve özel organizasyonlar</p>
+          <p className="text-[#8fd0f0]">Turnuvalar ve özel organizasyonlar</p>
         </div>
       </section>
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
           {/* Yaklaşan Etkinlikler */}
-          <h2 className="text-2xl font-bold text-blue-900 mb-6">Yaklaşan Etkinlikler</h2>
+          <h2 className="text-2xl font-bold text-[#1d3a5c] mb-6">Yaklaşan Etkinlikler</h2>
           {upcoming.length === 0 ? (
             <div className="bg-gray-50 rounded-xl p-8 text-center text-gray-400 mb-10">
               <Calendar size={48} className="mx-auto mb-3 opacity-40" />
@@ -58,8 +58,8 @@ export default async function EtkinliklerPage() {
                   {event.resimUrl ? (
                     <img src={event.resimUrl} alt={event.baslik} className="w-full h-40 object-cover" />
                   ) : (
-                    <div className="w-full h-40 bg-gradient-to-br from-blue-800 to-blue-900 flex items-center justify-center">
-                      <Calendar size={40} className="text-blue-400" />
+                    <div className="w-full h-40 bg-gradient-to-br from-[#163050] to-[#1d3a5c] flex items-center justify-center">
+                      <Calendar size={40} className="text-[#5aaddc]" />
                     </div>
                   )}
                   <div className="p-5">
@@ -72,12 +72,12 @@ export default async function EtkinliklerPage() {
                     {event.aciklama && <p className="text-gray-500 text-sm line-clamp-2 mb-3">{event.aciklama}</p>}
                     <div className="space-y-1 text-sm text-gray-500">
                       <div className="flex items-center gap-1.5">
-                        <Calendar size={13} className="text-blue-500" />
+                        <Calendar size={13} className="text-[#5aaddc]" />
                         {new Date(event.tarih).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}
                       </div>
                       {event.yer && (
                         <div className="flex items-center gap-1.5">
-                          <MapPin size={13} className="text-blue-500" />
+                          <MapPin size={13} className="text-[#5aaddc]" />
                           {event.yer}
                         </div>
                       )}

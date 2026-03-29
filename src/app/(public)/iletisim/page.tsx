@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { prisma } from "@/lib/db";
 import IletisimForm from "./IletisimForm";
@@ -31,10 +31,10 @@ export default async function IletisimPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-2">İletişim</h1>
-          <p className="text-blue-200">Bizimle iletişime geçin</p>
+          <p className="text-[#8fd0f0]">Bizimle iletişime geçin</p>
         </div>
       </section>
 
@@ -43,11 +43,11 @@ export default async function IletisimPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* İletişim Bilgileri */}
             <div>
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">İletişim Bilgileri</h2>
+              <h2 className="text-2xl font-bold text-[#1d3a5c] mb-6">İletişim Bilgileri</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                    <MapPin className="text-blue-700" size={20} />
+                  <div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0">
+                    <MapPin className="text-[#3a8fbf]" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 mb-1">Adres</div>
@@ -55,8 +55,8 @@ export default async function IletisimPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                    <Phone className="text-blue-700" size={20} />
+                  <div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0">
+                    <Phone className="text-[#3a8fbf]" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 mb-1">Telefon</div>
@@ -64,8 +64,8 @@ export default async function IletisimPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                    <Mail className="text-blue-700" size={20} />
+                  <div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0">
+                    <Mail className="text-[#3a8fbf]" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 mb-1">E-posta</div>
@@ -73,8 +73,8 @@ export default async function IletisimPage() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center shrink-0">
-                    <Clock className="text-blue-700" size={20} />
+                  <div className="w-10 h-10 bg-[#e0f3fc] rounded-lg flex items-center justify-center shrink-0">
+                    <Clock className="text-[#3a8fbf]" size={20} />
                   </div>
                   <div>
                     <div className="font-semibold text-gray-800 mb-1">Çalışma Saatleri</div>
@@ -90,7 +90,7 @@ export default async function IletisimPage() {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Mesaj Gönderin</h2>
+              <h2 className="text-2xl font-bold text-[#1d3a5c] mb-6">Mesaj Gönderin</h2>
               <IletisimForm />
             </div>
           </div>

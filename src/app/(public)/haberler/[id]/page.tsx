@@ -13,7 +13,7 @@ export default async function HaberDetayPage({ params }: { params: Promise<{ id:
   return (
     <div className="py-12">
       <div className="max-w-3xl mx-auto px-4">
-        <Link href="/haberler" className="inline-flex items-center gap-2 text-blue-700 font-medium mb-6 hover:gap-3 transition-all">
+        <Link href="/haberler" className="inline-flex items-center gap-2 text-[#3a8fbf] font-medium mb-6 hover:gap-3 transition-all">
           <ArrowLeft size={18} /> Haberlere Dön
         </Link>
 
@@ -22,7 +22,7 @@ export default async function HaberDetayPage({ params }: { params: Promise<{ id:
         )}
 
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-medium capitalize">{news.kategori}</span>
+          <span className="text-xs bg-[#e0f3fc] text-[#3a8fbf] px-2 py-0.5 rounded-full font-medium capitalize">{news.kategori}</span>
           <div className="flex items-center gap-1 text-gray-400 text-sm">
             <Calendar size={14} />
             {new Date(news.yayinTarihi).toLocaleDateString("tr-TR", { day: "numeric", month: "long", year: "numeric" })}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useState } from "react";
 import { Send, Check } from "lucide-react";
 
@@ -23,10 +23,10 @@ export default function IletisimForm() {
 
   if (submitted) {
     return (
-      <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-        <Check size={48} className="text-green-500 mx-auto mb-4" />
-        <h3 className="text-xl font-bold text-green-800 mb-2">Mesajınız Alındı!</h3>
-        <p className="text-green-600">En kısa sürede size dönüş yapacağız.</p>
+      <div className="bg-orange-50 border border-orange-200 rounded-xl p-8 text-center">
+        <Check size={48} className="text-[#e5500a] mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-[#c44208] mb-2">Mesajınız Alındı!</h3>
+        <p className="text-[#e5500a]">En kısa sürede size dönüş yapacağız.</p>
       </div>
     );
   }
@@ -57,7 +57,7 @@ export default function IletisimForm() {
         <label className="block text-sm font-medium text-gray-700 mb-1">Mesajınız *</label>
         <textarea required value={formData.mesaj} onChange={(e) => setFormData({ ...formData, mesaj: e.target.value })} rows={5} className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Mesajınızı buraya yazın..." />
       </div>
-      <button type="submit" disabled={loading} className="flex items-center gap-2 bg-blue-900 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-800 transition-colors disabled:opacity-60">
+      <button type="submit" disabled={loading} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-8 py-3 rounded-lg font-bold hover:bg-[#163050] transition-colors disabled:opacity-60">
         <Send size={18} />
         {loading ? "Gönderiliyor..." : "Mesaj Gönder"}
       </button>
