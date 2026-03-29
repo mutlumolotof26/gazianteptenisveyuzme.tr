@@ -37,7 +37,7 @@ export default function UyelikClient({ plans }: Props) {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white pb-16 pt-36">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Users size={48} className="text-amber-400" />

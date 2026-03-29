@@ -44,7 +44,7 @@ export default async function TenisPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#e5500a] to-[#c44208] text-white py-16">
+      <section className="bg-gradient-to-r from-[#e5500a] to-[#c44208] text-white pb-16 pt-36">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Trophy size={48} className="text-amber-400" />

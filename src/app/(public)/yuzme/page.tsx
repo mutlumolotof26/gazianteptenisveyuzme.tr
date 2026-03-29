@@ -145,7 +145,7 @@ export default async function YuzmePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(yuzmeJsonLd) }}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#3a8fbf] text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#3a8fbf] text-white pb-16 pt-36">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-4">
             <Waves size={48} className="text-cyan-300" />

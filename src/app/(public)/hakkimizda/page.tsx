@@ -18,7 +18,7 @@ export default async function HakkimizdaPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white py-16">
+      <section className="bg-gradient-to-r from-[#1d3a5c] to-[#163050] text-white pb-16 pt-36">
         <div className="max-w-7xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-3">Hakkımızda</h1>
           <p className="text-[#8fd0f0] text-lg">Gaziantep'in köklü spor kulübü</p>
