@@ -34,10 +34,10 @@ const defaultSettings: Settings = {
   instagramUrl: "",
   facebookUrl: "",
   whatsappNo: "",
-  fiyatYetiskin: "₺800",
-  fiyatCocuk: "₺600",
-  fiyatYazKursu: "₺1.500",
-  fiyatKardes: "₺500",
+  fiyatYetiskin: "₺5.000",
+  fiyatCocuk: "₺4.000",
+  fiyatYazKursu: "₺5.000",
+  fiyatKardes: "₺8.500",
 };
 
 export default function AyarlarPage() {
