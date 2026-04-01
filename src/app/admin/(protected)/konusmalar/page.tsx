@@ -173,7 +173,7 @@ export default function KonusmalarPage() {
   }
 
   const lastMessage = (conv: Conversation) => {
-    const msgs = (conv.messages || []).filter(m => m.role && m.content);
+    const msgs = (conv.messages || []).filter(m => m.role !== "system" && m.content && !m.content.startsWith("__"));
     if (!msgs.length) return "—";
     const text = stripMarker(msgs[msgs.length - 1].content || "");
     return text.slice(0, 60) + (text.length > 60 ? "…" : "");
