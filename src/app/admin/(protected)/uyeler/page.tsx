@@ -81,7 +81,7 @@ export default function UyelerPage() {
   const [onKayitCount, setOnKayitCount] = useState(0);
   const [aranacakCount, setAranacakCount] = useState(0);
   const [showForm, setShowForm] = useState(false);
-  const [form, setForm] = useState({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "standart", spor: "yuzme", durum: "aktif", notlar: "" });
+  const [form, setForm] = useState({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "takim", spor: "yuzme", durum: "aktif", notlar: "" });
   const [editId, setEditId] = useState<string | null>(null);
 
   const [donem, setDonem] = useState(currentDonem());
@@ -228,7 +228,7 @@ export default function UyelerPage() {
     if (!payload.kayitTarihi) delete (payload as Record<string, unknown>).kayitTarihi;
     await fetch(url, { method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
     setShowForm(false); setEditId(null);
-    setForm({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "standart", spor: "yuzme", durum: "aktif", notlar: "" });
+    setForm({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "takim", spor: "yuzme", durum: "aktif", notlar: "" });
     fetchMembers();
     if (selectedMember && editId === selectedMember.id) openProfile(selectedMember);
   }
@@ -731,7 +731,7 @@ export default function UyelerPage() {
                 {editId && <div><label className="block text-xs font-medium text-gray-700 mb-1">Kayıt / Başlangıç Tarihi</label><input type="date" value={form.kayitTarihi} onChange={(e) => setForm({ ...form, kayitTarihi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>}
               </div>
               <div className="grid grid-cols-3 gap-3">
-                <div><label className="block text-xs font-medium text-gray-700 mb-1">Üyelik Tipi</label><select value={form.uyeTipi} onChange={(e) => setForm({ ...form, uyeTipi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="takim">Takım</option><option value="kursiyerler">Kursiyer</option><option value="ogrenci">Öğrenci</option><option value="standart">Standart</option><option value="premium">Premium</option><option value="aile">Aile</option></select></div>
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Üyelik Tipi</label><select value={form.uyeTipi} onChange={(e) => setForm({ ...form, uyeTipi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="takim">Takım</option><option value="kursiyerler">Kursiyer</option><option value="birey">Birey</option><option value="yetiskin_erkek">Erkek Yetişkin</option><option value="yetiskin_bayan">Kadın Yetişkin</option></select></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Spor</label><select value={form.spor} onChange={(e) => setForm({ ...form, spor: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="tenis">Tenis</option><option value="yuzme">Yüzme</option><option value="her_ikisi">Her İkisi</option></select></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Durum</label><select value={form.durum} onChange={(e) => setForm({ ...form, durum: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="aktif">Aktif</option><option value="beklemede">Beklemede</option><option value="pasif">Pasif</option></select></div>
               </div>
