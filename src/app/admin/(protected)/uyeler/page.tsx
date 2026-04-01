@@ -788,6 +788,41 @@ export default function UyelerPage() {
                 </div>
               )}
             </div>
+            {/* WhatsApp Mesaj */}
+            {editId && (
+              <div className="px-5 pb-4">
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <p className="text-xs font-semibold text-green-700 mb-2 flex items-center gap-1.5">
+                    <Phone size={13} /> WhatsApp Mesajı Gönder
+                  </p>
+                  {!form.telefon ? (
+                    <p className="text-xs text-amber-600">Telefon numarası girilmeden mesaj gönderilemez.</p>
+                  ) : (
+                    <>
+                      <textarea
+                        value={waMessage}
+                        onChange={(e) => { setWaMessage(e.target.value); setWaResult(null); }}
+                        placeholder="Mesajınızı yazın..."
+                        rows={3}
+                        className="w-full border border-green-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 bg-white resize-none"
+                      />
+                      <div className="flex items-center justify-between mt-2">
+                        {waResult === "ok" && <span className="text-xs text-green-600 font-medium">Gönderildi ✓</span>}
+                        {waResult === "err" && <span className="text-xs text-red-500">Gönderilemedi</span>}
+                        {!waResult && <span />}
+                        <button
+                          onClick={sendWaMessage}
+                          disabled={waSending || !waMessage.trim()}
+                          className="flex items-center gap-1.5 text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 disabled:opacity-50"
+                        >
+                          <Send size={12} /> {waSending ? "Gönderiliyor..." : "Gönder"}
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+            )}
             <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white"><button onClick={() => { setShowForm(false); setEditId(null); }} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={handleSave} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] flex items-center justify-center gap-2"><Check size={15} /> {editId ? "Kaydet" : "Ekle"}</button></div>
           </div>
         </div>
