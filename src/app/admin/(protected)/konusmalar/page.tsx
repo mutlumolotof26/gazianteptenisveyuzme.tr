@@ -31,6 +31,11 @@ function formatPhone(userId: string) {
   return userId;
 }
 
+function getDisplayName(conv: Conversation) {
+  const nameMsg = (conv.messages || []).find(m => m.role === "system" && m.content?.startsWith("__NAME__:"));
+  return nameMsg ? nameMsg.content.slice(8) : null;
+}
+
 function isWhatsApp(userId: string) {
   return /^\d{10,15}$/.test(userId);
 }
@@ -244,7 +249,7 @@ export default function KonusmalarPage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
                       <span className="font-medium text-sm text-gray-800 truncate">
-                        {formatPhone(conv.user_id)}
+                        {getDisplayName(conv) || formatPhone(conv.user_id)}
                       </span>
                       <span className="text-xs text-gray-400 flex-shrink-0 ml-1">{timeAgo(conv.updated_at)}</span>
                     </div>
@@ -280,7 +285,8 @@ export default function KonusmalarPage() {
                 <span className="text-xs font-bold">{isWhatsApp(selected.user_id) ? "WA" : "IG"}</span>
               </div>
               <div>
-                <p className="font-semibold text-gray-800">{formatPhone(selected.user_id)}</p>
+                <p className="font-semibold text-gray-800">{getDisplayName(selected) || formatPhone(selected.user_id)}</p>
+              {getDisplayName(selected) && <p className="text-xs text-gray-400">{formatPhone(selected.user_id)}</p>}
                 <p className="text-xs text-gray-400">
                   {isWhatsApp(selected.user_id) ? "WhatsApp" : "Instagram"} · {selected.messages?.length || 0} mesaj
                 </p>
