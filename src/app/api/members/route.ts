@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+﻿import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import { getAdminSession } from "@/lib/auth";
 
@@ -6,29 +6,39 @@ import { getAdminSession } from "@/lib/auth";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { ad, soyad, email, telefon, uyeTipi, spor, mesaj } = body;
+    const { ad, soyad, email, tcKimlik, telefon, dogumTarihi, uyeTipi, spor, mesaj, notlar } = body;
 
-    if (!ad || !soyad || !email) {
-      return NextResponse.json({ error: "Ad, soyad ve email zorunludur." }, { status: 400 });
+    if (!ad || !soyad) {
+      return NextResponse.json({ error: "Ad ve soyad zorunludur." }, { status: 400 });
+    }
+
+    // TC kimlik ile mükerrer kontrol
+    if (tcKimlik) {
+      const existing = await prisma.member.findFirst({ where: { tcKimlik } });
+      if (existing) {
+        return NextResponse.json({ error: "Bu TC kimlik numarası zaten kayıtlı." }, { status: 409 });
+      }
     }
 
     const member = await prisma.member.create({
       data: {
         ad,
         soyad,
-        email,
+        email: email || null,
+        tcKimlik: tcKimlik || null,
         telefon: telefon || null,
+        dogumTarihi: dogumTarihi || null,
         uyeTipi: uyeTipi || "standart",
         spor: spor || "her_ikisi",
         durum: "beklemede",
-        notlar: mesaj || null,
+        notlar: notlar || mesaj || null,
       },
     });
 
     return NextResponse.json(member, { status: 201 });
   } catch (error: unknown) {
     if ((error as { code?: string }).code === "P2002") {
-      return NextResponse.json({ error: "Bu e-posta adresi zaten kayıtlı." }, { status: 409 });
+      return NextResponse.json({ error: "Bu kayıt zaten mevcut." }, { status: 409 });
     }
     return NextResponse.json({ error: "Bir hata oluştu." }, { status: 500 });
   }
@@ -42,11 +52,13 @@ export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
   const search = searchParams.get("search") || "";
   const durum = searchParams.get("durum") || "";
+  const uyeTipi = searchParams.get("uyeTipi") || "";
 
   const members = await prisma.member.findMany({
     where: {
       AND: [
         durum ? { durum } : {},
+        uyeTipi ? { uyeTipi } : {},
         search ? {
           OR: [
             { ad: { contains: search } },

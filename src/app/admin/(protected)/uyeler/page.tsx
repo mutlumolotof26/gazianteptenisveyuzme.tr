@@ -3,13 +3,13 @@ import { useEffect, useState, useCallback } from "react";
 import {
   Search, Plus, Trash2, Edit, Check, X, UserCheck, UserX,
   ChevronLeft, ChevronRight, TrendingUp, Users, CheckCircle, XCircle,
-  Phone, Mail, Calendar, CreditCard, ChevronDown, ArrowLeft, Waves, Eye, EyeOff,
+  Phone, Mail, Calendar, CreditCard, ChevronDown, ArrowLeft, Waves, Eye, EyeOff, AlertTriangle, Send,
 } from "lucide-react";
 
 type Member = {
   id: string; ad: string; soyad: string; email: string; telefon?: string;
-  dogumTarihi?: string; uyeTipi: string; spor: string; durum: string;
-  kayitTarihi: string; notlar?: string;
+  tcKimlik?: string; dogumTarihi?: string; uyeTipi: string; spor: string; durum: string;
+  kayitTarihi: string; notlar?: string; dogumTarihi2?: string;
 };
 type MemberDetail = Member & { aidatlar: AidatRecord[] };
 type AidatRecord = {
@@ -39,7 +39,7 @@ const durumEtiket: Record<string, { label: string; cls: string }> = {
   beklemede: { label: "Beklemede", cls: "bg-amber-100 text-amber-700" },
 };
 const sporLabel: Record<string, string> = { tenis: "Tenis", yuzme: "Yüzme", her_ikisi: "Tenis + Yüzme" };
-const tipLabel: Record<string, string> = { ogrenci: "Öğrenci", standart: "Standart", premium: "Premium", aile: "Aile" };
+const tipLabel: Record<string, string> = { ogrenci: "Öğrenci", standart: "Standart", premium: "Premium", aile: "Aile", takim: "Takım", kursiyerler: "Kursiyer" };
 const aylar = ["", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
 const gunler = ["pazartesi", "sali", "carsamba", "persembe", "cuma", "cumartesi", "pazar"];
@@ -48,13 +48,27 @@ const seviyeRenk: Record<string, string> = { baslangic: "bg-orange-50 text-[#e55
 const seviyeAdLabel: Record<string, string> = { baslangic: "Başlangıç", orta: "Orta", ileri: "İleri", her_seviye: "Her Seviye" };
 const emptySeansForm = { gun: "pazartesi", baslangic: "09:00", bitis: "10:00", program: "", seviye: "her_seviye", kapasite: 20, coachId: "", aktif: true, sira: 0 };
 
+function formatPhone(tel?: string) {
+  if (!tel) return null;
+  const digits = tel.replace(/\D/g, "");
+  const normalized = digits.startsWith("90") ? "0" + digits.slice(2) : digits.startsWith("0") ? digits : "0" + digits;
+  if (normalized.length === 11) return `${normalized.slice(0,4)} ${normalized.slice(4,7)} ${normalized.slice(7,9)} ${normalized.slice(9)}`;
+  return tel;
+}
+
+function tcValid(tc?: string) {
+  if (!tc) return false;
+  const d = tc.replace(/\D/g, "");
+  return d.length === 11;
+}
+
 function donemLabel(d: string) { const [y, m] = d.split("-"); return `${aylar[parseInt(m)]} ${y}`; }
 function prevDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, "0")}`; }
 function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 12 ? `${y + 1}-01` : `${y}-${String(m + 1).padStart(2, "0")}`; }
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
 
 export default function UyelerPage() {
-  const [tab, setTab] = useState<"uyeler" | "aidat" | "seanslar" | "basvurular">("uyeler");
+  const [tab, setTab] = useState<"takim" | "kursiyerler" | "on_kayit" | "aidat" | "seanslar" | "basvurular">("takim");
   const [basvurular, setBasvurular] = useState<SessionRequest[]>([]);
   const [basvurularLoading, setBasvurularLoading] = useState(false);
   const [selectedMember, setSelectedMember] = useState<MemberDetail | null>(null);
@@ -62,9 +76,10 @@ export default function UyelerPage() {
   const [members, setMembers] = useState<Member[]>([]);
   const [search, setSearch] = useState("");
   const [durumFilter, setDurumFilter] = useState("");
+  const [tipFilter, setTipFilter] = useState("");
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
-  const [form, setForm] = useState({ ad: "", soyad: "", email: "", telefon: "", dogumTarihi: "", uyeTipi: "standart", spor: "her_ikisi", durum: "aktif", notlar: "" });
+  const [form, setForm] = useState({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "standart", spor: "yuzme", durum: "aktif", notlar: "" });
   const [editId, setEditId] = useState<string | null>(null);
 
   const [donem, setDonem] = useState(currentDonem());
@@ -91,15 +106,40 @@ export default function UyelerPage() {
   const [newAidatForm, setNewAidatForm] = useState({ donem: currentDonem(), tutar: 0, odendi: false });
   const [showAddAidat, setShowAddAidat] = useState(false);
 
+  const [waMessage, setWaMessage] = useState("");
+  const [waSending, setWaSending] = useState(false);
+  const [waResult, setWaResult] = useState<"ok" | "err" | null>(null);
+
+  async function sendWaMessage() {
+    if (!waMessage.trim() || !form.telefon) return;
+    setWaSending(true); setWaResult(null);
+    const digits = form.telefon.replace(/\D/g, "");
+    const to = digits.startsWith("90") ? digits : digits.startsWith("0") ? "9" + digits : "90" + digits;
+    try {
+      const res = await fetch("/api/admin/whatsapp/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ to, text: waMessage.trim(), channel: "whatsapp" }),
+      });
+      const data = await res.json();
+      setWaResult(data.ok ? "ok" : "err");
+      if (data.ok) setWaMessage("");
+    } catch { setWaResult("err"); }
+    setWaSending(false);
+  }
+
   const fetchMembers = useCallback(async () => {
     setLoading(true);
     const params = new URLSearchParams();
     if (search) params.set("search", search);
-    if (durumFilter) params.set("durum", durumFilter);
+    const activeDurum = durumFilter || (tab === "on_kayit" ? "beklemede" : "");
+    if (activeDurum) params.set("durum", activeDurum);
+    const activeTip = tipFilter || (tab === "takim" ? "takim" : tab === "kursiyerler" ? "kursiyerler" : "");
+    if (activeTip) params.set("uyeTipi", activeTip);
     const res = await fetch(`/api/members?${params}`);
     setMembers(await res.json());
     setLoading(false);
-  }, [search, durumFilter]);
+  }, [search, durumFilter, tipFilter, tab]);
 
   async function fetchAidat(d: string) {
     setAidatLoading(true);
@@ -171,9 +211,11 @@ export default function UyelerPage() {
   async function handleSave() {
     const method = editId ? "PUT" : "POST";
     const url = editId ? `/api/members/${editId}` : "/api/members";
-    await fetch(url, { method, headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...form, dogumTarihi: form.dogumTarihi || null }) });
+    const payload = { ...form, dogumTarihi: form.dogumTarihi || null, kayitTarihi: form.kayitTarihi ? new Date(form.kayitTarihi).toISOString() : undefined };
+    if (!payload.kayitTarihi) delete (payload as Record<string, unknown>).kayitTarihi;
+    await fetch(url, { method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
     setShowForm(false); setEditId(null);
-    setForm({ ad: "", soyad: "", email: "", telefon: "", dogumTarihi: "", uyeTipi: "standart", spor: "her_ikisi", durum: "aktif", notlar: "" });
+    setForm({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "standart", spor: "yuzme", durum: "aktif", notlar: "" });
     fetchMembers();
     if (selectedMember && editId === selectedMember.id) openProfile(selectedMember);
   }
@@ -192,7 +234,8 @@ export default function UyelerPage() {
   }
 
   async function startEdit(member: Member) {
-    setForm({ ad: member.ad, soyad: member.soyad, email: member.email, telefon: member.telefon || "", dogumTarihi: member.dogumTarihi || "", uyeTipi: member.uyeTipi, spor: member.spor, durum: member.durum, notlar: member.notlar || "" });
+    const kt = member.kayitTarihi ? new Date(member.kayitTarihi).toISOString().split("T")[0] : "";
+    setForm({ ad: member.ad, soyad: member.soyad, email: member.email, telefon: member.telefon || "", tcKimlik: member.tcKimlik || "", dogumTarihi: member.dogumTarihi || "", kayitTarihi: kt, uyeTipi: member.uyeTipi, spor: member.spor, durum: member.durum, notlar: member.notlar || "" });
     setEditId(member.id);
     setShowAddAidat(false);
     setNewAidatForm({ donem: currentDonem(), tutar: 0, odendi: false });
@@ -267,7 +310,7 @@ export default function UyelerPage() {
           <h1 className="text-2xl font-bold text-gray-800">Üye Yönetimi</h1>
           <p className="text-gray-500 text-sm">Üyeleri ve aidat durumlarını yönetin</p>
         </div>
-        {tab === "uyeler" && !selectedMember && (
+        {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && !selectedMember && (
           <button onClick={() => { setShowForm(true); setEditId(null); }} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
             <Plus size={16} /> Yeni Üye
           </button>
@@ -279,9 +322,15 @@ export default function UyelerPage() {
         )}
       </div>
 
-      <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6 w-fit">
-        <button onClick={() => { setTab("uyeler"); setSelectedMember(null); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "uyeler" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
-          <Users size={16} /> Üye Listesi
+      <div className="flex gap-1 bg-gray-100 rounded-xl p-1 mb-6 w-fit flex-wrap">
+        <button onClick={() => { setTab("takim"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "takim" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Users size={16} /> Takım
+        </button>
+        <button onClick={() => { setTab("kursiyerler"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "kursiyerler" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Users size={16} /> Kursiyerler
+        </button>
+        <button onClick={() => { setTab("on_kayit"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "on_kayit" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <UserCheck size={16} /> Ön Kayıt
         </button>
         <button onClick={() => setTab("aidat")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "aidat" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <TrendingUp size={16} /> Aidat Takibi
@@ -300,7 +349,7 @@ export default function UyelerPage() {
       </div>
 
       {/* ── ÜYE PROFİL ── */}
-      {tab === "uyeler" && selectedMember && (
+      {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && selectedMember && (
         <div>
           <button onClick={() => setSelectedMember(null)} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-4">
             <ArrowLeft size={16} /> Üye listesine dön
@@ -374,11 +423,11 @@ export default function UyelerPage() {
       )}
 
       {/* ── ÜYE LİSTESİ ── */}
-      {tab === "uyeler" && !selectedMember && (
+      {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && !selectedMember && (
         <>
           <div className="flex flex-wrap gap-3 mb-4">
             <div className="relative flex-1 min-w-48"><Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Ad, soyad veya e-posta ara..." className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
-            <select value={durumFilter} onChange={(e) => setDurumFilter(e.target.value)} className="border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="">Tüm Durumlar</option><option value="aktif">Aktif</option><option value="beklemede">Beklemede</option><option value="pasif">Pasif</option></select>
+<select value={durumFilter} onChange={(e) => setDurumFilter(e.target.value)} className="border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="">Tüm Durumlar</option><option value="aktif">Aktif</option><option value="beklemede">Beklemede</option><option value="pasif">Pasif</option></select>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
             {[
@@ -396,15 +445,24 @@ export default function UyelerPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Üye</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">E-posta</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Tip / Spor</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Durum</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">Kayıt</th><th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">İşlem</th></tr></thead>
+                <thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Üye</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">TC Kimlik</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Telefon</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Tip</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Durum</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">Kayıt</th><th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">İşlem</th></tr></thead>
                 <tbody className="divide-y divide-gray-50">
-                  {loading ? <tr><td colSpan={6} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
-                    : members.length === 0 ? <tr><td colSpan={6} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
+                  {loading ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
+                    : members.length === 0 ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
                     : members.map((m) => (
                       <tr key={m.id} className="hover:bg-[#f0f9ff]/30 cursor-pointer" onClick={() => openProfile(m)}>
-                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className="w-8 h-8 bg-[#e0f3fc] rounded-full flex items-center justify-center text-[#3a8fbf] font-bold text-xs shrink-0">{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
-                        <td className="px-4 py-3 text-sm text-gray-500 hidden md:table-cell">{m.email}</td>
-                        <td className="px-4 py-3 text-sm"><span className="block text-gray-700">{tipLabel[m.uyeTipi]}</span><span className="text-xs text-gray-400">{sporLabel[m.spor]}</span></td>
+                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
+                        <td className="px-4 py-3 text-sm hidden lg:table-cell font-mono">
+                          {tcValid(m.tcKimlik)
+                            ? <span className="text-gray-500">{m.tcKimlik}</span>
+                            : <span className="flex items-center gap-1 text-amber-600 font-medium"><AlertTriangle size={13} />{m.tcKimlik || "Eksik"}</span>}
+                        </td>
+                        <td className="px-4 py-3 text-sm hidden md:table-cell">
+                          {m.telefon
+                            ? <span className="text-gray-500">{formatPhone(m.telefon)}</span>
+                            : <span className="flex items-center gap-1 text-amber-600 font-medium"><AlertTriangle size={13} />Eksik</span>}
+                        </td>
+                        <td className="px-4 py-3 text-sm"><span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-600"}`}>{tipLabel[m.uyeTipi] || m.uyeTipi}</span></td>
                         <td className="px-4 py-3"><span className={`text-xs px-2 py-0.5 rounded-full font-medium ${durumEtiket[m.durum]?.cls}`}>{durumEtiket[m.durum]?.label}</span></td>
                         <td className="px-4 py-3 text-xs text-gray-400 hidden lg:table-cell">{new Date(m.kayitTarihi).toLocaleDateString("tr-TR")}</td>
                         <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
@@ -634,17 +692,51 @@ export default function UyelerPage() {
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Ad *</label><input value={form.ad} onChange={(e) => setForm({ ...form, ad: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Soyad *</label><input value={form.soyad} onChange={(e) => setForm({ ...form, soyad: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
               </div>
-              <div><label className="block text-xs font-medium text-gray-700 mb-1">E-posta *</label><input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+              <div><label className="block text-xs font-medium text-gray-700 mb-1">E-posta</label><input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
               <div className="grid grid-cols-2 gap-3">
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">TC Kimlik No</label><input value={form.tcKimlik} onChange={(e) => setForm({ ...form, tcKimlik: e.target.value })} placeholder="11 haneli TC" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono" /></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Telefon</label><input value={form.telefon} onChange={(e) => setForm({ ...form, telefon: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Doğum Tarihi</label><input value={form.dogumTarihi} onChange={(e) => setForm({ ...form, dogumTarihi: e.target.value })} placeholder="ör. 01.01.1990" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+                {editId && <div><label className="block text-xs font-medium text-gray-700 mb-1">Kayıt / Başlangıç Tarihi</label><input type="date" value={form.kayitTarihi} onChange={(e) => setForm({ ...form, kayitTarihi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>}
               </div>
               <div className="grid grid-cols-3 gap-3">
-                <div><label className="block text-xs font-medium text-gray-700 mb-1">Üyelik Tipi</label><select value={form.uyeTipi} onChange={(e) => setForm({ ...form, uyeTipi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="ogrenci">Öğrenci</option><option value="standart">Standart</option><option value="premium">Premium</option><option value="aile">Aile</option></select></div>
+                <div><label className="block text-xs font-medium text-gray-700 mb-1">Üyelik Tipi</label><select value={form.uyeTipi} onChange={(e) => setForm({ ...form, uyeTipi: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="takim">Takım</option><option value="kursiyerler">Kursiyer</option><option value="ogrenci">Öğrenci</option><option value="standart">Standart</option><option value="premium">Premium</option><option value="aile">Aile</option></select></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Spor</label><select value={form.spor} onChange={(e) => setForm({ ...form, spor: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="tenis">Tenis</option><option value="yuzme">Yüzme</option><option value="her_ikisi">Her İkisi</option></select></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Durum</label><select value={form.durum} onChange={(e) => setForm({ ...form, durum: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="aktif">Aktif</option><option value="beklemede">Beklemede</option><option value="pasif">Pasif</option></select></div>
               </div>
               <div><label className="block text-xs font-medium text-gray-700 mb-1">Not</label><textarea value={form.notlar} onChange={(e) => setForm({ ...form, notlar: e.target.value })} rows={2} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none" placeholder="Opsiyonel not..." /></div>
+
+              {/* WhatsApp Mesaj – sadece düzenlemede ve telefon varsa */}
+              {editId && form.telefon && (
+                <div className="border-t border-gray-100 pt-4">
+                  <h4 className="text-sm font-semibold text-gray-700 flex items-center gap-2 mb-3">
+                    <span className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
+                      <Phone size={11} className="text-white" />
+                    </span>
+                    WhatsApp Mesajı Gönder
+                  </h4>
+                  <textarea
+                    value={waMessage}
+                    onChange={(e) => { setWaMessage(e.target.value); setWaResult(null); }}
+                    placeholder="Mesajınızı yazın..."
+                    rows={3}
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 resize-none mb-2"
+                  />
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={sendWaMessage}
+                      disabled={waSending || !waMessage.trim()}
+                      className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      <Phone size={14} /> {waSending ? "Gönderiliyor..." : "Gönder"}
+                    </button>
+                    {waResult === "ok" && <span className="text-green-600 text-xs font-medium">✓ Gönderildi</span>}
+                    {waResult === "err" && <span className="text-red-500 text-xs font-medium">✗ Gönderilemedi</span>}
+                  </div>
+                </div>
+              )}
 
               {/* Aidat Bölümü – sadece düzenlemede göster */}
               {editId && (
@@ -697,6 +789,34 @@ export default function UyelerPage() {
                 </div>
               )}
             </div>
+            {editId && form.telefon && (
+              <div className="px-5 pb-4">
+                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                  <p className="text-xs font-semibold text-green-700 mb-2 flex items-center gap-1.5">
+                    <Phone size={13} /> WhatsApp Mesajı Gönder
+                  </p>
+                  <textarea
+                    value={waMessage}
+                    onChange={(e) => { setWaMessage(e.target.value); setWaResult(null); }}
+                    placeholder="Mesajınızı yazın..."
+                    rows={3}
+                    className="w-full border border-green-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-400 bg-white resize-none"
+                  />
+                  <div className="flex items-center justify-between mt-2">
+                    {waResult === "ok" && <span className="text-xs text-green-600 font-medium">Gönderildi ✓</span>}
+                    {waResult === "err" && <span className="text-xs text-red-500">Gönderilemedi</span>}
+                    {!waResult && <span />}
+                    <button
+                      onClick={sendWaMessage}
+                      disabled={waSending || !waMessage.trim()}
+                      className="flex items-center gap-1.5 text-xs bg-green-600 text-white px-3 py-1.5 rounded-lg hover:bg-green-700 disabled:opacity-50"
+                    >
+                      <Send size={12} /> {waSending ? "Gönderiliyor..." : "Gönder"}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
             <div className="flex gap-3 p-5 border-t sticky bottom-0 bg-white"><button onClick={() => { setShowForm(false); setEditId(null); }} className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50">İptal</button><button onClick={handleSave} className="flex-1 bg-[#1d3a5c] text-white py-2.5 rounded-lg text-sm font-bold hover:bg-[#163050] flex items-center justify-center gap-2"><Check size={15} /> {editId ? "Kaydet" : "Ekle"}</button></div>
           </div>
         </div>
