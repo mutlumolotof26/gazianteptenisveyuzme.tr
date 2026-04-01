@@ -365,7 +365,7 @@ export default function UyelerPage() {
                   </div>
                 </div>
                 <div className="space-y-3 text-sm">
-                  <div className="flex items-center gap-2 text-gray-600"><Mail size={14} className="text-gray-400 shrink-0" /><a href={`mailto:${selectedMember.email}`} className="hover:text-[#3a8fbf] truncate">{selectedMember.email}</a></div>
+
                   {selectedMember.telefon && <div className="flex items-center gap-2 text-gray-600"><Phone size={14} className="text-gray-400 shrink-0" /><a href={`tel:${selectedMember.telefon}`} className="hover:text-[#3a8fbf]">{selectedMember.telefon}</a></div>}
                   {selectedMember.dogumTarihi && <div className="flex items-center gap-2 text-gray-600"><Calendar size={14} className="text-gray-400 shrink-0" /><span>{selectedMember.dogumTarihi}</span></div>}
                   <div className="flex items-center gap-2 text-gray-600"><CreditCard size={14} className="text-gray-400 shrink-0" /><span>{tipLabel[selectedMember.uyeTipi]} · {sporLabel[selectedMember.spor]}</span></div>
@@ -692,7 +692,6 @@ export default function UyelerPage() {
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Ad *</label><input value={form.ad} onChange={(e) => setForm({ ...form, ad: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Soyad *</label><input value={form.soyad} onChange={(e) => setForm({ ...form, soyad: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
               </div>
-              <div><label className="block text-xs font-medium text-gray-700 mb-1">E-posta</label><input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
               <div className="grid grid-cols-2 gap-3">
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">TC Kimlik No</label><input value={form.tcKimlik} onChange={(e) => setForm({ ...form, tcKimlik: e.target.value })} placeholder="11 haneli TC" className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono" /></div>
                 <div><label className="block text-xs font-medium text-gray-700 mb-1">Telefon</label><input value={form.telefon} onChange={(e) => setForm({ ...form, telefon: e.target.value })} className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
@@ -789,12 +788,16 @@ export default function UyelerPage() {
                 </div>
               )}
             </div>
-            {editId && form.telefon && (
+            {editId && (
               <div className="px-5 pb-4">
                 <div className="bg-green-50 border border-green-200 rounded-xl p-4">
                   <p className="text-xs font-semibold text-green-700 mb-2 flex items-center gap-1.5">
                     <Phone size={13} /> WhatsApp Mesajı Gönder
                   </p>
+                  {!form.telefon ? (
+                    <p className="text-xs text-amber-600">Telefon numarası girilmeden mesaj gönderilemez.</p>
+                  ) : (
+                    <>
                   <textarea
                     value={waMessage}
                     onChange={(e) => { setWaMessage(e.target.value); setWaResult(null); }}
@@ -814,6 +817,8 @@ export default function UyelerPage() {
                       <Send size={12} /> {waSending ? "Gönderiliyor..." : "Gönder"}
                     </button>
                   </div>
+                  </>
+                  )}
                 </div>
               </div>
             )}
