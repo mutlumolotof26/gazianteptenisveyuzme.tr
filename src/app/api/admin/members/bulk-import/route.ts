@@ -31,7 +31,8 @@ export async function POST(req: NextRequest) {
 
     // TC varsa mükerrer kontrolü
     if (m.tcKimlik) {
-      const existing = await prisma.member.findFirst({ where: { tcKimlik: m.tcKimlik ?? null } });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const existing = await (prisma.member as any).findFirst({ where: { tcKimlik: m.tcKimlik } });
       if (existing) { skipped++; continue; }
     }
 
