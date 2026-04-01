@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
           spor: m.spor || "yuzme",
           durum: "aktif",
           notlar: m.notlar || null,
-          email: undefined,
+          email: "",
         },
       });
       added++;
