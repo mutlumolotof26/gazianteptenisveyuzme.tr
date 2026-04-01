@@ -1,0 +1,7207 @@
+{
+  "members": [
+    {
+      "ad": "CEYLİN",
+      "soyad": "KIVANÇ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "28720570696",
+      "telefon": "5308821161",
+      "dogumTarihi": "2010-01-16"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "KIVANÇ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "28813567572",
+      "telefon": "5308821161",
+      "dogumTarihi": "2010-01-16"
+    },
+    {
+      "ad": "EREN",
+      "soyad": "TANRIÖVER",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "21775912756",
+      "telefon": "5383519526",
+      "dogumTarihi": "2011-12-08"
+    },
+    {
+      "ad": "ERKAM",
+      "soyad": "TANRIÖVER",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "16040106244",
+      "telefon": "5383519526",
+      "dogumTarihi": "2009-02-06"
+    },
+    {
+      "ad": "IŞILAY",
+      "soyad": "KÜRÜMLÜOĞLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "20740955170",
+      "telefon": "5325441425",
+      "dogumTarihi": "2010-03-12"
+    },
+    {
+      "ad": "KARTAL",
+      "soyad": "KAYAR",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "33070535196",
+      "telefon": "5546848798",
+      "dogumTarihi": "2009-04-05"
+    },
+    {
+      "ad": "KERİM",
+      "soyad": "ABDUSSAMET AKSOY",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "28576692566",
+      "telefon": "5524633723",
+      "dogumTarihi": "2009-08-06"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "FATİH BAY",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "16772079144",
+      "telefon": "5365742771",
+      "dogumTarihi": "2010-02-08"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "DOĞAY ŞEKER",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "15806479066",
+      "telefon": "5550471509",
+      "dogumTarihi": "2009-07-13"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "KAZIM KEÇECİ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "39886315014",
+      "telefon": "5547897792",
+      "dogumTarihi": "2010-05-12"
+    },
+    {
+      "ad": "SUDEN",
+      "soyad": "BERRA UZUNKAYA",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "33199531116",
+      "telefon": "5073627847",
+      "dogumTarihi": "2012-12-12"
+    },
+    {
+      "ad": "TARIK",
+      "soyad": "EREN TÜFEKÇİ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "10488201790",
+      "telefon": "5059332766",
+      "dogumTarihi": "2009-02-24"
+    },
+    {
+      "ad": "MEDİNE",
+      "soyad": "GÜN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "14948140810",
+      "telefon": "5332628464",
+      "dogumTarihi": "2014-01-20"
+    },
+    {
+      "ad": "ERAY",
+      "soyad": "BAKIR",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "13940176056",
+      "telefon": "5446822440",
+      "dogumTarihi": "2008-01-11"
+    },
+    {
+      "ad": "EVİN",
+      "soyad": "ÖYKÜ DEMİRTAŞ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "20740955170",
+      "telefon": "5516502049",
+      "dogumTarihi": "2010-03-21"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "KILIÇ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "20740955170",
+      "telefon": "5518301148",
+      "dogumTarihi": "2010-10-03"
+    },
+    {
+      "ad": "MİRAÇ",
+      "soyad": "SAMANLI",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "52018393124",
+      "telefon": "5057191652",
+      "dogumTarihi": "2011-08-07"
+    },
+    {
+      "ad": "ADEN",
+      "soyad": "ÖZBİRECİKLİ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "20710948652",
+      "telefon": "5447233650",
+      "dogumTarihi": "2012-05-14"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "BUĞRAHAN KIRIŞCİ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "26954525918",
+      "telefon": "5070096784",
+      "dogumTarihi": "2009-01-05"
+    },
+    {
+      "ad": "SERHAT",
+      "soyad": "BALABAN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "19552993968",
+      "telefon": "5339262405",
+      "dogumTarihi": "2011-01-29"
+    },
+    {
+      "ad": "HASAN",
+      "soyad": "ZÜLKARNEYN MERCİMEKOĞLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "12422340176",
+      "telefon": "5320602232",
+      "dogumTarihi": "2007-08-04"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "AKSOY",
+      "uyeTipi": "takim",
+      "spor": "yuzme"
+    },
+    {
+      "ad": "MİLA",
+      "soyad": "SARIBAŞ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "42040244426",
+      "telefon": "5309373757",
+      "dogumTarihi": "2017-07-28"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "ABACI",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "36694415592",
+      "telefon": "5063169510",
+      "dogumTarihi": "2017-07-07"
+    },
+    {
+      "ad": "BUĞLEM",
+      "soyad": "ECE HAKVERDİOĞLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "39766315684",
+      "telefon": "5321720399",
+      "dogumTarihi": "2016-06-23"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "SEZEN BURUNLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "42994207546",
+      "telefon": "5425452940",
+      "dogumTarihi": "2014-06-03"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "SU GÜMÜŞ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "44095170910",
+      "telefon": "5347351897",
+      "dogumTarihi": "2017-01-13"
+    },
+    {
+      "ad": "MERYEM",
+      "soyad": "ELA İNCE",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "16658081162",
+      "telefon": "5339726468",
+      "dogumTarihi": "2018-11-17"
+    },
+    {
+      "ad": "BASRİ",
+      "soyad": "KEREM İNCE",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "40771278444",
+      "telefon": "5339726468",
+      "dogumTarihi": "2016-03-07"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "YILDIZ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "44581154462",
+      "telefon": "5535341088",
+      "dogumTarihi": "2016-12-31"
+    },
+    {
+      "ad": "ECE",
+      "soyad": "YILDIZ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "44365161662",
+      "telefon": "5535341088",
+      "dogumTarihi": "2016-12-31"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "YİĞİT KAFADAR",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "17639051136",
+      "telefon": "5073977009",
+      "dogumTarihi": "2016-04-28"
+    },
+    {
+      "ad": "NİL",
+      "soyad": "GÖKÇE İNAN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "14650045588",
+      "telefon": "5327224501",
+      "dogumTarihi": "2019-01-13"
+    },
+    {
+      "ad": "TOPRAK",
+      "soyad": "ERDOĞAN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "27412725864",
+      "telefon": "5347195056",
+      "dogumTarihi": "2016-07-29"
+    },
+    {
+      "ad": "ANIL",
+      "soyad": "YALIN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "15314127206",
+      "telefon": "5334046411",
+      "dogumTarihi": "2018-08-16"
+    },
+    {
+      "ad": "FURKAN",
+      "soyad": "METE KAHYA",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "15668114518",
+      "telefon": "5058876027",
+      "dogumTarihi": "2017-07-08"
+    },
+    {
+      "ad": "BUĞLEM",
+      "soyad": "ECE HAKVERDİOĞLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "39766315684",
+      "telefon": "5321720399",
+      "dogumTarihi": "2016-06-23"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "KAHYA",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "16331093130",
+      "telefon": "5058876027",
+      "dogumTarihi": "2017-11-01"
+    },
+    {
+      "ad": "BASRİ",
+      "soyad": "KEREM İNCE",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "40771278444",
+      "telefon": "5339726468",
+      "dogumTarihi": "2016-03-07"
+    },
+    {
+      "ad": "MERYEM",
+      "soyad": "ELA İNCE",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "16658081162",
+      "telefon": "5339726468",
+      "dogumTarihi": "2018-11-17"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "ABACI",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "36694415592",
+      "telefon": "5063169510",
+      "dogumTarihi": "2017-07-07"
+    },
+    {
+      "ad": "TAYLAN",
+      "soyad": "ÖZGÜR",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "48748015726",
+      "telefon": "5059975721",
+      "dogumTarihi": "2018-06-11"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "ALİ ŞAHİN",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "37252978788",
+      "telefon": "5534853606",
+      "dogumTarihi": "2016-02-12"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "AZAD POLAT",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "67927305694",
+      "telefon": "5534853606",
+      "dogumTarihi": "2015-07-31"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "EBRAR NACAROĞLU",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "34195498946",
+      "telefon": "5459464686",
+      "dogumTarihi": "2017-07-07"
+    },
+    {
+      "ad": "EKREM",
+      "soyad": "ÇİÇEK",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "27794632538",
+      "telefon": "5396516330",
+      "dogumTarihi": "2016-12-12"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "AZRA ÇEKİÇİ",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "19963973658",
+      "telefon": "5344547384",
+      "dogumTarihi": "2014-11-20"
+    },
+    {
+      "ad": "HİRANUR",
+      "soyad": "KARTAL",
+      "uyeTipi": "takim",
+      "spor": "yuzme",
+      "tcKimlik": "39904309254",
+      "telefon": "5522213929",
+      "dogumTarihi": "2015-11-28"
+    },
+    {
+      "ad": "CUMA",
+      "soyad": "YAĞIZ YILDIZ",
+      "tc": "47125068744",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5356709231",
+      "baslangicTarihi": "2024-02-16"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "MİRAÇ KALENDER",
+      "tc": "33560449026",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5454744746",
+      "baslangicTarihi": "2024-02-16"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "SUMMAK",
+      "tc": "42413160674",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052380552",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "GÜRBÜZ",
+      "tc": "59941576310",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5424361884",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "EĞEMEN ÜNER",
+      "tc": "38606239210",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5512059678",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "MURATHAN SAKIZCI",
+      "tc": "58554468946",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5443178716",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "BAĞCIGİL",
+      "tc": "31624584676",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5066674776",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "SUDEM",
+      "soyad": "YÜCEL",
+      "tc": "65458098184",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5422910901",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "YAĞIZ",
+      "soyad": "ALP ÖĞÜT",
+      "tc": "18965942228",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5310817845",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "EGEMEN",
+      "soyad": "TEKLE",
+      "tc": "28270559356",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5448203777",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "UYGAR",
+      "soyad": "TEKLE",
+      "tc": "25579648040",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5448203777",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ADA AYDIN",
+      "tc": "64459425784",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5352892474",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "AYTEN",
+      "soyad": "ELA BOZKURT",
+      "tc": "29456592518",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5452509909",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "RÜZGAR ORMAN",
+      "tc": "55915706042",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5534822789",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "ŞAHİN",
+      "tc": "17899232078",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5524012286",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "ADEM",
+      "soyad": "BUĞRA BOZKURT",
+      "tc": "36124441498",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5452509909",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "HAMZA",
+      "soyad": "EMİR BOZKURT",
+      "tc": "49144006424",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5362693325",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "MASAL",
+      "soyad": "SULTAN ÇERİBAŞI",
+      "tc": "55879572592",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5469212958",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "ŞERİH BAŞASLAN",
+      "tc": "24118842178",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5310301507",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "NEHİR AĞAR",
+      "tc": "48925007476",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5543489995",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "DENİZ AĞAR",
+      "tc": "5543489995",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5543489995",
+      "baslangicTarihi": "2024-03-01"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ERVA KOLUKISA",
+      "tc": "15299127512",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5539121727",
+      "baslangicTarihi": "2024-02-23"
+    },
+    {
+      "ad": "ALPEREN",
+      "soyad": "KAŞALTI",
+      "tc": "48454940558",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5330235736",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "BERRA",
+      "soyad": "BULUT",
+      "tc": "31996579706",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052918668",
+      "baslangicTarihi": "2024-02-02"
+    },
+    {
+      "ad": "GÖKÇEN",
+      "soyad": "KOÇ",
+      "tc": "28903214324",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059308181",
+      "baslangicTarihi": "2024-02-03"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "SELCEN KOÇ,",
+      "tc": "61075528868",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059308181",
+      "baslangicTarihi": "2024-02-03"
+    },
+    {
+      "ad": "TUNA",
+      "soyad": "HANAY",
+      "tc": "36940406596",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5446592020",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "TOPRAK",
+      "soyad": "HANAY",
+      "tc": "22159898284",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5446592020",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "ENES",
+      "soyad": "TALHA ALPARSLAN",
+      "tc": "35860448884",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5325105246",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "GÜLLÜ",
+      "tc": "40141300126",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5363086643",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "PAREM",
+      "soyad": "SAYLAN",
+      "tc": "42838213214",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5077416540",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "ONURALP",
+      "soyad": "ASLANTAŞ",
+      "tc": "20875944582",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5559917470",
+      "baslangicTarihi": "2024-02-09"
+    },
+    {
+      "ad": "YİĞİTALP",
+      "soyad": "TAN",
+      "tc": "46573093186",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5534752267",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ATLAS",
+      "soyad": "TAN",
+      "tc": "52441826350",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5534752267",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "OĞUZHAN",
+      "soyad": "TAN",
+      "tc": "52438826424",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5534752267",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ÇAĞAN",
+      "soyad": "ALP GEZER",
+      "tc": "38186007216",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5453694911",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "MİNA",
+      "soyad": "KANDİLLİ",
+      "tc": "40922210224",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5445510097",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "KANDİLLİ",
+      "tc": "19139006852",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5445510097",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "GÜNEŞ",
+      "soyad": "GÜNER",
+      "tc": "31504595518",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5322739970",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "DİLEM",
+      "soyad": "OSKAY",
+      "tc": "41677255850",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5424754535",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "KILYAR",
+      "tc": "28396698236",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5542658077",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "YILMAZ",
+      "tc": "29959645650",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326866672",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "ERBAĞCI",
+      "tc": "33514527954",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5062421804",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "DOĞA",
+      "soyad": "ERBAĞCI",
+      "tc": "17711318188",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5062421804",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ZEHRA",
+      "soyad": "NİSA OSKAY",
+      "tc": "36025444536",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5424754535",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ESMA",
+      "soyad": "AYŞENUR KILIÇ",
+      "tc": "25345794278",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5302429428",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ARYA",
+      "soyad": "ILGIN GÖGEBAKAN",
+      "tc": "25798780668",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5533677151",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "EMİR BUDAK",
+      "tc": "31624587156",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321371383",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "SERRA",
+      "soyad": "BUDAK",
+      "tc": "42148241310",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321371383",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "ERDOĞAN",
+      "tc": "48496020126",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055016213",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "HİRA ORAK",
+      "tc": "38599351586",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5524033315",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "DOĞA",
+      "soyad": "ERCEYLAN",
+      "tc": "20827946244",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058180148",
+      "baslangicTarihi": "2024-04-19"
+    },
+    {
+      "ad": "ALPTUĞ",
+      "soyad": "GEREK",
+      "tc": "23980838180",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5056488566",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "MELİS",
+      "soyad": "YAVUZ",
+      "tc": "35503461478",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5333117288",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "ÇELİK",
+      "tc": "32284565364",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5066674776",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "ATA",
+      "soyad": "SENCER",
+      "tc": "32104575962",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059781384",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "SENCER",
+      "tc": "32245571212",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059781384",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "TAYFUR",
+      "soyad": "ALP TUNÇ",
+      "tc": "20044971210",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5415426213",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "ESİLA ULUSOY",
+      "tc": "23011873500",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5363802500",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "KUZEY",
+      "soyad": "SARP KARAKUŞ",
+      "tc": "41173271736",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5053557652",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "POYRAZ",
+      "soyad": "MİRZA KARAKUŞ",
+      "tc": "46189106218",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5053557652",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "YURT",
+      "tc": "19942975208",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5332634923",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "ELA BİNZET",
+      "tc": "18032043674",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5438371111",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "BETÜL",
+      "soyad": "ÇİL",
+      "tc": "29557659288",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5422408052",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "ÇİL",
+      "tc": "37522393464",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5422408052",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "HATİCE",
+      "soyad": "ERVA YILDIRIM",
+      "tc": "39889309256",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5398236151",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "IRMAK",
+      "soyad": "ŞAHAN",
+      "tc": "23278863504",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5535343056",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "GÜLSEREN",
+      "soyad": "ŞAHAN",
+      "tc": "26653750734",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5535343056",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "İBRAHİM",
+      "soyad": "ÖZER",
+      "tc": "18614025074",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5338127720",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "CİHAN",
+      "soyad": "ÖZER",
+      "tc": "25861784258",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5338127720",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "TURAN",
+      "soyad": "ÖZER",
+      "tc": "37820313782",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5338127720",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "ARAS",
+      "soyad": "TÜRKDOĞAN",
+      "tc": "41539253710",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536352094",
+      "baslangicTarihi": "2024-04-27"
+    },
+    {
+      "ad": "MİRAÇ",
+      "soyad": "ŞAHAN",
+      "tc": "40315295548",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5386510490",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "TALHA",
+      "soyad": "ŞAHAN",
+      "tc": "26134768456",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5386510490",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "EMRE ERDOĞAN",
+      "tc": "16859999006",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5353580220",
+      "baslangicTarihi": "2024-04-27"
+    },
+    {
+      "ad": "UĞUR",
+      "soyad": "ÖZDOĞDU",
+      "tc": "43108204574",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5538688146",
+      "baslangicTarihi": "2024-04-26"
+    },
+    {
+      "ad": "EGEMEN",
+      "soyad": "BOZKURT",
+      "tc": "22192905482",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5388694071",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "GÜNEY",
+      "soyad": "BOZKURT",
+      "tc": "58468625396",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5388694071",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ERTUĞRUL",
+      "soyad": "EMİR YILDIZ",
+      "tc": "26515753026",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5331677331",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "SELİM ÇALIŞKAN",
+      "tc": "31561592710",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5331677331",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "SERRA",
+      "soyad": "KEKEÇ",
+      "tc": "27536656426",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059510274",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "KEKEÇ",
+      "tc": "23008871908",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059510274",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "SEVGİ",
+      "soyad": "ÖZKAYIKÇI",
+      "tc": "25390798160",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321684676",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "SERENAY",
+      "soyad": "ÖZKAYIKÇI",
+      "tc": "38140375146",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321684676",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "SİMAY",
+      "soyad": "ÖZKAYIKÇI",
+      "tc": "18383032648",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321684676",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "DENİZ AĞAR",
+      "tc": "40466225548",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5543489995",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "NİSA",
+      "soyad": "KAYURTGAN",
+      "tc": "31160535712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5438371111",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "RAMAZAN",
+      "soyad": "ÖÇALAN",
+      "tc": "37690381546",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5334937427",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "HEDİYETULLAH",
+      "soyad": "ÖÇALAN",
+      "tc": "66412050330",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5334937427",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "HATİCE",
+      "soyad": "KÜRKÇÜ",
+      "tc": "48952012764",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5354137137",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "YAMAN TATAROĞLU",
+      "tc": "24523827036",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326974667",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "DEMİR",
+      "tc": "39724315206",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5072653762",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "DÜNDAR",
+      "tc": "19900977350",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5053660165",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "BEYZANUR",
+      "soyad": "DÜNDAR",
+      "tc": "31684588294",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5053660165",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "SELEN",
+      "soyad": "DAĞDEVİREN",
+      "tc": "19480991708",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070191313",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "DAĞDEVİREN",
+      "tc": "26431759164",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070191313",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "BUĞRA",
+      "soyad": "REFİK DEMİR",
+      "tc": "37921373432",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052321672",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "YİĞİT ÇALIŞKAN",
+      "tc": "45461059082",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5331677331",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "BELİNAY",
+      "soyad": "ERCAN",
+      "tc": "28076644096",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5413793308",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "BULUT",
+      "soyad": "ÇEVİK",
+      "tc": "24961814308",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5053744955",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "BEGÜM",
+      "soyad": "HANEFE",
+      "tc": "29596657672",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5312129109",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ESMA",
+      "soyad": "AYDIN",
+      "tc": "56692051554",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5312129109",
+      "baslangicTarihi": "2024-05-03"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "EYLÜL AKDAŞ",
+      "tc": "1956494398",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5426225578",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "HİRA",
+      "soyad": "GÖZÜBÜYÜKLER",
+      "tc": "25303787588",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5078264477",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "RÜZGAR",
+      "soyad": "EMİR BAĞCI",
+      "tc": "39859311166",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5377833007",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "MERAL",
+      "soyad": "BUĞLEM BAĞCI",
+      "tc": "20947938204",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5377833007",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "İPEK",
+      "soyad": "ÇOBAN",
+      "tc": "57865640810",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5369798687",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "KAAN",
+      "soyad": "ÇOBAN",
+      "tc": "19867445060",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5369798687",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "SİRAÇ",
+      "soyad": "ALİ MİKYAS",
+      "tc": "34265352932",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5466874860",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "PELİN",
+      "soyad": "SAKMAN",
+      "tc": "43264196218",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052773206",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "EBRAR",
+      "soyad": "KIVANÇ",
+      "tc": "43657183962",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5300434583",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "REYYAN",
+      "soyad": "ÇOMAKTEKİN",
+      "tc": "42247228786",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070528679",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "KAĞAN KAVGACI",
+      "tc": "36115550376",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5062918039",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "KAVGACI",
+      "tc": "37498506226",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5062918039",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "KAAN",
+      "soyad": "DORUK KARADUMAN",
+      "tc": "19645990430",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055071917",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "KAYRA",
+      "soyad": "DEMİR KARADUMAN",
+      "tc": "39055344104",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055071917",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "NİL",
+      "soyad": "ALYA SAPAN",
+      "tc": "65860370656",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5306305951",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "BATUR SAPAN",
+      "tc": "24290006924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5306305951",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "MELİH GÜNGÖR",
+      "tc": "39358327842",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5353324066",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "ELİF GÜNGÖR",
+      "tc": "35260470096",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5353324066",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "HUZEYFE AKMAN",
+      "tc": "22318902388",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5060202751",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "DOĞA",
+      "soyad": "TİLKİ",
+      "tc": "41446259072",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5313111448",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "TALHA GÜNDÜZ",
+      "tc": "36388433604",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5302758100",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "YAGIZ",
+      "soyad": "ALP DENEK",
+      "tc": "21745912304",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5530869046",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MASAL",
+      "soyad": "ESLEM DOĞAN",
+      "tc": "49081002060",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5529513369",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MELEK",
+      "soyad": "LİYA DOĞAN",
+      "tc": "38881343930",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5051264367",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "AYAZ",
+      "soyad": "MERT GÜROCAK",
+      "tc": "14360162452",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052137848",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "ŞENDİL",
+      "tc": "43534185744",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5069746181",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "BEGÜM",
+      "soyad": "AĞAÇKESEN",
+      "tc": "29788653154",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052587416",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "FEYZANUR",
+      "soyad": "ÇOLAK",
+      "tc": "16280094202",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5071683488",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "FATMANUR",
+      "soyad": "ÇOLAK",
+      "tc": "38422359208",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5071683488",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "IŞIL ERDEM",
+      "tc": "14978138696",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366190849",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "İLKER ERDEM",
+      "tc": "48217029698",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366190849",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "EMİR",
+      "soyad": "TAHA KAYHAN",
+      "tc": "42268228048",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5079249416",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "DERİN",
+      "soyad": "TUNA",
+      "tc": "21196929852",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5065394993",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "ÖZGÜR KOÇ",
+      "tc": "33413460666",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058765301",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "ALİ KOÇ",
+      "tc": "21592926646",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058765301",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "EYLÜL KOÇ",
+      "tc": "34813484948",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5458580006",
+      "baslangicTarihi": "2024-05-11"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ÖZÇÖREKÇİ",
+      "tc": "37528390276",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5327636033",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MERT",
+      "soyad": "KAAN ÖZKAN",
+      "tc": "36268436480",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5556236214",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "DENİZ",
+      "soyad": "GÜNEŞ",
+      "tc": "16178099258",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055180062",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "GÜLCE",
+      "soyad": "GÜNEŞ",
+      "tc": "38497354238",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055180062",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "EMİR KAYA",
+      "tc": "13823683206",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058618109",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "NİSA KAYA",
+      "tc": "37325309990",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058618109",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "HÜSNA",
+      "soyad": "NAZ ŞAHAN",
+      "tc": "28786680612",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536552438",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "EREN ŞAHAN",
+      "tc": "45511122506",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536552438",
+      "baslangicTarihi": "2024-05-17"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "ERDEM YETKİNŞEKERCİ",
+      "tc": "24769820020",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326980628",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "AYBÜKE",
+      "soyad": "CEYLAN",
+      "tc": "22144899098",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5056510516",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "ADEN",
+      "soyad": "CEYLAN",
+      "tc": "19846978428",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5056510516",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "DOĞAN",
+      "tc": "32611550520",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5067201943",
+      "baslangicTarihi": "2024-05-25"
+    },
+    {
+      "ad": "ELİZ",
+      "soyad": "KAYHAN",
+      "tc": "21394927018",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5079249416",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "ERDEM DERVİŞOĞLU",
+      "tc": "17984041790",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5337111727",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "EREN",
+      "tc": "31519595794",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5320563075",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "ELVİN",
+      "soyad": "DERVİŞ",
+      "tc": "30343626254",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052363712",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "DERVİŞ",
+      "tc": "30862610130",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052363712",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "BEREN",
+      "soyad": "ŞAŞMAZ",
+      "tc": "24541818924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5396161477",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "NUR AKBULUT",
+      "tc": "36964414232",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5396161477",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "AHMED",
+      "soyad": "EMİN KILINÇ",
+      "tc": "44509156554",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5303929229",
+      "baslangicTarihi": "2024-05-25"
+    },
+    {
+      "ad": "TALHA",
+      "soyad": "YILDIZ",
+      "tc": "36268437166",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5432244056",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "AYSU",
+      "soyad": "ELİZ ESENDEMİR",
+      "tc": "31192599188",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5439494044",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "ABDULKADİR",
+      "soyad": "İZZET YILMAZ",
+      "tc": "33031535890",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5077509790",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "SEMİ YILMAZ",
+      "tc": "31267597392",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5077509790",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "BEGÜM",
+      "soyad": "ÖZKİRİŞÇİ",
+      "tc": "26134773788",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536440607",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "BİLGE",
+      "soyad": "ÖZKİRİŞÇİ",
+      "tc": "30335563222",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536440607",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "EYMEN DEMİRBAŞ",
+      "tc": "37795379370",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5303092553",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "YUSUF DÜZGÖREN",
+      "tc": "28283269730",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5517328792",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "BERRA",
+      "soyad": "DÜZGÖREN",
+      "tc": "42703215206",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5517328792",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "ARDA",
+      "soyad": "KAĞAN TAN",
+      "tc": "25366800910",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326080836",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "BEREN TAN",
+      "tc": "25495795040",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326080836",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "HALİL",
+      "soyad": "İBRAHİM AKDEMİR",
+      "tc": "11440752060",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5530913359",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "EGEMEN",
+      "soyad": "KARAGÖZLÜ",
+      "tc": "73735111266",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5324702927",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "KARABAĞLI",
+      "tc": "34843475176",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536839691",
+      "baslangicTarihi": "2024-06-07"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "ZİYA CANBAY",
+      "tc": "14648152010",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5426711439",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "OSMAN ÖZTÜRKMEN",
+      "tc": "46558092302",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5333847075",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "PATLI",
+      "tc": "22795877872",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5375683145",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "SEZGİN",
+      "soyad": "PATLI",
+      "tc": "202629914",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5375683145",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "RUZGAR",
+      "soyad": "ÖZSEVGİ",
+      "tc": "22045903320",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5549695938",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "GÖKÇE",
+      "soyad": "HANZEDE GÖĞÜŞ",
+      "tc": "16736080056",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5445890249",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "GAZİ",
+      "tc": "47356067974",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 413 19 82",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "EREN GAZİ",
+      "tc": "42679217020",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 413 19 82",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "NİL",
+      "soyad": "OĞUZHAN",
+      "tc": "34037439878",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5544370306",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "KUZEY",
+      "soyad": "LEBLEBİCİ",
+      "tc": "39400333050",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5321569075",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "TALHA GELİÇ",
+      "tc": "31843584310",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5384933766",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "MİHRİMAH",
+      "soyad": "BİNELLİ",
+      "tc": "23486791538",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "534 596 18 38",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "METEHAN",
+      "soyad": "BİNELLİ",
+      "tc": "25351868390",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "535 596 18 38",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "REYHAN",
+      "soyad": "EROL",
+      "tc": "47464054712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "552 934 39 27",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "DEFNE DEMİRBAŞ",
+      "tc": "25345791826",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "530 309 25 53",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "ALPARSLAN",
+      "tc": "30073634680",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 891 62 98",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "EMİR",
+      "soyad": "TÜYSÜZ",
+      "tc": "18794019986",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 686 83 74",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "DURU SOYLU",
+      "tc": "28162700422",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 086 60 35",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "EMİN SOYLU",
+      "tc": "44293169198",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 086 60 35",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "İSMET",
+      "soyad": "DUMAN",
+      "tc": "47503057674",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "551 715 82 88",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "MUHAMMET",
+      "soyad": "ÇELİK",
+      "tc": "18836012784",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 498 26 63",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "SEÇİL EROĞLU",
+      "tc": "26470756018",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "542 518 51 15",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "İKRA",
+      "soyad": "EROĞLU",
+      "tc": "37249394898",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "542 518 51 15",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "KEREM KORKMAZ",
+      "tc": "25411789412",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 391 01 70",
+      "baslangicTarihi": "2024-06-28"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "ERSOY",
+      "tc": "40423289484",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "541 273 22 06",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "BADE KALENDER",
+      "tc": "59245135824",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "554 327 55 77",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "ZANYAR EROL",
+      "tc": "39982311736",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 280 65 76",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "ADAR EROL",
+      "tc": "53029796720",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 280 65 76",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "ÇAKIR",
+      "tc": "25636791986",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "538 074 79 79",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "KARAKUŞ",
+      "tc": "31933572418",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "534 518 4319",
+      "baslangicTarihi": "2024-07-28"
+    },
+    {
+      "ad": "EMİR",
+      "soyad": "GÜNÖZ",
+      "tc": "27520728856",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "549 772 15 42",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "GÜNÖZ",
+      "tc": "20209972618",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "555 685 27 46",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "ALYA BAĞCI",
+      "tc": "16187100464",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "537 584 58 44",
+      "baslangicTarihi": "2024-07-05"
+    },
+    {
+      "ad": "METE",
+      "soyad": "ÖZKOÇ",
+      "tc": "27403731164",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "545 330 5 30",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "EFE",
+      "soyad": "ŞENER",
+      "tc": "49600921056",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5327399239",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "ECE",
+      "soyad": "ŞENER",
+      "tc": "49606920848",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5327399239",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "RUZGAR",
+      "soyad": "KARAKÜÇÜK",
+      "tc": "44857142476",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5379381055",
+      "baslangicTarihi": "2024-07-12"
+    },
+    {
+      "ad": "HAZAL",
+      "soyad": "DARGA",
+      "tc": "46096108442",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 849 34 31"
+    },
+    {
+      "ad": "SERHAT",
+      "soyad": "KARAKUŞ",
+      "tc": "44849068586",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5057442009",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "SERTKAYA",
+      "tc": "25849783488",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "530 445 98 98",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "İKBAL",
+      "soyad": "EYLÜL YILDIZ",
+      "tc": "30001742906",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "539 697 25 53",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "PERVİN",
+      "soyad": "CEYLAN",
+      "tc": "48940006898",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "505 651 05 16",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "ECE",
+      "soyad": "ZÜMRA KARIK",
+      "tc": "28279697066",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "535 855 97 59",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "METEHAN",
+      "soyad": "TURSUN",
+      "tc": "48994006752",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 701 21 21",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "FATMA",
+      "soyad": "AHSEN DEMİR",
+      "tc": "51487503126",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "531 903 24 41",
+      "baslangicTarihi": "2024-07-26"
+    },
+    {
+      "ad": "GÖKTUĞ",
+      "soyad": "DOĞAN",
+      "tc": "35440460152",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "552 402 93 90",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "FIRAT",
+      "soyad": "ÇOBAN",
+      "tc": "29272669722",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "542 395 59 71",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "ERDEM",
+      "soyad": "ÇOBAN",
+      "tc": "39694321894",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "542 395 59 71",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "KAAN ÖZTÜRK",
+      "tc": "22348894516",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "530 149 34 26",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "ANTEP",
+      "tc": "19510996000",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 683 74 42",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "YILDIRIM",
+      "tc": "33085538656",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "530 979 68 08",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "LİNA",
+      "soyad": "AKBAŞ",
+      "tc": "44818151462",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 682 85 58",
+      "baslangicTarihi": "2024-08-02"
+    },
+    {
+      "ad": "YAHYA",
+      "soyad": "İÇOĞLU",
+      "tc": "32986539892",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "555 457 49 11",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "HÜSEYİN",
+      "soyad": "EYMEN İÇOĞLU",
+      "tc": "30034638894",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "555 457 49 11",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "LİNA",
+      "soyad": "ÖZKAN",
+      "tc": "38905343656",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 580 02 27",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "ASUMAN",
+      "soyad": "MEVA ÖZKAN",
+      "tc": "58474625168",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 580 02 27",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "BÜYÜKKILCI",
+      "tc": "22744878530",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "538 652 60 57",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "MUHSİN",
+      "soyad": "ERDEM KÜPELİ",
+      "tc": "18023044956",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "555 972 99 76",
+      "baslangicTarihi": "2024-08-03"
+    },
+    {
+      "ad": "MÜJDE",
+      "soyad": "KÜPELİ",
+      "tc": "18212038612",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "555 972 99 76",
+      "baslangicTarihi": "2024-08-03"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ARAS AKMAN",
+      "tc": "28054704156",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 020 27 51",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "TUĞÇE ÇOBAN",
+      "tc": "28366698648",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "505 456 60 52",
+      "baslangicTarihi": "2024-08-03"
+    },
+    {
+      "ad": "ELİZ",
+      "soyad": "AKÇURA",
+      "tc": "24556826716",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 874 29 30",
+      "baslangicTarihi": "2024-08-09"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "BERİL SAKICI",
+      "tc": "24118840952",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 244 15 42",
+      "baslangicTarihi": "2024-08-16"
+    },
+    {
+      "ad": "BERAT",
+      "soyad": "BOZKURT",
+      "tc": "35035478364",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 808 60 11",
+      "baslangicTarihi": "2023-08-16"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "BOZKURT",
+      "tc": "46240097080",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5068086011",
+      "baslangicTarihi": "2024-08-16"
+    },
+    {
+      "ad": "İREM",
+      "soyad": "ÖYKÜM ERDOGAN",
+      "tc": "15611117238",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5327723829",
+      "baslangicTarihi": "2024-08-23"
+    },
+    {
+      "ad": "GÖKTUĞ",
+      "soyad": "ARAS KAYAALP",
+      "tc": "16991071318",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5301228423",
+      "baslangicTarihi": "2024-08-23"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "SAKMAN",
+      "tc": "23203867348",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 277 32 06",
+      "baslangicTarihi": "2024-08-30"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "CANSIZ",
+      "tc": "12357147000",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 975 51 87",
+      "baslangicTarihi": "2024-08-30"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "AYAZ ÖZTÜRK",
+      "tc": "54346762894",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0530 516 00 84",
+      "baslangicTarihi": "2024-08-31"
+    },
+    {
+      "ad": "BERİL",
+      "soyad": "PELTEK",
+      "tc": "56026706754",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 855 95 45",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "ÇETİN",
+      "tc": "37421327010",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0555 028 70 33",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "ATAHAN",
+      "soyad": "EFE ÇETİN",
+      "tc": "20164969074",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0555 028 70 33",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "ADEN",
+      "soyad": "NUR TURNALAR",
+      "tc": "28279701534",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0530 736 40 63",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "ALİ POLAT",
+      "tc": "69271186134",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0553 485 36 06"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "EFE MERT",
+      "tc": "10591355380",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0544 964 41 11",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "TUNAHAN",
+      "soyad": "ÇOLAK",
+      "tc": "25675780842",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0554 591 57 57",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "AYBARS TOLUNAY",
+      "tc": "27517726872",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 683 16 68",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "EREN GÜLÜŞÜR",
+      "tc": "25123808470",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0555 470 56 20",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "NİSA GÜLÜŞÜR",
+      "tc": "20527961158",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0555 470 56 20",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "EZGİ",
+      "soyad": "KÖSEOĞLU",
+      "tc": "20263965946",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0530 371 29 97",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "DOĞAN",
+      "soyad": "KÖSEOĞLU",
+      "tc": "34933476458",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0530 371 29 97",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "ELİFNAZ",
+      "soyad": "TAŞDELEN",
+      "tc": "30913606266",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0541 392 10 54",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "TAŞDELEN",
+      "tc": "35821444078",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0541 392 10 54",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "FERAH DORA",
+      "tc": "14648369900",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0553 465 64 55",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "MELİS",
+      "soyad": "BAKDIM",
+      "tc": "47935048134",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0546 824 27 54",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "İBRAHİM",
+      "soyad": "HALİL ŞAHİN",
+      "tc": "16556086726",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "542 374 52 59",
+      "baslangicTarihi": "2024-09-06"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "EDİZ BAKDIM",
+      "tc": "32351496058",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0546 824 27 54",
+      "baslangicTarihi": "2024-09-07"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "ÖZTÜRKMEN",
+      "tc": "45757121394",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0539 370 42 36",
+      "baslangicTarihi": "2024-09-07"
+    },
+    {
+      "ad": "EZĞİ",
+      "soyad": "ÖZTÜRKMEN",
+      "tc": "27631718500",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0539 370 42 36",
+      "baslangicTarihi": "2024-09-07"
+    },
+    {
+      "ad": "KENAN",
+      "soyad": "EKİCİ",
+      "tc": "48085042270",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 994 96 97",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "ALPER",
+      "soyad": "MERT TABUR",
+      "tc": "19483981812",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0537 594 7824",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "HALUK",
+      "soyad": "GÖKAY ŞEN",
+      "tc": "45904115436",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0543 256 40 51",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "ELA ESEN",
+      "tc": "20569960164",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0545 520 19 11",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "SERRA",
+      "soyad": "BOYNUKISA",
+      "tc": "47581059874",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0507 942 1662",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "İHSAN KAĞAN DEMİR",
+      "tc": "30649616768",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "505 403 61 39",
+      "baslangicTarihi": "2024-09-13"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "BOYNUKISA",
+      "tc": "29453592672",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5079421662",
+      "baslangicTarihi": "2024-09-14"
+    },
+    {
+      "ad": "REYYAN",
+      "soyad": "KARAKAŞ",
+      "tc": "36658423984",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "552 481 63 95",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "NUR",
+      "soyad": "EBRAR DAĞDELEN",
+      "tc": "15912035286",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 5720899",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "BENSU",
+      "soyad": "ÇELİKKALKAN",
+      "tc": "2271187398",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0537 235 67 67",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "MUHAMMET",
+      "soyad": "TAYYİP DAĞDELEN",
+      "tc": "35443462764",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 5720899",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "MUHAMMET",
+      "soyad": "ZEKİ EKİNCİOĞLU",
+      "tc": "17693050922",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 456 54 74",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "ESRA",
+      "soyad": "EKİNCİOĞLU",
+      "tc": "26020778552",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 456 54 74",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "EKİNCİOĞLU",
+      "tc": "53737783036",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 456 54 74",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "KAYRA",
+      "soyad": "TAN YEGÜL",
+      "tc": "23263870708",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0505 268 44 94",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "OSMAN",
+      "soyad": "BARAN ÇİÇEK",
+      "tc": "50452747992",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366184957",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "AYŞİN",
+      "soyad": "EYLEM ÇİÇEK",
+      "tc": "26693539924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366184957",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "MEMDUH",
+      "soyad": "ÇINAR DÖNERTAŞ",
+      "tc": "37207399538",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "533 038 15 26",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "MİRZA",
+      "soyad": "BİNDAL",
+      "tc": "19264994352",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0530 516 00 84",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "HÜMEYRA",
+      "soyad": "BULUT",
+      "tc": "30100641476",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5380662966",
+      "baslangicTarihi": "2024-09-21"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "AYSU ÖZKİRİŞÇİ",
+      "tc": "19714984070",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 547 07 88",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "KEMAL",
+      "soyad": "ÖZKİRİŞÇİ",
+      "tc": "29200665482",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 547 07 88",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "TAHA",
+      "soyad": "AYDOĞAN",
+      "tc": "48235037934",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 344 66 34",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "BÜNYAMİN",
+      "soyad": "YEKTA DOĞAN",
+      "tc": "37570387088",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "EMİR",
+      "soyad": "ASAF ŞEN",
+      "tc": "46648083784",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0533 313 02 01",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "ZEHİROĞLU",
+      "tc": "42517223152",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0553 372 09 27",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "DENİZ",
+      "soyad": "ETHAN KUŞ",
+      "tc": "66787344218",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0507 627 29 34",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "DENİZ",
+      "soyad": "ÇİÇEK",
+      "tc": "41582042804",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366184957",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "MİNE",
+      "soyad": "ŞİLAN ÇİÇEK",
+      "tc": "30920398352",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366184957",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "SAİT ÖZÜ",
+      "tc": "21835049248",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0507 772 55 27",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "ELİS",
+      "soyad": "AKGÜN",
+      "tc": "43213203738",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "536 951 47 47",
+      "baslangicTarihi": "2024-10-04"
+    },
+    {
+      "ad": "MERT",
+      "soyad": "ÇAĞAN GÜR",
+      "tc": "41527262212",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 503 65 67",
+      "baslangicTarihi": "2024-10-11"
+    },
+    {
+      "ad": "OĞUZ",
+      "soyad": "KAAN GÜR",
+      "tc": "41671257430",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 503 65 67",
+      "baslangicTarihi": "2024-10-11"
+    },
+    {
+      "ad": "ZEHRA",
+      "soyad": "YILDIRIM",
+      "tc": "62209500644",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0543 790 33 71",
+      "baslangicTarihi": "2024-10-11"
+    },
+    {
+      "ad": "RUKİYE",
+      "soyad": "ERVA AZİZOĞLU",
+      "tc": "24982812758",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 367 37 99",
+      "baslangicTarihi": "2024-10-18"
+    },
+    {
+      "ad": "YAVUZ",
+      "soyad": "SELİM ESEN",
+      "tc": "43183614336",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "505 388 32 38",
+      "baslangicTarihi": "2024-10-18"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "AZİZOĞLU",
+      "tc": "35192401342",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 367 37 99",
+      "baslangicTarihi": "2024-10-18"
+    },
+    {
+      "ad": "KAĞAN",
+      "soyad": "AYBERK TOLUNAY",
+      "tc": "35108404184",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 683 16 68",
+      "baslangicTarihi": "2024-11-01"
+    },
+    {
+      "ad": "ATLAS",
+      "soyad": "DİNLER",
+      "tc": "35728454996",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0507 460 21 97",
+      "baslangicTarihi": "2024-11-15"
+    },
+    {
+      "ad": "MİNA",
+      "soyad": "KARAŞAHİN",
+      "tc": "16058103600",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0532 228 49 03",
+      "baslangicTarihi": "2024-11-15"
+    },
+    {
+      "ad": "ESLEM",
+      "soyad": "KÖK",
+      "tc": "58942609508",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 910 03 36",
+      "baslangicTarihi": "2024-11-15"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "SALİH DOĞAN",
+      "tc": "12349453898",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5343124499",
+      "baslangicTarihi": "2024-11-15"
+    },
+    {
+      "ad": "ŞERİFE",
+      "soyad": "GÖKÇE CEYHAN",
+      "tc": "35828022224",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 607 77 36",
+      "baslangicTarihi": "2024-11-22"
+    },
+    {
+      "ad": "SEYİT",
+      "soyad": "ATA YILMAZ",
+      "tc": "45427123086",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 222 1453",
+      "baslangicTarihi": "2024-11-22"
+    },
+    {
+      "ad": "ASU",
+      "soyad": "YILDIZ",
+      "tc": "30070642800",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5520159363",
+      "baslangicTarihi": "2024-12-06"
+    },
+    {
+      "ad": "GÖKTUĞ",
+      "soyad": "SARIÇİYDEM",
+      "tc": "26080655596",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0551 414 96 84",
+      "baslangicTarihi": "2024-12-06"
+    },
+    {
+      "ad": "BURAK",
+      "soyad": "SIĞINDI",
+      "tc": "28886611448",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0506 382 63 36",
+      "baslangicTarihi": "2025-01-10"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "ALYA ADAMHASAN",
+      "tc": "69103268410",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "0545 964 01 01",
+      "baslangicTarihi": "2024-02-14"
+    },
+    {
+      "ad": "MERT",
+      "soyad": "İNCİOĞLU",
+      "tc": "37087409952",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5365150770",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "ÖZDE ÖZGÖZÜKARA",
+      "tc": "67537323118",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5416512544",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ÖZGÖZÜKARA",
+      "tc": "18512028030",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5416512544",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "GÜNEBAKAN",
+      "tc": "36409427308",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5054401696",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "ASLAN",
+      "tc": "15548122176",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5067526984",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "ESLEM ASLAN",
+      "tc": "42577227220",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5067526984",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "METE SAKİN",
+      "tc": "19637262668",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "BEYZA",
+      "soyad": "AYAS",
+      "tc": "43855184716",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5068350383",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "ARİF",
+      "soyad": "ARAS SOYTEKİN",
+      "tc": "43445126188",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058180148",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "UMUT AKPOLAT",
+      "tc": "47695965900",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5464371277",
+      "baslangicTarihi": "2025-04-18"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "TAŞ",
+      "tc": "28193634680",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5434783228",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "GÖKÇE",
+      "soyad": "HANZADE GÖĞÜŞ",
+      "tc": "5445890249",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5445890249",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "GÖÇMEN",
+      "tc": "43852179616",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5074886362",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "EMRE",
+      "soyad": "PAYMAN",
+      "tc": "43861175296",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5307603756",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "MASMAS",
+      "tc": "42022239464",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5468915155",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "TALHA DÖLEK",
+      "tc": "47026070860",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5372369799",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "YAĞAN",
+      "soyad": "RÜZGAR OKUR",
+      "tc": "22717882298",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5059485223",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "NARİN",
+      "soyad": "NEHİR POLAT",
+      "tc": "43420197998",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5372639940",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "SELİM POLAT",
+      "tc": "19181005612",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5538869928",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "HALİL",
+      "soyad": "İBRAHİM POLAT",
+      "tc": "26686755836",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5462081010",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "DURNA",
+      "tc": "32587540532",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "55208466",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "AKDAĞ",
+      "soyad": "ÖYKÜ",
+      "tc": "22270902600",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5076558919",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "LİN",
+      "soyad": "ELDİYAP",
+      "tc": "67534330416",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5345522033",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "AYA",
+      "soyad": "ELDİYAP",
+      "tc": "67531330570",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5345522033",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "YAMEN ELDİYAP",
+      "tc": "67537330352",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5345522033",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "ÇELİKKALKAN",
+      "tc": "29297597864",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070933857",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "BEREN",
+      "soyad": "ÖZDEMİR",
+      "tc": "45868110058",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5305417512",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "GÖKÇE",
+      "soyad": "HAZIR",
+      "tc": "62257499150",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5314094198",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "HAZIR",
+      "tc": "43972178742",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5314094198",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "CELAL",
+      "soyad": "GÖKTUĞ BAY",
+      "tc": "25378793330",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "535 488 26 00",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "ÖZBEZEK",
+      "tc": "43627183206",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5322272455",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "YAĞIZ",
+      "soyad": "EFE KÖYMEN",
+      "tc": "49234005344",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5079613423",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "HAMZA",
+      "soyad": "YILDIZ",
+      "tc": "19390999122",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5323647104",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "SELİM YILDIZ",
+      "tc": "30256635954",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5323647104",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "MİNA GÜR",
+      "tc": "19250002672",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "505 708 53 00",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "SU SEVİNDİ",
+      "tc": "68374275394",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "506 357 29 40",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "DERİN",
+      "soyad": "ASEL TANRIÖVER",
+      "tc": "18470022712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5301839936",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "NİSA",
+      "soyad": "KUMSAL KIRŞAN",
+      "tc": "31201605930",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5424540227",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "YAVUZ",
+      "soyad": "KAĞAN KOÇOĞLU",
+      "tc": "59281598232",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5320589798",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "BADE",
+      "soyad": "ZİREK",
+      "tc": "30349628252",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5541633011",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "BERRA",
+      "soyad": "GÜNSEVER",
+      "tc": "14297160538",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5052957315",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "MERVE",
+      "soyad": "SELİN ÖZCAN",
+      "tc": "74032092456",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5546993620",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "EROL BATMAZ",
+      "tc": "40831283166",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5374311663",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "BEYZANUR",
+      "soyad": "EKİNCİ",
+      "tc": "18253238552",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5078495095",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "MELİKE",
+      "soyad": "SENA EKİNCİ",
+      "tc": "23914054020",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5078495095",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ELA ÇETİNKAYA",
+      "tc": "20092966992",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5370146842",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "BERFİN",
+      "soyad": "VİCTORİA KUŞ",
+      "tc": "55189734642",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5076272934",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "ÜMMÜ",
+      "soyad": "GÜLSÜM HARAT",
+      "tc": "45064144468",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5349441521",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "YANÇ",
+      "tc": "30703616826",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070560727",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "DENİZ YANÇ",
+      "tc": "19582987784",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5070560727",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "BETÜL",
+      "soyad": "BURÇİN EKİNCİ",
+      "tc": "25705789104",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5423427702",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "FURKAN",
+      "soyad": "EKİNCİ",
+      "tc": "34543492756",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5423427702",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "AHSEN",
+      "soyad": "EKİNCİ",
+      "tc": "1657023590",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5423427702",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ATA",
+      "soyad": "AK",
+      "tc": "56086704882",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5425373711",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "DURAKOĞLUGİL",
+      "tc": "25024812026",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "KEPEKÇİ",
+      "tc": "35095475266",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5072168280",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "SELİM",
+      "soyad": "KEPEKÇİ",
+      "tc": "43516194924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5072168280",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ASİLAY",
+      "soyad": "ZEYNEP GÖĞEBAKAN",
+      "tc": "14801146768",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5076328915",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "YILDIRIMLAR",
+      "tc": "12381146208",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5423111282",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "MİRAY EKİN",
+      "tc": "15572122050",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5072872532",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "UZUN",
+      "tc": "34081501866",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5447888319",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "ÜNAL",
+      "tc": "33364534102",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5066621037",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "EVRİM",
+      "soyad": "ELİHAN",
+      "tc": "48418022436",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5545405858",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "HİRA",
+      "soyad": "BOZKURT",
+      "tc": "44509153898",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5424121327",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "GÜRSEL",
+      "tc": "23491854174",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5533062023",
+      "baslangicTarihi": "2025-06-13"
+    },
+    {
+      "ad": "ASMİN",
+      "soyad": "EROL",
+      "tc": "43109137468",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5301832027",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "YİĞİT DEMİR",
+      "tc": "42748332340",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536345670",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "SERDAR YILDIZ",
+      "tc": "38704355072",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5302294649",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "İDİL",
+      "soyad": "REYHAN YILDIZ",
+      "tc": "31624590752",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5302294649",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "MUSA",
+      "soyad": "YILDIZ",
+      "tc": "38230370310",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5394558147",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "SERRRA KOSKA",
+      "tc": "30443559698",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 636 31 43",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "ARI",
+      "tc": "37792377454",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "553 474 05 64",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "BERFİN",
+      "soyad": "ÇOBAN",
+      "tc": "29411594038",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5423955971",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "MELİSA",
+      "soyad": "KOSKA",
+      "tc": "28657683780",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5330251790",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "SAİT KARTAL",
+      "tc": "23095868652",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5369215516",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "MECİT ÖZYURT",
+      "tc": "19789984982",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5533495351",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "FERHAT",
+      "soyad": "KARAKULAK",
+      "tc": "26485755068",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355184876",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "RONAY",
+      "soyad": "KARAKULAK",
+      "tc": "26743746470",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355184876",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "NEŞE",
+      "soyad": "SELEN AYDIN",
+      "tc": "29515808086",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5076662214",
+      "baslangicTarihi": "2025-06-20"
+    },
+    {
+      "ad": "NİDA",
+      "soyad": "GÜRBÜZ",
+      "tc": "26362766378",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5326993427",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "ŞEREF",
+      "soyad": "MUAZ KOYUNLU",
+      "tc": "22588885770",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5301420525",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "ESENDEMİR",
+      "tc": "33805512300",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5522084027",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "MAHİR",
+      "soyad": "CİHAN AKKOÇ",
+      "tc": "4339619834",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5057972107",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "ŞENEL",
+      "soyad": "REYYAN CAN",
+      "tc": "19343000684",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5343500892",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "HAKTAN CAN",
+      "tc": "21292930974",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5343500892",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "MUSAB",
+      "soyad": "KAĞAN DEYNEK",
+      "tc": "40739210646",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5532042707",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "KAAN",
+      "soyad": "ÖZERBAŞ",
+      "tc": "41563252468",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366805168",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "ÖZERBAŞ",
+      "tc": "33709520920",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5366805168",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "HALİL",
+      "soyad": "İBRAHİM YAŞAR",
+      "tc": "38836351478",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "İDİL OĞUZCAN",
+      "tc": "45616125976",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "OĞUZCAN",
+      "tc": "24475828662",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "ADEM",
+      "soyad": "BUŞİ",
+      "tc": "45548056164",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "SELVİ",
+      "soyad": "ECE ÖZKAYA",
+      "tc": "22532823254",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5372192327",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "HAN",
+      "tc": "40471289566",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5398187515",
+      "baslangicTarihi": "2025-06-27"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "ALİ KÖK",
+      "tc": "41086271762",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5364939849",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "KÖK",
+      "tc": "17036071140",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5364939849",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "DERİN ÇAĞLAYAN",
+      "tc": "47554989146",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5013671616",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "AYBALA",
+      "soyad": "BOZKURT",
+      "tc": "36851346028",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5427945896",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "DENİZ",
+      "soyad": "KÖROĞLU",
+      "tc": "27481725062",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5427945896",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "EBRAR",
+      "soyad": "BELİZ İSAN",
+      "tc": "20995946442",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5358185265",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "SILA",
+      "soyad": "ECRİN AVCI",
+      "tc": "38062523144",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5320502708",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "HİRA",
+      "soyad": "NİSA ALICI",
+      "tc": "32572553158",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5449440046",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "BELİNAY",
+      "soyad": "DEMİR",
+      "tc": "48490022188",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5063572940",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "BEGÜM",
+      "soyad": "BEREN ÖZASLAN",
+      "tc": "24961805252",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5422707699",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "MUHAMMET",
+      "soyad": "DİYAR DEMİRTEKİN",
+      "tc": "42925207034",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5051104067",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "MURAT",
+      "soyad": "DEMİRTEKİN",
+      "tc": "49078005418",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5051104067",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "EYMEN BOZHÜYÜK",
+      "tc": "19453990998",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5444218532",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "EMİNE",
+      "soyad": "ZÜMRA DÖNMEZ",
+      "tc": "26770747662",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5348312721",
+      "baslangicTarihi": "2025-07-04"
+    },
+    {
+      "ad": "ARMAN",
+      "soyad": "NACARGİL",
+      "tc": "38857345586",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5342563333",
+      "baslangicTarihi": "2025-07-11"
+    },
+    {
+      "ad": "CİVAN",
+      "soyad": "BOZAN",
+      "tc": "25576793330",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058725925",
+      "baslangicTarihi": "2025-07-11"
+    },
+    {
+      "ad": "İlayda",
+      "soyad": "Nur KURT",
+      "tc": "34186497170",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055346716",
+      "baslangicTarihi": "2025-07-11"
+    },
+    {
+      "ad": "NİDA",
+      "soyad": "SENA KURT",
+      "tc": "20539956470",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055346716",
+      "baslangicTarihi": "2025-07-11"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "BERRA BOSTAN",
+      "tc": "22711887848",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5434697407",
+      "baslangicTarihi": "2025-07-18"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "DERİN DURMAN",
+      "tc": "48187040136",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5333669022",
+      "baslangicTarihi": "2025-07-25"
+    },
+    {
+      "ad": "EGEMEN",
+      "soyad": "TOPAL",
+      "tc": "6603437374",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5056741781",
+      "baslangicTarihi": "2025-07-25"
+    },
+    {
+      "ad": "EMİRHAN",
+      "soyad": "CENGİZ",
+      "tc": "42622219682",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5428108367",
+      "baslangicTarihi": "2025-07-25"
+    },
+    {
+      "ad": "MELEK",
+      "soyad": "MAYSA CENGİZ",
+      "tc": "27850712068",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5428108367",
+      "baslangicTarihi": "2025-07-25"
+    },
+    {
+      "ad": "ASLI",
+      "soyad": "TAKA",
+      "tc": "25336801480",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5353508458",
+      "baslangicTarihi": "2025-07-25"
+    },
+    {
+      "ad": "BUĞLEM",
+      "soyad": "YILDIRIM",
+      "tc": "49003012436",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355410444",
+      "baslangicTarihi": "2025-07-26"
+    },
+    {
+      "ad": "BERRA",
+      "soyad": "YILDIRIM",
+      "tc": "45736107418",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355410444",
+      "baslangicTarihi": "2025-07-26"
+    },
+    {
+      "ad": "NİLAY",
+      "soyad": "MASMAS",
+      "tc": "48364026496",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-01"
+    },
+    {
+      "ad": "BUĞRA",
+      "soyad": "AYAZ DEMİRBAŞ",
+      "tc": "56662162396",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 202 17 12",
+      "baslangicTarihi": "2025-08-01"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "AYSEN DEMİRBAŞ",
+      "tc": "30065049300",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "544 202 17 12",
+      "baslangicTarihi": "2025-08-01"
+    },
+    {
+      "ad": "FİLİZ",
+      "soyad": "ŞENLİK",
+      "tc": "24436829806",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5455726011",
+      "baslangicTarihi": "2025-08-01"
+    },
+    {
+      "ad": "MAHMUT",
+      "soyad": "YİĞİT ÖZDEMİR",
+      "tc": "39985304124",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5077367521",
+      "baslangicTarihi": "2025-08-08"
+    },
+    {
+      "ad": "DİLEM",
+      "soyad": "TÖRE",
+      "tc": "65266398858",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5413803027",
+      "baslangicTarihi": "2025-08-08"
+    },
+    {
+      "ad": "DENİZ",
+      "soyad": "TÖRE",
+      "tc": "65263398912",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5413803027",
+      "baslangicTarihi": "2025-08-08"
+    },
+    {
+      "ad": "BUKRE",
+      "soyad": "LİNA BOYRAZ",
+      "tc": "12655265024",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5468100215",
+      "baslangicTarihi": "2025-08-15"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "GÖNÜLTAŞ",
+      "tc": "16979072214",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5550342756",
+      "baslangicTarihi": "2025-08-16"
+    },
+    {
+      "ad": "AYÇA",
+      "soyad": "ÜNLÜ",
+      "tc": "16376094680",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "546 635 06 83",
+      "baslangicTarihi": "2025-08-16"
+    },
+    {
+      "ad": "NERGİS",
+      "soyad": "DEMİRKIRAN",
+      "tc": "24238828748",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055622704",
+      "baslangicTarihi": "2025-08-16"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "ASLAN",
+      "tc": "28642685966",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5055622004",
+      "baslangicTarihi": "2025-08-16"
+    },
+    {
+      "ad": "AREL",
+      "soyad": "HAN",
+      "tc": "31717579268",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5385066151",
+      "baslangicTarihi": "2025-08-22"
+    },
+    {
+      "ad": "BERAT",
+      "soyad": "AYAZ HAN",
+      "tc": "37951375864",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5385066151",
+      "baslangicTarihi": "2025-08-22"
+    },
+    {
+      "ad": "EYUP",
+      "soyad": "EMİR KATMERCİ",
+      "tc": "55417727132",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-19"
+    },
+    {
+      "ad": "ECRİN",
+      "soyad": "ECE KATMERCİ",
+      "tc": "29341660438",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-19"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "CANSIZ",
+      "tc": "22636059924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-30"
+    },
+    {
+      "ad": "ARYA",
+      "soyad": "KARACAKÖYLÜ",
+      "tc": "31255604118",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5066090807",
+      "baslangicTarihi": "2025-08-30"
+    },
+    {
+      "ad": "ÖMÜR",
+      "soyad": "GÜNGÖR",
+      "tc": "29899639948",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "CEMİL",
+      "soyad": "YUŞA CEYLAN",
+      "tc": "42427224096",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5524223897",
+      "baslangicTarihi": "2025-08-07"
+    },
+    {
+      "ad": "SERVET",
+      "soyad": "MİRZA CEYLAN",
+      "tc": "23647851668",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5524223897",
+      "baslangicTarihi": "2025-08-07"
+    },
+    {
+      "ad": "UMAY",
+      "soyad": "TEKER",
+      "tc": "32536189300",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-30"
+    },
+    {
+      "ad": "NEHİR",
+      "soyad": "HAYTA",
+      "tc": "25255796898",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-30"
+    },
+    {
+      "ad": "YAĞMUR",
+      "soyad": "TEKİN",
+      "tc": "24496828092",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "İBRAHİM",
+      "soyad": "HALİL TEKİN",
+      "tc": "42865216936",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "ALPEREN",
+      "soyad": "CANÇELİK",
+      "tc": "44785144344",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "SÜNDÜK",
+      "tc": "37999379220",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-18"
+    },
+    {
+      "ad": "BERAT",
+      "soyad": "SÜNDÜK",
+      "tc": "31483595288",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-18"
+    },
+    {
+      "ad": "SALİHA",
+      "soyad": "GÜLSUNA",
+      "tc": "35281461202",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "YAŞAR",
+      "tc": "32726483522",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "SIDIKA",
+      "soyad": "ELA YAŞAR",
+      "tc": "26509761242",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "ELİFSU",
+      "soyad": "YAŞAR",
+      "tc": "32723483686",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "MAHİR",
+      "soyad": "MERT ÇİÇEK",
+      "tc": "32086571990",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "OZAN",
+      "soyad": "BARAN ŞAHİN",
+      "tc": "36844417186",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "ECEM",
+      "soyad": "TÜMAY ŞAHİN",
+      "tc": "48589026530",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "RÜYA",
+      "soyad": "ŞANLI",
+      "tc": "47722048262",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-20"
+    },
+    {
+      "ad": "DORUK",
+      "soyad": "ŞİMŞEK",
+      "tc": "42787218650",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "BARIŞ",
+      "soyad": "KENDİRCİ",
+      "tc": "28381699668",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "AYSİMA",
+      "soyad": "KITIR",
+      "tc": "15558055846",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "SAVSAK",
+      "tc": "41491254954",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-09-05"
+    },
+    {
+      "ad": "ELVİN",
+      "soyad": "KARAKUŞ",
+      "tc": "38179372000",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-14"
+    },
+    {
+      "ad": "DURU",
+      "soyad": "KARAKUŞ",
+      "tc": "36952407512",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-14"
+    },
+    {
+      "ad": "HİRA",
+      "soyad": "NUR ASLANOĞLU",
+      "tc": "48424022994",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-08-19"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "HAMZA MANTAR",
+      "tc": "18350026724",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5541573074",
+      "baslangicTarihi": "2025-09-19"
+    },
+    {
+      "ad": "IRMAK",
+      "soyad": "LİNA AKDAĞ",
+      "tc": "54103770940",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5337440785",
+      "baslangicTarihi": "2025-09-19"
+    },
+    {
+      "ad": "BİLAL",
+      "soyad": "ÖZKAN KAHRAMAN",
+      "tc": "35881444636",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "531 886 82 10",
+      "baslangicTarihi": "2025-09-26"
+    },
+    {
+      "ad": "EBRAR",
+      "soyad": "AKCA",
+      "tc": "30154632284",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355871113",
+      "baslangicTarihi": "2025-10-03"
+    },
+    {
+      "ad": "MİRAY",
+      "soyad": "SÜNDÜK",
+      "tc": "35933376526",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5333077375",
+      "baslangicTarihi": "2025-10-03"
+    },
+    {
+      "ad": "BEREN",
+      "soyad": "ÖZYURTSEVEN",
+      "tc": "53389794626",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355103408",
+      "baslangicTarihi": "2025-10-03"
+    },
+    {
+      "ad": "ARDEN",
+      "soyad": "GÜNEŞ",
+      "tc": "48070037076",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-10-10"
+    },
+    {
+      "ad": "ZEHRA",
+      "soyad": "ÖZÜTÜRK",
+      "tc": "24811811242",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-10-10"
+    },
+    {
+      "ad": "HANZADE",
+      "soyad": "ZEREN ERKAN",
+      "tc": "43690187828",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-10-17"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "AKİF DİLEK",
+      "tc": "155699119704",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "543 316 70 84",
+      "baslangicTarihi": "2025-10-18"
+    },
+    {
+      "ad": "AMİNE",
+      "soyad": "HÜMA KORKMAZ",
+      "tc": "63583454806",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "533 059 82 93",
+      "baslangicTarihi": "2025-10-31"
+    },
+    {
+      "ad": "İDİL",
+      "soyad": "ÖZKAYA",
+      "tc": "25693782620",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "507 212 95 20",
+      "baslangicTarihi": "2025-10-31"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "AKIN KARAŞAHİN",
+      "tc": "42688216502",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "530 341 50 58",
+      "baslangicTarihi": "2025-10-31"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "HAZAL KELEŞ",
+      "tc": "37378395162",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5063396797",
+      "baslangicTarihi": "2025-11-14"
+    },
+    {
+      "ad": "RESUL",
+      "soyad": "ASAF ZEHİROĞLU",
+      "tc": "24826949992",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536075600",
+      "baslangicTarihi": "2025-11-14"
+    },
+    {
+      "ad": "EBRAR",
+      "soyad": "ZEHİROĞLU",
+      "tc": "29119670522",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5536075600",
+      "baslangicTarihi": "2025-11-14"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "EMRE KÜÇÜK",
+      "tc": "44557153352",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-11-14"
+    },
+    {
+      "ad": "AYAZ",
+      "soyad": "SELİM EMRE",
+      "tc": "23365859922",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5367767252",
+      "baslangicTarihi": "2025-11-21"
+    },
+    {
+      "ad": "UFUK",
+      "soyad": "AYAZ KAFADAR",
+      "tc": "35032469990",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5073977009",
+      "baslangicTarihi": "2025-11-21"
+    },
+    {
+      "ad": "ERALP",
+      "soyad": "SAÇINTI",
+      "tc": "48682005418",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-11-21"
+    },
+    {
+      "ad": "GÖKALP",
+      "soyad": "SAÇINTI",
+      "tc": "46552074564",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2025-11-21"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "KEREM DİZMAN",
+      "tc": "42082563370",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058741234",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "ATLAS",
+      "soyad": "ARPAÇAY",
+      "tc": "26420696726",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5069149136",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "ÇINAR SAYI",
+      "tc": "30317545840",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5064921932",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "HASAN",
+      "soyad": "MİRZA AVCI",
+      "tc": "14211104778",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5416052803",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ALİ ÇELİK",
+      "tc": "43027205126",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "545 214 16 15",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "ALYA",
+      "soyad": "ÇEVİK",
+      "tc": "45307136076",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5058180090",
+      "baslangicTarihi": "2025-11-28"
+    },
+    {
+      "ad": "ASYA",
+      "soyad": "NUR GÖKDEMİR",
+      "tc": "56230143734",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5541198012",
+      "baslangicTarihi": "2025-12-12"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "ARİF ŞAHİN",
+      "tc": "5550828901",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5550828901",
+      "baslangicTarihi": "2025-12-12"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "DOĞANAY",
+      "tc": "58333027416",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5434508497",
+      "baslangicTarihi": "2025-12-19"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "DOĞANAY",
+      "tc": "21245861706",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5434508497",
+      "baslangicTarihi": "2025-12-19"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ASEL ÖZASLAN",
+      "tc": "49384928142",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5355006356",
+      "baslangicTarihi": "2026-01-02"
+    },
+    {
+      "ad": "KAREN",
+      "soyad": "NOYAN ERİMİŞ",
+      "tc": "62290497830",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5412182584",
+      "baslangicTarihi": "2026-01-16"
+    },
+    {
+      "ad": "POYRAZ",
+      "soyad": "KADİR ŞENGEL",
+      "tc": "39268330802",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5554272334",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "ELVAN",
+      "soyad": "BAYINDIR",
+      "tc": "48880944960",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "5315988025",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "ARYA",
+      "soyad": "MİRZAOĞLU",
+      "tc": "23134867240",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "532 669 77 73",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "TAIMULLAH",
+      "soyad": "ALABO",
+      "tc": "99747613208",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "telefon": "535 015 62 36",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "ZEKERİYE",
+      "soyad": "İHVAN",
+      "tc": "27416674298",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "MARYA",
+      "soyad": "İHVAN",
+      "tc": "27419674134",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "FERAH",
+      "soyad": "İHVAN",
+      "tc": "27422674060",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2026-03-27"
+    },
+    {
+      "ad": "RÜZGAR",
+      "soyad": "ERİM ERDOĞAN",
+      "tc": "38968339986",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2026-03-28"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "AYAZ KÖRCÜK",
+      "tc": "66712350628",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "C.TESİ-PAZAR",
+      "baslangicTarihi": "2026-03-28"
+    },
+    {
+      "ad": "NAYA",
+      "soyad": "ALAMER",
+      "tc": "99156793256",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "539 910 03 09",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "ÇINAR",
+      "soyad": "TİLKİ",
+      "tc": "24715814158",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "531 311 14 48",
+      "baslangicTarihi": "2024-05-10"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ÖZYILMAZ",
+      "tc": "1557305528",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "530 811 64 39",
+      "baslangicTarihi": "2024-05-31"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "DOĞAN",
+      "tc": "33535519532",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "506 720 19 43",
+      "baslangicTarihi": "2024-05-24"
+    },
+    {
+      "ad": "AYLİZ",
+      "soyad": "NAZENDE ESENDEMİR",
+      "tc": "41884240786",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "543 949 40 44",
+      "baslangicTarihi": "2024-05-31"
+    },
+    {
+      "ad": "ATLAS",
+      "soyad": "AÇIKKOL",
+      "tc": "33266465498",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 555 65 49",
+      "baslangicTarihi": "2024-06-24"
+    },
+    {
+      "ad": "GÖKALP",
+      "soyad": "ÖZTÜTÜNCÜ",
+      "tc": "33032473252",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "507 097 42 34",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "SELİM",
+      "soyad": "GÜNEŞ",
+      "tc": "57844646116",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "533 161 71 70",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "TUĞRA",
+      "soyad": "DANABAŞ",
+      "tc": "44995140556",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "506 798 03 10",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "BÜLENT",
+      "soyad": "ÇALKILIÇ",
+      "tc": "15272132496",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "536 359 86 29",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "ATLAS",
+      "soyad": "ÇINAR AKÇİÇEK",
+      "tc": "28930672524",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 931 52 48",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "TALİP SARIBAŞTANOĞLU",
+      "tc": "40183297712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 265 55 63",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "SELİM",
+      "tc": "28783677806",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "535 826 7411",
+      "baslangicTarihi": "2024-06-25"
+    },
+    {
+      "ad": "DEMİR",
+      "soyad": "ALP SALİH",
+      "tc": "26374761590",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "534 060 57 59",
+      "baslangicTarihi": "2024-07-03"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ILGAZ TAŞKIN",
+      "tc": "30313630212",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "507 836 02 84",
+      "baslangicTarihi": "2024-07-01"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "ADEN TAŞKIN",
+      "tc": "27109733158",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "507 836 02 84",
+      "baslangicTarihi": "2024-07-01"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "NEŞE ÇALKILIÇ",
+      "tc": "24949808756",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "536 359 86 29",
+      "baslangicTarihi": "7573-07-01"
+    },
+    {
+      "ad": "MİHRA",
+      "soyad": "TURNALAR",
+      "tc": "17672985184",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "530 736 40 63",
+      "baslangicTarihi": "2024-06-26"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "ALİ DARICAN",
+      "tc": "26461762790",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "541 267 53 35",
+      "baslangicTarihi": "2024-07-02"
+    },
+    {
+      "ad": "ALİN",
+      "soyad": "NAS DARICAN",
+      "tc": "43685118028",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "541 267 53 35",
+      "baslangicTarihi": "2024-07-02"
+    },
+    {
+      "ad": "ASLIHAN",
+      "soyad": "KILINÇ",
+      "tc": "55795714496",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "542 594 13 58",
+      "baslangicTarihi": "2024-07-02"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "GÜVEN",
+      "tc": "16218033778",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 086 40 36",
+      "baslangicTarihi": "2024-07-02"
+    },
+    {
+      "ad": "ELİZ",
+      "soyad": "ALYA KIRKIZ",
+      "tc": "40412227114",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 652 48 39",
+      "baslangicTarihi": "2024-07-01"
+    },
+    {
+      "ad": "ELFİN",
+      "soyad": "ELMAS KIRKIZ",
+      "tc": "47042006294",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 652 48 39",
+      "baslangicTarihi": "2024-07-01"
+    },
+    {
+      "ad": "SELEN",
+      "soyad": "SABUNCUOĞLU",
+      "tc": "52687818072",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "534 333 99 98",
+      "baslangicTarihi": "2024-07-03"
+    },
+    {
+      "ad": "DERİN",
+      "soyad": "ERİŞ",
+      "tc": "29483591584",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "553 119 59 53",
+      "baslangicTarihi": "2024-07-03"
+    },
+    {
+      "ad": "AZRA",
+      "soyad": "KAVSARA",
+      "tc": "14456156440",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "542 419 05 28",
+      "baslangicTarihi": "2024-07-03"
+    },
+    {
+      "ad": "GÖKALP",
+      "soyad": "GÜRBÜZ",
+      "tc": "26200428802",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "539 430 60 86",
+      "baslangicTarihi": "2024-07-09"
+    },
+    {
+      "ad": "AYSİMA",
+      "soyad": "BOZKURT",
+      "tc": "27124734864",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "541 510 18 48",
+      "baslangicTarihi": "2024-07-09"
+    },
+    {
+      "ad": "KUZEY",
+      "soyad": "ARSLANTAŞ",
+      "tc": "28607620674",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "544 427 07 95",
+      "baslangicTarihi": "2024-07-11"
+    },
+    {
+      "ad": "ABDULKADİR",
+      "soyad": "EFE KIVANÇ",
+      "tc": "29825571526",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "507 031 02 48",
+      "baslangicTarihi": "2024-07-11"
+    },
+    {
+      "ad": "UMAY",
+      "soyad": "DANAOĞLU",
+      "tc": "41341258378",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "544 212 61 27",
+      "baslangicTarihi": "2024-07-17"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "YİĞİT ATÇI",
+      "tc": "45713050522",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "501 257 63 27",
+      "baslangicTarihi": "2024-07-17"
+    },
+    {
+      "ad": "DİLŞAH",
+      "soyad": "ASEL ASLAN",
+      "tc": "19085003332",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "530 867 15 33",
+      "baslangicTarihi": "2024-07-23"
+    },
+    {
+      "ad": "ASEL",
+      "soyad": "YAKAR",
+      "tc": "17564055834",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "537 784 80 82",
+      "baslangicTarihi": "2024-07-23"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "ARDEN SAVCILIOĞLU",
+      "tc": "43123207574",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "535 023 36 10",
+      "baslangicTarihi": "2024-07-16"
+    },
+    {
+      "ad": "AYŞEGÜL",
+      "soyad": "ALTUNBAŞ",
+      "tc": "40015305356",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "552 693 03 12",
+      "baslangicTarihi": "2024-07-16"
+    },
+    {
+      "ad": "YAĞIZ",
+      "soyad": "ALİ YILDIZ",
+      "tc": "15185131500",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "505 346 55 84",
+      "baslangicTarihi": "2024-07-18"
+    },
+    {
+      "ad": "ARAS",
+      "soyad": "KEMAL EROĞLU",
+      "tc": "58819613652",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "532 160 90 36",
+      "baslangicTarihi": "2024-07-18"
+    },
+    {
+      "ad": "AHSEN",
+      "soyad": "VERA TAŞDELEN",
+      "tc": "20671947534",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "535 206 39 98",
+      "baslangicTarihi": "2024-07-16"
+    },
+    {
+      "ad": "ERVA",
+      "soyad": "TAŞDELEN",
+      "tc": "18755012896",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "535 206 39 98",
+      "baslangicTarihi": "2024-07-16"
+    },
+    {
+      "ad": "EGE",
+      "soyad": "AREN AKDOĞAN",
+      "tc": "28819678852",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "537 781 96 93",
+      "baslangicTarihi": "2024-07-18"
+    },
+    {
+      "ad": "İLHAN",
+      "soyad": "KERİM BİREKUL",
+      "tc": "73012140682",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "541 802 40 29",
+      "baslangicTarihi": "2024-07-18"
+    },
+    {
+      "ad": "ADA",
+      "soyad": "ASLAN",
+      "tc": "13227133406",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "539 772 02 95",
+      "baslangicTarihi": "2024-07-22"
+    },
+    {
+      "ad": "BERRİN",
+      "soyad": "ERVA İSKENDER",
+      "tc": "36961413160",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "545 805 05 93",
+      "baslangicTarihi": "2024-07-24"
+    },
+    {
+      "ad": "EBRAR",
+      "soyad": "İSKENDER",
+      "tc": "16089038162",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "545 805 05 93",
+      "baslangicTarihi": "2024-07-24"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "BADE TOLAMAN",
+      "tc": "57247665912",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "543 493 92 72",
+      "baslangicTarihi": "2024-07-25"
+    },
+    {
+      "ad": "SELEN",
+      "soyad": "HENGİRMEN",
+      "tc": "10752215812",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "544 778 46 20",
+      "baslangicTarihi": "2024-07-25"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "ÇAKIR",
+      "tc": "64204434108",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "538 074 79 79"
+    },
+    {
+      "ad": "MİLA",
+      "soyad": "KAYCI",
+      "tc": "35059475660",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "541 610 99 85",
+      "baslangicTarihi": "2024-08-14"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "AYRANCIOĞLU",
+      "tc": "6048458190",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "532 152 73 82",
+      "baslangicTarihi": "2024-07-20"
+    },
+    {
+      "ad": "YAĞMUR",
+      "soyad": "DİNÇER",
+      "tc": "52747087998",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5070201336",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "ÖZER",
+      "tc": "43304130806",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "0551 428 25 44",
+      "baslangicTarihi": "2024-09-20"
+    },
+    {
+      "ad": "YUNUS",
+      "soyad": "EMRE DOĞAN",
+      "tc": "38027306706",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5343124499",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "NEVA ŞAHAN",
+      "tc": "34217433726",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "0507 308 81 13",
+      "baslangicTarihi": "2024-09-27"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ASLAN ÖĞÜT",
+      "tc": "42791147892",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5310817845",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "LEVEND",
+      "soyad": "CİHAN DOĞAN",
+      "tc": "46859012252",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5413839863",
+      "baslangicTarihi": "2025-04-25"
+    },
+    {
+      "ad": "YİĞİT",
+      "soyad": "ALP KÖYMEN",
+      "tc": "45161068810",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5079613423",
+      "baslangicTarihi": "2025-05-02"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "AKİF DİLEK",
+      "tc": "15569119704",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5433167084",
+      "baslangicTarihi": "2025-05-23"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "BAHAR SAĞIT",
+      "tc": "15830109052",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5538498208",
+      "baslangicTarihi": "2025-05-16"
+    },
+    {
+      "ad": "GÖKTUĞ",
+      "soyad": "ZİREK",
+      "tc": "24440759656",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "BİREY 11.00-12.00",
+      "telefon": "5393705566",
+      "baslangicTarihi": "2025-05-16"
+    },
+    {
+      "ad": "HAKKI",
+      "soyad": "CEM TUĞCU",
+      "tc": "57037673110",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5065181303",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "ÖZTÜMEN",
+      "tc": "31373528686",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ELA EKİCİ",
+      "tc": "36616418274",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5357914027",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "EMİR",
+      "soyad": "ALP ÖZTÜRK",
+      "tc": "12241822440",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5071547210",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "YAREN",
+      "soyad": "ÖZTÜRK",
+      "tc": "35240275154",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5444255527",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "SERDAR",
+      "soyad": "YAMAÇ DİKİCİ",
+      "tc": "45940835930",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5059889224",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "GÜLSÜM",
+      "soyad": "CEYDA AKKUŞ",
+      "tc": "18437029532",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5325443001",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "EZGİ",
+      "soyad": "FATMA AKKUŞ",
+      "tc": "38023378240",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "UMUT",
+      "soyad": "BURAK BAYRAMOĞLU",
+      "tc": "15827113840",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5442598550",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "SERGEN",
+      "soyad": "GÜMÜŞ",
+      "tc": "44509160582",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5320501523",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ARİN",
+      "soyad": "KAYA",
+      "tc": "74962002112",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "ÇELİK",
+      "tc": "45548056096",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5456783003",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "TUNCAY",
+      "soyad": "KERİM ÇELİK",
+      "tc": "39493329978",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5456783003",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "DAMLA",
+      "soyad": "BİRELLİ",
+      "tc": "43102202712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "MERYEM",
+      "soyad": "SU BİRELLİ",
+      "tc": "40039304564",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ECEM",
+      "soyad": "BİRELLİ",
+      "tc": "28990671406",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ELİFNAZ",
+      "soyad": "BİRELLİ",
+      "tc": "26836745304",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ELA",
+      "soyad": "TAZEOĞLU",
+      "tc": "36406432176",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5325436232",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "YASMİN",
+      "soyad": "TOZLU",
+      "tc": "48643952966",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5415002744",
+      "baslangicTarihi": "2025-07-02"
+    },
+    {
+      "ad": "ZÜBEYDE",
+      "soyad": "BEREN ÖZTÜRK",
+      "tc": "13862169938",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5063960626",
+      "baslangicTarihi": "2025-07-02"
+    },
+    {
+      "ad": "NUH",
+      "soyad": "RESUL ERGİN",
+      "tc": "25978779048",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HALİL HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "ARZU",
+      "soyad": "HİRA ERGİN",
+      "tc": "39391326444",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HALİL HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "FATMA",
+      "soyad": "KUDRET ERGİN",
+      "tc": "46579092350",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HAYRİ HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "MEVLÜT",
+      "soyad": "ERGİN",
+      "tc": "47281069074",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HAYRİ HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "AFRA",
+      "soyad": "MERYEM KARABAY",
+      "tc": "69373261906",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HAYRİ HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "CEMAL",
+      "soyad": "İHSAN KARABAY",
+      "tc": "46729087946",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HAYRİ HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "TALHA",
+      "soyad": "KARABAY",
+      "tc": "23092875400",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "HAYRİ HOCA",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "NİL",
+      "soyad": "HAYTA",
+      "tc": "24418823686",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5533489591",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "DİLA",
+      "soyad": "KARA",
+      "tc": "23554860968",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5363769717",
+      "baslangicTarihi": "2025-07-16"
+    },
+    {
+      "ad": "GÜNEY",
+      "soyad": "KAYA",
+      "tc": "15158131162",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5447251669",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "KEMAL",
+      "soyad": "EREN SÜZER",
+      "tc": "48640016616",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "LİNA",
+      "soyad": "NUR GÜN",
+      "tc": "40576285388",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "baslangicTarihi": "2025-07-23"
+    },
+    {
+      "ad": "AYSİMA",
+      "soyad": "ILGIN SÜZER",
+      "tc": "26647752560",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5522800703",
+      "baslangicTarihi": "2025-07-23"
+    },
+    {
+      "ad": "YUSUF",
+      "soyad": "MERT ÇELİK",
+      "tc": "14639151774",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "536 888 61 33",
+      "baslangicTarihi": "2025-07-28"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "BEREN CANPOLAT",
+      "tc": "29899643662",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5453499797",
+      "baslangicTarihi": "2025-08-06"
+    },
+    {
+      "ad": "ALPER",
+      "soyad": "YİĞİT CANPOLAT",
+      "tc": "32566554062",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 09.00-10.00",
+      "telefon": "5453499797",
+      "baslangicTarihi": "2025-08-11"
+    },
+    {
+      "ad": "AHMET",
+      "soyad": "ERDEM İNAN",
+      "tc": "27784718150",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5432418794",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "AYŞE",
+      "soyad": "NİL BAKIŞGAN",
+      "tc": "45748113766",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5325507868",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "MERET",
+      "soyad": "ARAS BAKIŞGAN",
+      "tc": "38245365714",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5325507868",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "HİLMİ",
+      "soyad": "ASLANOĞLU",
+      "tc": "15146132676",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5380639465",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "GÜLCE",
+      "soyad": "DİLA TAŞ",
+      "tc": "24698751136",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5377402744",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "CEREN",
+      "soyad": "NEVŞİN TAŞ",
+      "tc": "47497061244",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5377402744",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "AKİF",
+      "soyad": "ERDEM TUNCEL",
+      "tc": "37591387272",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5059209517",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "TEKER",
+      "tc": "20324880300",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5073781528",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "MUSTAFA",
+      "soyad": "TUNA ULUSOY",
+      "tc": "35893491524",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5055765718",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "ARYA",
+      "soyad": "GÜLER",
+      "tc": "39418323654",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5054878661",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "CAN",
+      "soyad": "GÜLER",
+      "tc": "29026678796",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5054878661",
+      "baslangicTarihi": "2025-06-24"
+    },
+    {
+      "ad": "HAMZA",
+      "soyad": "İLHAN",
+      "tc": "46648084156",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5070521334",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "HAMZA",
+      "soyad": "KARGÜLLE",
+      "tc": "23644852408",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5469316636",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "FARUK DİLEK",
+      "tc": "47998040618",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5394805683",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "FATMA",
+      "soyad": "BALABAN",
+      "tc": "46546088102",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5436125857",
+      "baslangicTarihi": "2025-07-03"
+    },
+    {
+      "ad": "BERRA",
+      "soyad": "ÖYKÜ DENİZ",
+      "tc": "32074577218",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5058742386",
+      "baslangicTarihi": "2025-07-03"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "YAKUP YAŞAR",
+      "tc": "33223532812",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5073507540",
+      "baslangicTarihi": "2025-07-08"
+    },
+    {
+      "ad": "EYMEN",
+      "soyad": "ÇAĞLAYAN",
+      "tc": "33031536330",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5073507540",
+      "baslangicTarihi": "2025-07-08"
+    },
+    {
+      "ad": "AYBÜKE",
+      "soyad": "ÖZKOL",
+      "tc": "19082000976",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "baslangicTarihi": "2025-07-08"
+    },
+    {
+      "ad": "BERAT",
+      "soyad": "ASLAN",
+      "tc": "21322124298",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5445674702",
+      "baslangicTarihi": "2025-07-08"
+    },
+    {
+      "ad": "ALMİLA",
+      "soyad": "GÜLTEKİN",
+      "tc": "35263461190",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5418769904",
+      "baslangicTarihi": "2025-07-10"
+    },
+    {
+      "ad": "NECATİ",
+      "soyad": "NAMLI",
+      "tc": "48217034166",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5061248112",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "SELİN",
+      "soyad": "NAMLI",
+      "tc": "29995641364",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5061248112",
+      "baslangicTarihi": "2025-07-01"
+    },
+    {
+      "ad": "EMRE",
+      "soyad": "PARMAKSIZ",
+      "tc": "46612086902",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5062372054",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "PARMAKSIZ",
+      "tc": "21184939894",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5062372054",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "HATİCE",
+      "soyad": "NURA ÇETİNDAŞ",
+      "tc": "48733020254",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5321335514",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "ZEYNEP",
+      "soyad": "KIRŞAN",
+      "tc": "19187005562",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5317453044",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "ZÜMRA",
+      "soyad": "BORAZAN",
+      "tc": "28267695982",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5386329717",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "MEHMET",
+      "soyad": "EYMEN BORAZAN",
+      "tc": "32956537910",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5386329717",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "HİRA",
+      "soyad": "BORAZAN",
+      "tc": "36610418706",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "ALİ",
+      "soyad": "EMİR GÖZÜKARA",
+      "tc": "25513795434",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5452458083",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "POYRAZ",
+      "soyad": "AYBEY",
+      "tc": "42892208218",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5309329699",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "RÜZGAR",
+      "soyad": "AYBEY",
+      "tc": "21214932420",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5309329699",
+      "baslangicTarihi": "2025-07-22"
+    },
+    {
+      "ad": "BERKAY",
+      "soyad": "DURU",
+      "tc": "15724377826",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5323724773",
+      "baslangicTarihi": "2025-07-24"
+    },
+    {
+      "ad": "EYLÜL",
+      "soyad": "ELİF ONMAN",
+      "tc": "30631623712",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "baslangicTarihi": "2025-07-24"
+    },
+    {
+      "ad": "YÜSRA",
+      "soyad": "İĞNELER",
+      "tc": "41020273470",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "ÇARŞAMBA-CUMA 16.00-17.00",
+      "telefon": "5549902220",
+      "baslangicTarihi": "2025-08-05"
+    },
+    {
+      "ad": "DEFNE",
+      "soyad": "GÖĞÜŞ",
+      "tc": "19579988848",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5535781110",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "BARAN",
+      "soyad": "GÖĞÜŞ",
+      "tc": "45829112428",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5535781110",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "ÖMER",
+      "soyad": "GÜLSUNA",
+      "tc": "42697221924",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5313324451",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "MUHAMMED",
+      "soyad": "AHMET TEKİN",
+      "tc": "22540886296",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5536363143",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ADA ÖNDÜL",
+      "tc": "24541818788",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5412666726",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "ZEHRA",
+      "soyad": "MUTLU",
+      "tc": "25228796214",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5464953232",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "ESİN",
+      "soyad": "MUTLU",
+      "tc": "19432993224",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5464953232",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "MERT",
+      "soyad": "KAYRA EROĞLU",
+      "tc": "32080574706",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "UFUK",
+      "soyad": "EGE EROĞLU",
+      "tc": "31078492206",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "baslangicTarihi": "2025-07-23"
+    },
+    {
+      "ad": "KAĞAN",
+      "soyad": "TEZE",
+      "tc": "29458877088",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5536481029",
+      "baslangicTarihi": "2025-06-23"
+    },
+    {
+      "ad": "KEREM",
+      "soyad": "NATIR",
+      "tc": "45484128376",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5459561171",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "FATİH",
+      "soyad": "SELİM ATMACA",
+      "tc": "30571622264",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ÖYKÜ ÖZTÜRK",
+      "tc": "30826613818",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5077722105",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ABDULLAH",
+      "soyad": "TAAYYİP ALICI",
+      "tc": "16764015662",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5079167320",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "BETÜL",
+      "soyad": "ÖZTÜRK",
+      "tc": "45586121800",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5077722105",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ÖYKÜ",
+      "soyad": "ASEL KESİK",
+      "tc": "66847272642",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5533518511",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "SÜLEYMAN",
+      "soyad": "ALİ TAŞDEMİR",
+      "tc": "19909981624",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5348643420",
+      "baslangicTarihi": "2025-06-30"
+    },
+    {
+      "ad": "ESMA",
+      "soyad": "YAĞLI",
+      "tc": "22543885692",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5337797883",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "YAREN",
+      "soyad": "NİSA GÜMÜŞ",
+      "tc": "39824246974",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5495035001",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "ERVA GECEKUŞU",
+      "tc": "42877216108",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5445041075",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "UMAY",
+      "soyad": "ELA GECEKUŞU",
+      "tc": "50701884294",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5445041075",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "ELİF",
+      "soyad": "REYYAN AYAZ",
+      "tc": "19528994906",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5326895027",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "CEM",
+      "soyad": "AYAZ",
+      "tc": "42362162354",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5326895027",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "ZEHRA",
+      "soyad": "GÜMÜŞ",
+      "tc": "35989446402",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5437796297",
+      "baslangicTarihi": "2025-07-07"
+    },
+    {
+      "ad": "SİMAY",
+      "soyad": "ÖZ",
+      "tc": "61480524998",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5078296639",
+      "baslangicTarihi": "2025-07-16"
+    },
+    {
+      "ad": "METİN",
+      "soyad": "EGEMEN TAŞDEMİR",
+      "tc": "30295635014",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5352177277",
+      "baslangicTarihi": "2025-07-16"
+    },
+    {
+      "ad": "BELİS",
+      "soyad": "KERVANCIOĞLU",
+      "tc": "46714087074",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5512371552",
+      "baslangicTarihi": "2025-07-16"
+    },
+    {
+      "ad": "DORUK",
+      "soyad": "KERVANCIOĞLU",
+      "tc": "18119970466",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5512371552",
+      "baslangicTarihi": "2025-07-16"
+    },
+    {
+      "ad": "MUHAMMET",
+      "soyad": "EMİN ÖZĞAN",
+      "tc": "27691722714",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5334123751",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "YAMAN",
+      "soyad": "EROĞLU",
+      "tc": "26140766316",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5073358238",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "KEMAL",
+      "soyad": "EROĞLU",
+      "tc": "48877008170",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5073358238",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "POYRAZ",
+      "soyad": "EMİN ALICI",
+      "tc": "46093104928",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5433685383",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "EGEMEN",
+      "soyad": "KONT",
+      "tc": "43609186300",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "5322263766",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "ERTUĞRUL",
+      "soyad": "ZORKİRİŞÇİ",
+      "tc": "42313227644",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "MİRAÇ",
+      "soyad": "ZORKİRİŞÇİ",
+      "tc": "32072612446",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "baslangicTarihi": "2025-07-21"
+    },
+    {
+      "ad": "RÜZGAR",
+      "soyad": "DEMİRBAŞ",
+      "tc": "24568818440",
+      "uyeTipi": "kursiyerler",
+      "spor": "yuzme",
+      "notlar": "SALI-PERŞEMBE 16.00-17.00",
+      "telefon": "537 258 50 39",
+      "baslangicTarihi": "2025-07-28"
+    }
+  ]
+}

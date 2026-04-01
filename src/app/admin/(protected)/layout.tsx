@@ -1,6 +1,7 @@
 ﻿import { redirect } from "next/navigation";
 import { getAdminSession } from "@/lib/auth";
 import AdminSidebar from "@/components/admin/AdminSidebar";
+import ThemeProvider from "@/components/admin/ThemeProvider";
 
 export default async function AdminLayout({
   children,
@@ -11,11 +12,13 @@ export default async function AdminLayout({
   if (!session) redirect("/admin/login");
 
   return (
-    <div className="flex min-h-screen bg-gray-100">
-      <AdminSidebar />
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
-    </div>
+    <ThemeProvider>
+      <div className="admin-wrap flex min-h-screen bg-gray-100">
+        <AdminSidebar />
+        <main className="flex-1 overflow-auto">
+          {children}
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }

@@ -39,7 +39,7 @@ const durumEtiket: Record<string, { label: string; cls: string }> = {
   beklemede: { label: "Beklemede", cls: "bg-amber-100 text-amber-700" },
 };
 const sporLabel: Record<string, string> = { tenis: "Tenis", yuzme: "Yüzme", her_ikisi: "Tenis + Yüzme" };
-const tipLabel: Record<string, string> = { ogrenci: "Öğrenci", standart: "Standart", premium: "Premium", aile: "Aile", takim: "Takım", kursiyerler: "Kursiyer" };
+const tipLabel: Record<string, string> = { ogrenci: "Öğrenci", standart: "Standart", premium: "Premium", aile: "Aile", takim: "Takım", kursiyerler: "Kursiyer", birey: "Birey", yetiskin_erkek: "Erkek Yetişkin", yetiskin_bayan: "Kadın Yetişkin" };
 const aylar = ["", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran", "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"];
 
 const gunler = ["pazartesi", "sali", "carsamba", "persembe", "cuma", "cumartesi", "pazar"];
@@ -68,7 +68,7 @@ function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return 
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
 
 export default function UyelerPage() {
-  const [tab, setTab] = useState<"takim" | "kursiyerler" | "on_kayit" | "aidat" | "seanslar" | "basvurular">("takim");
+  const [tab, setTab] = useState<"takim" | "kursiyerler" | "birey" | "yetiskin_erkek" | "yetiskin_bayan" | "on_kayit" | "aranacak" | "aidat" | "seanslar" | "basvurular">("takim");
   const [basvurular, setBasvurular] = useState<SessionRequest[]>([]);
   const [basvurularLoading, setBasvurularLoading] = useState(false);
   const [selectedMember, setSelectedMember] = useState<MemberDetail | null>(null);
@@ -78,18 +78,22 @@ export default function UyelerPage() {
   const [durumFilter, setDurumFilter] = useState("");
   const [tipFilter, setTipFilter] = useState("");
   const [loading, setLoading] = useState(true);
+  const [onKayitCount, setOnKayitCount] = useState(0);
+  const [aranacakCount, setAranacakCount] = useState(0);
   const [showForm, setShowForm] = useState(false);
   const [form, setForm] = useState({ ad: "", soyad: "", email: "", telefon: "", tcKimlik: "", dogumTarihi: "", kayitTarihi: "", uyeTipi: "standart", spor: "yuzme", durum: "aktif", notlar: "" });
   const [editId, setEditId] = useState<string | null>(null);
 
   const [donem, setDonem] = useState(currentDonem());
   const [rows, setRows] = useState<AidatRow[]>([]);
+  const [prevRows, setPrevRows] = useState<AidatRow[]>([]);
   const [aidatLoading, setAidatLoading] = useState(true);
   const [modalRow, setModalRow] = useState<AidatRow | null>(null);
   const [modalForm, setModalForm] = useState({ tutar: 0, notlar: "" });
   const [saving, setSaving] = useState(false);
   const [aidatSearch, setAidatSearch] = useState("");
   const [sporFilter, setSporFilter] = useState("");
+  const [uyeTipiFilter, setUyeTipiFilter] = useState("");
 
   // Seanslar
   const [sessions, setSessions] = useState<Session[]>([]);
@@ -132,9 +136,9 @@ export default function UyelerPage() {
     setLoading(true);
     const params = new URLSearchParams();
     if (search) params.set("search", search);
-    const activeDurum = durumFilter || (tab === "on_kayit" ? "beklemede" : "");
+    const activeDurum = durumFilter || (tab === "on_kayit" ? "beklemede" : tab === "aranacak" ? "aranacak" : "");
     if (activeDurum) params.set("durum", activeDurum);
-    const activeTip = tipFilter || (tab === "takim" ? "takim" : tab === "kursiyerler" ? "kursiyerler" : "");
+    const activeTip = tipFilter || (tab === "takim" ? "takim" : tab === "kursiyerler" ? "kursiyerler" : tab === "birey" ? "birey" : tab === "yetiskin_erkek" ? "yetiskin_erkek" : tab === "yetiskin_bayan" ? "yetiskin_bayan" : "");
     if (activeTip) params.set("uyeTipi", activeTip);
     const res = await fetch(`/api/members?${params}`);
     setMembers(await res.json());
@@ -143,8 +147,12 @@ export default function UyelerPage() {
 
   async function fetchAidat(d: string) {
     setAidatLoading(true);
-    const res = await fetch(`/api/aidat?donem=${d}`);
-    setRows(await res.json());
+    const [cur, prev] = await Promise.all([
+      fetch(`/api/aidat?donem=${d}`).then(r => r.json()),
+      fetch(`/api/aidat?donem=${prevDonem(d)}`).then(r => r.json()),
+    ]);
+    setRows(cur);
+    setPrevRows(prev);
     setAidatLoading(false);
   }
 
@@ -204,6 +212,11 @@ export default function UyelerPage() {
   }
 
   useEffect(() => { fetchMembers(); }, [fetchMembers]);
+
+  useEffect(() => {
+    fetch("/api/members?durum=beklemede").then(r => r.json()).then(d => setOnKayitCount(Array.isArray(d) ? d.length : 0));
+    fetch("/api/members?durum=aranacak").then(r => r.json()).then(d => setAranacakCount(Array.isArray(d) ? d.length : 0));
+  }, []);
   useEffect(() => { if (tab === "aidat") fetchAidat(donem); }, [donem, tab]);
   useEffect(() => { if (tab === "basvurular") fetchBasvurular(); }, [tab]);
   useEffect(() => { if (tab === "seanslar") { fetchSessions(); fetchSeansCoaches(); } }, [tab]);
@@ -294,7 +307,8 @@ export default function UyelerPage() {
 
   const filteredRows = rows
     .filter((r) => !aidatSearch || `${r.ad} ${r.soyad}`.toLowerCase().includes(aidatSearch.toLowerCase()))
-    .filter((r) => !sporFilter || r.spor === sporFilter);
+    .filter((r) => !sporFilter || r.spor === sporFilter)
+    .filter((r) => !uyeTipiFilter || r.uyeTipi === uyeTipiFilter);
   const odendi = filteredRows.filter((r) => r.odendi);
   const odenmedi = filteredRows.filter((r) => !r.odendi);
   const toplamTahsilat = odendi.reduce((s, r) => s + r.tutar, 0);
@@ -310,7 +324,7 @@ export default function UyelerPage() {
           <h1 className="text-2xl font-bold text-gray-800">Üye Yönetimi</h1>
           <p className="text-gray-500 text-sm">Üyeleri ve aidat durumlarını yönetin</p>
         </div>
-        {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && !selectedMember && (
+        {(tab === "takim" || tab === "kursiyerler" || tab === "birey" || tab === "yetiskin_erkek" || tab === "yetiskin_bayan" || tab === "on_kayit" || tab === "aranacak") && !selectedMember && (
           <button onClick={() => { setShowForm(true); setEditId(null); }} className="flex items-center gap-2 bg-[#1d3a5c] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#163050]">
             <Plus size={16} /> Yeni Üye
           </button>
@@ -329,8 +343,22 @@ export default function UyelerPage() {
         <button onClick={() => { setTab("kursiyerler"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "kursiyerler" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <Users size={16} /> Kursiyerler
         </button>
+        <button onClick={() => { setTab("birey"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "birey" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Users size={16} /> Birey Okulları
+        </button>
+        <button onClick={() => { setTab("yetiskin_erkek"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "yetiskin_erkek" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Users size={16} /> Erkek Yetişkin
+        </button>
+        <button onClick={() => { setTab("yetiskin_bayan"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "yetiskin_bayan" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Users size={16} /> Kadın Yetişkin
+        </button>
         <button onClick={() => { setTab("on_kayit"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "on_kayit" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <UserCheck size={16} /> Ön Kayıt
+          {onKayitCount > 0 && <span className="bg-green-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full leading-none">{onKayitCount}</span>}
+        </button>
+        <button onClick={() => { setTab("aranacak"); setSelectedMember(null); setDurumFilter(""); setSearch(""); }} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "aranacak" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
+          <Phone size={16} /> Aranacak
+          {aranacakCount > 0 && <span className="bg-orange-500 text-white text-xs font-bold px-1.5 py-0.5 rounded-full leading-none">{aranacakCount}</span>}
         </button>
         <button onClick={() => setTab("aidat")} className={`flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium transition-colors ${tab === "aidat" ? "bg-white text-gray-800 shadow-sm" : "text-gray-500 hover:text-gray-700"}`}>
           <TrendingUp size={16} /> Aidat Takibi
@@ -349,7 +377,7 @@ export default function UyelerPage() {
       </div>
 
       {/* ── ÜYE PROFİL ── */}
-      {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && selectedMember && (
+      {(tab === "takim" || tab === "kursiyerler" || tab === "birey" || tab === "yetiskin_erkek" || tab === "yetiskin_bayan" || tab === "on_kayit" || tab === "aranacak") && selectedMember && (
         <div>
           <button onClick={() => setSelectedMember(null)} className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 mb-4">
             <ArrowLeft size={16} /> Üye listesine dön
@@ -423,7 +451,7 @@ export default function UyelerPage() {
       )}
 
       {/* ── ÜYE LİSTESİ ── */}
-      {(tab === "takim" || tab === "kursiyerler" || tab === "on_kayit") && !selectedMember && (
+      {(tab === "takim" || tab === "kursiyerler" || tab === "birey" || tab === "yetiskin_erkek" || tab === "yetiskin_bayan" || tab === "on_kayit" || tab === "aranacak") && !selectedMember && (
         <>
           <div className="flex flex-wrap gap-3 mb-4">
             <div className="relative flex-1 min-w-48"><Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Ad, soyad veya e-posta ara..." className="w-full border border-gray-300 rounded-lg pl-9 pr-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
@@ -445,13 +473,13 @@ export default function UyelerPage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
-                <thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Üye</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">TC Kimlik</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Telefon</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Tip</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Durum</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">Kayıt</th><th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">İşlem</th></tr></thead>
+                <thead><tr className="bg-gray-50 border-b border-gray-100"><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Üye</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">TC Kimlik</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Telefon</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Tip</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase">Durum</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden md:table-cell">Aidat</th><th className="text-left px-4 py-3 text-xs font-semibold text-gray-500 uppercase hidden lg:table-cell">Kayıt</th><th className="text-right px-4 py-3 text-xs font-semibold text-gray-500 uppercase">İşlem</th></tr></thead>
                 <tbody className="divide-y divide-gray-50">
-                  {loading ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
-                    : members.length === 0 ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
+                  {loading ? <tr><td colSpan={8} className="text-center py-10 text-gray-400">Yükleniyor...</td></tr>
+                    : members.length === 0 ? <tr><td colSpan={8} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
                     : members.map((m) => (
                       <tr key={m.id} className="hover:bg-[#f0f9ff]/30 cursor-pointer" onClick={() => openProfile(m)}>
-                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
+                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : m.uyeTipi === "birey" ? "bg-orange-100 text-orange-700" : m.uyeTipi === "yetiskin_erkek" ? "bg-blue-100 text-blue-700" : m.uyeTipi === "yetiskin_bayan" ? "bg-pink-100 text-pink-700" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{m.ad[0]}{m.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{m.ad} {m.soyad}</span></div></td>
                         <td className="px-4 py-3 text-sm hidden lg:table-cell font-mono">
                           {tcValid(m.tcKimlik)
                             ? <span className="text-gray-500">{m.tcKimlik}</span>
@@ -462,8 +490,9 @@ export default function UyelerPage() {
                             ? <span className="text-gray-500">{formatPhone(m.telefon)}</span>
                             : <span className="flex items-center gap-1 text-amber-600 font-medium"><AlertTriangle size={13} />Eksik</span>}
                         </td>
-                        <td className="px-4 py-3 text-sm"><span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-600"}`}>{tipLabel[m.uyeTipi] || m.uyeTipi}</span></td>
+                        <td className="px-4 py-3 text-sm"><span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : m.uyeTipi === "birey" ? "bg-orange-100 text-orange-700" : m.uyeTipi === "yetiskin_erkek" ? "bg-blue-100 text-blue-700" : m.uyeTipi === "yetiskin_bayan" ? "bg-pink-100 text-pink-700" : "bg-gray-100 text-gray-600"}`}>{tipLabel[m.uyeTipi] || m.uyeTipi}</span></td>
                         <td className="px-4 py-3"><span className={`text-xs px-2 py-0.5 rounded-full font-medium ${durumEtiket[m.durum]?.cls}`}>{durumEtiket[m.durum]?.label}</span></td>
+                        <td className="px-4 py-3 hidden md:table-cell">{(() => { const ar = rows.find(r => r.memberId === m.id && r.aidatId); const fallback = !ar ? prevRows.find(r => r.memberId === m.id && r.aidatId) : null; const rec = ar || fallback; if (!rec) return <span className="text-xs text-gray-300">Kayıt yok</span>; if (rec.odendi) return <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">✓ Ödendi</span>; if (rec.tutar > 0) return <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-medium">✗ {rec.tutar.toLocaleString("tr-TR")}₺</span>; return <span className="text-xs text-gray-300">Kayıt yok</span>; })()}</td>
                         <td className="px-4 py-3 text-xs text-gray-400 hidden lg:table-cell">{new Date(m.kayitTarihi).toLocaleDateString("tr-TR")}</td>
                         <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
                           <div className="flex items-center justify-end gap-1">
@@ -491,6 +520,7 @@ export default function UyelerPage() {
               <button onClick={() => setDonem(nextDonem(donem))} disabled={donem >= currentDonem()} className="p-1 hover:bg-gray-100 rounded-lg disabled:opacity-30"><ChevronRight size={18} className="text-gray-600" /></button>
             </div>
             <div className="relative"><Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" /><input value={aidatSearch} onChange={(e) => setAidatSearch(e.target.value)} placeholder="Üye ara..." className="border border-gray-300 rounded-xl pl-8 pr-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" /></div>
+            <select value={uyeTipiFilter} onChange={(e) => setUyeTipiFilter(e.target.value)} className="border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="">Tüm Üye Tipleri</option><option value="takim">Takım</option><option value="kursiyerler">Kursiyer</option></select>
             <select value={sporFilter} onChange={(e) => setSporFilter(e.target.value)} className="border border-gray-300 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"><option value="">Tüm Sporlar</option><option value="tenis">Tenis</option><option value="yuzme">Yüzme</option><option value="her_ikisi">Her İkisi</option></select>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
@@ -508,7 +538,7 @@ export default function UyelerPage() {
                     : filteredRows.length === 0 ? <tr><td colSpan={7} className="text-center py-10 text-gray-400">Üye bulunamadı.</td></tr>
                     : filteredRows.map((row) => (
                       <tr key={row.memberId} className={`hover:bg-gray-50 ${row.odendi ? "bg-orange-50/20" : ""}`}>
-                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.odendi ? "bg-orange-50 text-[#e5500a]" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{row.ad[0]}{row.soyad[0]}</div><span className="font-medium text-gray-800 text-sm">{row.ad} {row.soyad}</span></div></td>
+                        <td className="px-4 py-3"><div className="flex items-center gap-2"><div className={`w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs shrink-0 ${row.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : row.odendi ? "bg-orange-50 text-[#e5500a]" : "bg-[#e0f3fc] text-[#3a8fbf]"}`}>{row.ad[0]}{row.soyad[0]}</div><div><span className="font-medium text-gray-800 text-sm">{row.ad} {row.soyad}</span>{row.uyeTipi === "takim" && <span className="ml-2 text-xs px-1.5 py-0.5 rounded-full bg-purple-100 text-purple-700 font-medium">Takım</span>}</div></div></td>
                         <td className="px-4 py-3 text-sm text-gray-500 hidden md:table-cell">{row.telefon ? <a href={`tel:${row.telefon}`} className="hover:text-[#3a8fbf]">{row.telefon}</a> : "—"}</td>
                         <td className="px-4 py-3 text-sm hidden lg:table-cell"><span className="block text-gray-700">{tipLabel[row.uyeTipi]}</span><span className="text-xs text-gray-400">{sporLabel[row.spor]}</span></td>
                         <td className="px-4 py-3 text-right"><button onClick={() => { setModalRow(row); setModalForm({ tutar: row.tutar, notlar: row.notlar }); }} className="text-sm font-medium text-gray-700 hover:text-[#3a8fbf]">{row.tutar > 0 ? `${row.tutar.toLocaleString("tr-TR")} ₺` : <span className="text-gray-300 text-xs">Gir</span>}</button></td>

@@ -46,6 +46,82 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 14px;
 }
 
+/* ── ADMIN DARK MODE ── */
+html.admin-dark .admin-wrap {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+html.admin-dark .admin-wrap .bg-white,
+html.admin-dark .admin-wrap .bg-white\/80 {
+  background-color: #1e293b !important;
+}
+html.admin-dark .admin-wrap .bg-gray-50 {
+  background-color: #0f172a !important;
+}
+html.admin-dark .admin-wrap .bg-gray-100 {
+  background-color: #1e293b !important;
+}
+html.admin-dark .admin-wrap .bg-gray-200 {
+  background-color: #334155 !important;
+}
+html.admin-dark .admin-wrap .text-gray-900,
+html.admin-dark .admin-wrap .text-gray-800 {
+  color: #f1f5f9 !important;
+}
+html.admin-dark .admin-wrap .text-gray-700 {
+  color: #cbd5e1 !important;
+}
+html.admin-dark .admin-wrap .text-gray-600 {
+  color: #94a3b8 !important;
+}
+html.admin-dark .admin-wrap .text-gray-500 {
+  color: #64748b !important;
+}
+html.admin-dark .admin-wrap .text-gray-400 {
+  color: #475569 !important;
+}
+html.admin-dark .admin-wrap .border-gray-50,
+html.admin-dark .admin-wrap .border-gray-100 {
+  border-color: #1e293b !important;
+}
+html.admin-dark .admin-wrap .border-gray-200 {
+  border-color: #334155 !important;
+}
+html.admin-dark .admin-wrap .border-gray-300 {
+  border-color: #475569 !important;
+}
+html.admin-dark .admin-wrap .shadow-sm {
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4) !important;
+}
+html.admin-dark .admin-wrap table thead tr {
+  background-color: #1e293b !important;
+}
+html.admin-dark .admin-wrap table tbody tr:hover {
+  background-color: #1e3a5f1a !important;
+}
+html.admin-dark .admin-wrap input,
+html.admin-dark .admin-wrap textarea,
+html.admin-dark .admin-wrap select {
+  background-color: #1e293b !important;
+  color: #e2e8f0 !important;
+  border-color: #334155 !important;
+}
+html.admin-dark .admin-wrap input::placeholder,
+html.admin-dark .admin-wrap textarea::placeholder {
+  color: #475569 !important;
+}
+html.admin-dark .admin-wrap .divide-gray-50 > * + * {
+  border-color: #1e293b !important;
+}
+html.admin-dark .admin-wrap .hover\:bg-gray-50:hover,
+html.admin-dark .admin-wrap .hover\:bg-gray-100:hover {
+  background-color: #1e3a5f30 !important;
+}
+html.admin-dark .admin-wrap .bg-\[#f0f9ff\]\/30,
+html.admin-dark .admin-wrap .hover\:bg-\[#f0f9ff\]\/30:hover {
+  background-color: #1e3a5f20 !important;
+}
+
 @keyframes bubble-rise {
   0%   { transform: translateY(0) scale(1);   opacity: 0.15; }
   50%  { opacity: 0.22; }
