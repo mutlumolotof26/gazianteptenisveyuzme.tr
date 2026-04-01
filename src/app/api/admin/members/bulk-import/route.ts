@@ -31,7 +31,7 @@ export async function POST(req: NextRequest) {
 
     // TC varsa mükerrer kontrolü
     if (m.tcKimlik) {
-      const existing = await prisma.member.findFirst({ where: { tcKimlik: m.tcKimlik } });
+      const existing = await prisma.member.findFirst({ where: { tcKimlik: m.tcKimlik ?? null } });
       if (existing) { skipped++; continue; }
     }
 
