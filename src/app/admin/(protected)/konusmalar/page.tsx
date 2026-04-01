@@ -287,8 +287,10 @@ export default function KonusmalarPage() {
   const lastMessage = (conv: Conversation) => {
     const msgs = (conv.messages || []).filter(m => m.role !== "system" && m.content && !m.content.startsWith("__"));
     if (!msgs.length) return "—";
-    const text = stripMarker(msgs[msgs.length - 1].content || "");
-    return text.slice(0, 60) + (text.length > 60 ? "…" : "");
+    const last = msgs[msgs.length - 1];
+    const prefix = last.role === "assistant" ? "Bot: " : "";
+    const text = stripMarker(last.content || "");
+    return prefix + text.slice(0, 60) + (text.length > 60 ? "…" : "");
   };
 
   return (
@@ -477,7 +479,7 @@ export default function KonusmalarPage() {
                     <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
                       msg.role === "assistant"
                         ? "bg-[#3a8fbf] text-white rounded-br-sm"
-                        : "bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm"
+                        : "chat-user-bubble bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm"
                     }`}>
                       {msg.mediaType === "image" && msg.mediaId ? (
                         <img
