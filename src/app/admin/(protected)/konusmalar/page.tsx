@@ -36,6 +36,19 @@ function getDisplayName(conv: Conversation) {
   return nameMsg ? nameMsg.content.slice(8) : null;
 }
 
+function getConvLabels(conv: Conversation) {
+  const labels: { text: string; cls: string }[] = [];
+  const msgs = conv.messages || [];
+  const hasRegistered = msgs.some(m => m.role === "system" && m.content === "__REGISTERED__");
+  const memberType = msgs.find(m => m.role === "system" && m.content?.startsWith("__MEMBER_TYPE__:"))?.content?.slice(15);
+  const source = msgs.find(m => m.role === "system" && m.content?.startsWith("__SOURCE__:"))?.content?.slice(10);
+  if (hasRegistered) labels.push({ text: "Ön Kayıt", cls: "bg-green-100 text-green-700" });
+  if (memberType === "takim") labels.push({ text: "Takım", cls: "bg-purple-100 text-purple-700" });
+  if (memberType === "kursiyerler") labels.push({ text: "Kursiyer", cls: "bg-blue-100 text-blue-700" });
+  if (source) labels.push({ text: "Reklam", cls: "bg-orange-100 text-orange-700" });
+  return labels;
+}
+
 function isWhatsApp(userId: string) {
   return /^\d{10,15}$/.test(userId);
 }
@@ -254,6 +267,13 @@ export default function KonusmalarPage() {
                       <span className="text-xs text-gray-400 flex-shrink-0 ml-1">{timeAgo(conv.updated_at)}</span>
                     </div>
                     <p className="text-xs text-gray-500 truncate mt-0.5">{lastMessage(conv)}</p>
+                    {getConvLabels(conv).length > 0 && (
+                      <div className="flex gap-1 mt-1 flex-wrap">
+                        {getConvLabels(conv).map(l => (
+                          <span key={l.text} className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${l.cls}`}>{l.text}</span>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               </button>
@@ -317,6 +337,13 @@ export default function KonusmalarPage() {
                         >
                           {msg.content}
                         </a>
+                      ) : msg.mediaType === "image" && msg.mediaId ? (
+                        <img
+                          src={`/api/admin/whatsapp/media?id=${msg.mediaId}`}
+                          alt="Fotoğraf"
+                          className="max-w-[240px] rounded-lg cursor-pointer"
+                          onClick={() => window.open(`/api/admin/whatsapp/media?id=${msg.mediaId}`, "_blank")}
+                        />
                       ) : (
                         stripMarker(msg.content)
                       )}
