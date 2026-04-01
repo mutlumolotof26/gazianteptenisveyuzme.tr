@@ -3,7 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
 }
 
 model AdminUser {
@@ -20,7 +22,8 @@ model Member {
   id          String   @id @default(cuid())
   ad          String
   soyad       String
-  email       String   @unique
+  email       String?
+  tcKimlik    String?
   telefon     String?
   dogumTarihi String?
   uyeTipi     String   @default("standart")
@@ -156,5 +159,8 @@ model SiteSettings {
   fiyatCocuk       String   @default("₺600")
   fiyatYazKursu    String   @default("₺1.500")
   fiyatKardes      String   @default("₺500")
+  ibanNo           String   @default("")
+  ibanAdSoyad      String   @default("")
+  bankAdi          String   @default("")
   updatedAt        DateTime @updatedAt
 }
