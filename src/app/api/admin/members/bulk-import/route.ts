@@ -37,7 +37,8 @@ export async function POST(req: NextRequest) {
     }
 
     try {
-      await prisma.member.create({
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      await (prisma.member as any).create({
         data: {
           ad: m.ad,
           soyad: m.soyad,
