@@ -372,7 +372,7 @@ export default function KonusmalarPage() {
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between">
-                        <span className="font-medium text-sm text-gray-800 truncate">
+                        <span className="conv-name font-medium text-sm text-gray-800 truncate">
                           {getDisplayName(conv) || formatPhone(conv.user_id)}
                         </span>
                         <span className="text-xs text-gray-400 flex-shrink-0 ml-1">{timeAgo(conv.updated_at)}</span>
