@@ -68,9 +68,9 @@ function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return 
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
 function kayitRenk(kayitTarihi: string) {
   const gun = Math.floor((Date.now() - new Date(kayitTarihi).getTime()) / 86400000);
-  if (gun <= 14) return "text-green-600 font-medium";
-  if (gun <= 30) return "text-orange-500 font-medium";
-  return "text-red-500 font-medium";
+  if (gun <= 28) return "text-green-600 font-medium";   // 4 hafta içi → yeşil
+  if (gun <= 42) return "text-red-500 font-medium";     // 4-6 hafta → kırmızı
+  return "text-orange-500 font-medium";                  // 6 hafta+ → turuncu
 }
 
 export default function UyelerPage() {
