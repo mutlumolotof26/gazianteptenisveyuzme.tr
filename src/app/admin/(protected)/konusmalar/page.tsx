@@ -467,51 +467,62 @@ export default function KonusmalarPage() {
 
             {/* Mesajlar */}
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
-              {(selected.messages || []).filter(m => m.role !== "system" && m.content).map((msg, i) => (
-                <div key={i} className={`flex ${msg.role === "assistant" ? "justify-end" : "justify-start"}`}>
-                  <div className={`flex items-end gap-2 max-w-[75%] ${msg.role === "assistant" ? "flex-row-reverse" : ""}`}>
-                    <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${
-                      msg.role === "assistant" ? "bg-[#3a8fbf] text-white" : getAvatarColors(selected)
-                    }`}>
-                      {msg.role === "assistant" ? <Bot size={14} /> : getInitials(selected)}
+              {(() => {
+                const visibleMsgs = (selected.messages || []).filter(m => m.role !== "system" && m.content);
+                return visibleMsgs.map((msg, i) => {
+                  const hasReplyAfter = msg.role === "assistant" && visibleMsgs.slice(i + 1).some(m => m.role === "user");
+                  return (
+                    <div key={i} className={`flex ${msg.role === "assistant" ? "justify-end" : "justify-start"}`}>
+                      <div className={`flex items-end gap-2 max-w-[75%] ${msg.role === "assistant" ? "flex-row-reverse" : ""}`}>
+                        <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold ${
+                          msg.role === "assistant" ? "bg-[#3a8fbf] text-white" : getAvatarColors(selected)
+                        }`}>
+                          {msg.role === "assistant" ? <Bot size={14} /> : getInitials(selected)}
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                            msg.role === "assistant"
+                              ? "bg-[#3a8fbf] text-white rounded-br-sm"
+                              : "chat-user-bubble bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm"
+                          }`}>
+                            {msg.mediaType === "image" && msg.mediaId ? (
+                              <img
+                                src={`/api/admin/whatsapp/media?id=${msg.mediaId}`}
+                                alt="Fotoğraf"
+                                className="max-w-[240px] rounded-lg cursor-pointer"
+                                onClick={() => window.open(`/api/admin/whatsapp/media?id=${msg.mediaId}`, "_blank")}
+                              />
+                            ) : msg.mediaId ? (
+                              <a
+                                href={`/api/admin/whatsapp/media?id=${msg.mediaId}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline font-medium hover:opacity-80"
+                              >
+                                {msg.content}
+                              </a>
+                            ) : (
+                              stripMarker(msg.content)
+                            )}
+                          </div>
+                          {msg.ts && (
+                            <span className={`flex items-center gap-1 text-[10px] text-gray-400 px-1 ${msg.role === "assistant" ? "justify-end" : "justify-start"}`}>
+                              {new Date(msg.ts).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" })}
+                              {" · "}
+                              {new Date(msg.ts).toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit" })}
+                              {msg.role === "assistant" && (
+                                <span className={`font-bold tracking-tighter ${hasReplyAfter ? "text-[#3a8fbf]" : "text-gray-400"}`}>
+                                  {hasReplyAfter ? "✓✓" : "✓"}
+                                </span>
+                              )}
+                            </span>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-1">
-                    <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
-                      msg.role === "assistant"
-                        ? "bg-[#3a8fbf] text-white rounded-br-sm"
-                        : "chat-user-bubble bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-sm"
-                    }`}>
-                      {msg.mediaType === "image" && msg.mediaId ? (
-                        <img
-                          src={`/api/admin/whatsapp/media?id=${msg.mediaId}`}
-                          alt="Fotoğraf"
-                          className="max-w-[240px] rounded-lg cursor-pointer"
-                          onClick={() => window.open(`/api/admin/whatsapp/media?id=${msg.mediaId}`, "_blank")}
-                        />
-                      ) : msg.mediaId ? (
-                        <a
-                          href={`/api/admin/whatsapp/media?id=${msg.mediaId}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="underline font-medium hover:opacity-80"
-                        >
-                          {msg.content}
-                        </a>
-                      ) : (
-                        stripMarker(msg.content)
-                      )}
-                    </div>
-                    {msg.ts && (
-                      <span className={`text-[10px] text-gray-400 px-1 ${msg.role === "assistant" ? "text-right" : "text-left"}`}>
-                        {new Date(msg.ts).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" })}
-                        {" · "}
-                        {new Date(msg.ts).toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit" })}
-                      </span>
-                    )}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                  );
+                });
+              })()}
               <div ref={messagesEndRef} />
             </div>
 
