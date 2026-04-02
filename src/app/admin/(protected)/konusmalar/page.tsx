@@ -469,8 +469,17 @@ export default function KonusmalarPage() {
             <div className="flex-1 overflow-y-auto p-4 space-y-3">
               {(() => {
                 const visibleMsgs = (selected.messages || []).filter(m => m.role !== "system" && m.content);
+                const lastIdx = visibleMsgs.length - 1;
                 return visibleMsgs.map((msg, i) => {
+                  const isLastMsg = i === lastIdx;
                   const hasReplyAfter = msg.role === "assistant" && visibleMsgs.slice(i + 1).some(m => m.role === "user");
+                  const hasAnyAfter = msg.role === "assistant" && i < lastIdx;
+                  // tick durumu: tek tik=son mesaj, çift gri=iletildi, çift mavi=görüldü
+                  const tickState = msg.role !== "assistant" ? null
+                    : hasReplyAfter ? "read"
+                    : hasAnyAfter ? "delivered"
+                    : isLastMsg ? "sent"
+                    : "delivered";
                   return (
                     <div key={i} className={`flex ${msg.role === "assistant" ? "justify-end" : "justify-start"}`}>
                       <div className={`flex items-end gap-2 max-w-[75%] ${msg.role === "assistant" ? "flex-row-reverse" : ""}`}>
@@ -510,9 +519,9 @@ export default function KonusmalarPage() {
                               {new Date(msg.ts).toLocaleTimeString("tr-TR", { hour: "2-digit", minute: "2-digit" })}
                               {" · "}
                               {new Date(msg.ts).toLocaleDateString("tr-TR", { day: "2-digit", month: "2-digit" })}
-                              {msg.role === "assistant" && (
-                                <span className={`font-bold tracking-tighter ${hasReplyAfter ? "text-[#3a8fbf]" : "text-gray-400"}`}>
-                                  {hasReplyAfter ? "✓✓" : "✓"}
+                              {tickState && (
+                                <span className={`font-bold tracking-tighter ${tickState === "read" ? "text-[#3a8fbf]" : "text-gray-400"}`}>
+                                  {tickState === "sent" ? "✓" : "✓✓"}
                                 </span>
                               )}
                             </span>
