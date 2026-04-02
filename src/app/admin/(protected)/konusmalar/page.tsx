@@ -116,8 +116,8 @@ export default function KonusmalarPage() {
   const [newFreeText, setNewFreeText] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  async function loadConversations(archived = showArchived) {
-    setLoading(true);
+  async function loadConversations(archived = showArchived, silent = false) {
+    if (!silent) setLoading(true);
     try {
       const res = await fetch(`/api/admin/konusmalar${archived ? "?archived=true" : ""}`);
       const data = await res.json();
@@ -129,9 +129,9 @@ export default function KonusmalarPage() {
         else setSelected(null);
       }
     } catch (e: unknown) {
-      setError(e instanceof Error ? e.message : "Yüklenemedi");
+      if (!silent) setError(e instanceof Error ? e.message : "Yüklenemedi");
     } finally {
-      setLoading(false);
+      if (!silent) setLoading(false);
     }
   }
 
@@ -165,8 +165,8 @@ export default function KonusmalarPage() {
       .then((d) => setBotEnabled(d.enabled ?? true));
 
     const interval = setInterval(() => {
-      loadConversations(showArchived);
-    }, 5000);
+      loadConversations(showArchived, true);
+    }, 3000);
     return () => clearInterval(interval);
   }, [showArchived]);
 
