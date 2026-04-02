@@ -69,9 +69,9 @@ function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${Str
 function durumBadge(durum: string, kayitTarihi: string): { label: string; cls: string } {
   if (durum === "aktif") {
     const gun = Math.floor((Date.now() - new Date(kayitTarihi).getTime()) / 86400000);
-    if (gun <= 28) return { label: "Aktif", cls: "bg-green-100 text-green-700" };
-    if (gun <= 42) return { label: "Süresi Doldu", cls: "bg-red-100 text-red-600" };
-    return { label: "Pasif", cls: "bg-orange-100 text-orange-600" };
+    if (gun <= 28) return { label: "Aktif", cls: "bg-green-500 text-white" };
+    if (gun <= 42) return { label: "Süresi Doldu", cls: "bg-red-500 text-white" };
+    return { label: "Pasif", cls: "bg-orange-500 text-white" };
   }
   return durumEtiket[durum] ?? { label: durum, cls: "bg-gray-100 text-gray-600" };
 }
