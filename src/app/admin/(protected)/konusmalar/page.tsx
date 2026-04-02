@@ -115,6 +115,8 @@ export default function KonusmalarPage() {
   const [newMsgMode, setNewMsgMode] = useState<"template" | "free">("free");
   const [newFreeText, setNewFreeText] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const selectedRef = useRef<Conversation | null>(null);
+  useEffect(() => { selectedRef.current = selected; }, [selected]);
 
   async function loadConversations(archived = showArchived, silent = false) {
     if (!silent) setLoading(true);
@@ -123,8 +125,9 @@ export default function KonusmalarPage() {
       const data = await res.json();
       if (data.error) throw new Error(data.error);
       setConversations(data);
-      if (selected) {
-        const updated = data.find((c: Conversation) => c.user_id === selected.user_id);
+      const currentSelected = selectedRef.current;
+      if (currentSelected) {
+        const updated = data.find((c: Conversation) => c.user_id === currentSelected.user_id);
         if (updated) setSelected(updated);
         else setSelected(null);
       }
