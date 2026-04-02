@@ -6,7 +6,7 @@ import { getAdminSession } from "@/lib/auth";
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { ad, soyad, email, tcKimlik, telefon, dogumTarihi, uyeTipi, spor, mesaj, notlar } = body;
+    const { ad, soyad, email, tcKimlik, telefon, dogumTarihi, uyeTipi, spor, mesaj, notlar, durum: durumParam } = body;
 
     if (!ad || !soyad) {
       return NextResponse.json({ error: "Ad ve soyad zorunludur." }, { status: 400 });
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
         dogumTarihi: dogumTarihi || null,
         uyeTipi: uyeTipi || "standart",
         spor: spor || "her_ikisi",
-        durum: "beklemede",
+        durum: durumParam || "beklemede",
         notlar: notlar || mesaj || null,
       },
     });
@@ -61,9 +61,9 @@ export async function GET(req: NextRequest) {
         uyeTipi ? { uyeTipi } : {},
         search ? {
           OR: [
-            { ad: { contains: search } },
-            { soyad: { contains: search } },
-            { email: { contains: search } },
+            { ad: { contains: search, mode: "insensitive" } },
+            { soyad: { contains: search, mode: "insensitive" } },
+            { email: { contains: search, mode: "insensitive" } },
           ],
         } : {},
       ],
