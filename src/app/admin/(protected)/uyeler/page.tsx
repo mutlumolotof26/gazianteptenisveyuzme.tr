@@ -138,7 +138,7 @@ export default function UyelerPage() {
     if (search) params.set("search", search);
     const activeDurum = durumFilter || (tab === "on_kayit" ? "beklemede" : tab === "aranacak" ? "aranacak" : "");
     if (activeDurum) params.set("durum", activeDurum);
-    const activeTip = tipFilter || (tab === "takim" ? "takim" : tab === "kursiyerler" ? "kursiyerler" : tab === "birey" ? "birey" : tab === "yetiskin_erkek" ? "yetiskin_erkek" : tab === "yetiskin_bayan" ? "yetiskin_bayan" : "");
+    const activeTip = search ? "" : (tipFilter || (tab === "takim" ? "takim" : tab === "kursiyerler" ? "kursiyerler" : tab === "birey" ? "birey" : tab === "yetiskin_erkek" ? "yetiskin_erkek" : tab === "yetiskin_bayan" ? "yetiskin_bayan" : ""));
     if (activeTip) params.set("uyeTipi", activeTip);
     const res = await fetch(`/api/members?${params}`);
     setMembers(await res.json());
