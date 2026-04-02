@@ -59,13 +59,16 @@ export async function GET(req: NextRequest) {
       AND: [
         durum ? { durum } : {},
         uyeTipi ? { uyeTipi } : {},
-        search ? {
-          OR: [
-            { ad: { contains: search, mode: "insensitive" } },
-            { soyad: { contains: search, mode: "insensitive" } },
-            { email: { contains: search, mode: "insensitive" } },
-          ],
-        } : {},
+        ...(search
+          ? search.trim().split(/\s+/).map((word) => ({
+              OR: [
+                { ad: { contains: word, mode: "insensitive" as const } },
+                { soyad: { contains: word, mode: "insensitive" as const } },
+                { email: { contains: word, mode: "insensitive" as const } },
+                { telefon: { contains: word, mode: "insensitive" as const } },
+              ],
+            }))
+          : []),
       ],
     },
     orderBy: { kayitTarihi: "desc" },
