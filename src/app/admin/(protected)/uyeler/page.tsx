@@ -66,6 +66,12 @@ function donemLabel(d: string) { const [y, m] = d.split("-"); return `${aylar[pa
 function prevDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 1 ? `${y - 1}-12` : `${y}-${String(m - 1).padStart(2, "0")}`; }
 function nextDonem(d: string) { const [y, m] = d.split("-").map(Number); return m === 12 ? `${y + 1}-01` : `${y}-${String(m + 1).padStart(2, "0")}`; }
 function currentDonem() { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, "0")}`; }
+function kayitRenk(kayitTarihi: string) {
+  const gun = Math.floor((Date.now() - new Date(kayitTarihi).getTime()) / 86400000);
+  if (gun <= 14) return "text-green-600 font-medium";
+  if (gun <= 30) return "text-orange-500 font-medium";
+  return "text-red-500 font-medium";
+}
 
 export default function UyelerPage() {
   const [tab, setTab] = useState<"takim" | "kursiyerler" | "birey" | "yetiskin_erkek" | "yetiskin_bayan" | "on_kayit" | "aranacak" | "aidat" | "seanslar" | "basvurular">("takim");
@@ -493,7 +499,7 @@ export default function UyelerPage() {
                         <td className="px-4 py-3 text-sm"><span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${m.uyeTipi === "takim" ? "bg-purple-100 text-purple-700" : m.uyeTipi === "kursiyerler" ? "bg-green-100 text-green-700" : m.uyeTipi === "birey" ? "bg-orange-100 text-orange-700" : m.uyeTipi === "yetiskin_erkek" ? "bg-blue-100 text-blue-700" : m.uyeTipi === "yetiskin_bayan" ? "bg-pink-100 text-pink-700" : "bg-gray-100 text-gray-600"}`}>{tipLabel[m.uyeTipi] || m.uyeTipi}</span></td>
                         <td className="px-4 py-3"><span className={`text-xs px-2 py-0.5 rounded-full font-medium ${durumEtiket[m.durum]?.cls}`}>{durumEtiket[m.durum]?.label}</span></td>
                         <td className="px-4 py-3 hidden md:table-cell">{(() => { const ar = rows.find(r => r.memberId === m.id && r.aidatId); const fallback = !ar ? prevRows.find(r => r.memberId === m.id && r.aidatId) : null; const rec = ar || fallback; if (!rec) return <span className="text-xs text-gray-300">Kayıt yok</span>; if (rec.odendi) return <span className="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-700 font-medium">✓ Ödendi</span>; if (rec.tutar > 0) return <span className="text-xs px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-medium">✗ {rec.tutar.toLocaleString("tr-TR")}₺</span>; return <span className="text-xs text-gray-300">Kayıt yok</span>; })()}</td>
-                        <td className="px-4 py-3 text-xs text-gray-400 hidden lg:table-cell">{new Date(m.kayitTarihi).toLocaleDateString("tr-TR")}</td>
+                        <td className={`px-4 py-3 text-xs hidden lg:table-cell ${kayitRenk(m.kayitTarihi)}`}>{new Date(m.kayitTarihi).toLocaleDateString("tr-TR")}</td>
                         <td className="px-4 py-3" onClick={(e) => e.stopPropagation()}>
                           <div className="flex items-center justify-end gap-1">
                             {m.durum === "beklemede" && (<><button onClick={() => handleStatusChange(m.id, "aktif")} title="Onayla" className="p-1.5 text-[#e5500a] hover:bg-orange-50 rounded"><UserCheck size={15} /></button><button onClick={() => handleStatusChange(m.id, "pasif")} title="Reddet" className="p-1.5 text-red-500 hover:bg-red-50 rounded"><UserX size={15} /></button></>)}
